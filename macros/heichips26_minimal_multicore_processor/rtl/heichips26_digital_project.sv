@@ -5,7 +5,7 @@
 
 `default_nettype none
 
-module heichips26_digital_project (
+module heichips26_minimal_multicore_processor (
 `ifdef USE_POWER_PINS
     inout  wire VPWR,
     inout  wire VGND,
@@ -20,25 +20,51 @@ module heichips26_digital_project (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-    // List all unused inputs to prevent warnings
-    wire _unused = &{ena, ui_in[7:1], uio_in[7:1]};
-    
-    logic [7:0] count;
-    
-    counter counter_0 (
-    `ifdef USE_POWER_PINS
-        .VPWR  (VPWR),
-        .VGND  (VGND),
-    `endif
-        .clk_i    (clk),
-        .rst_ni   (rst_n),
-        .enable_i (ui_in[0]),
+localparam CPU_COUNT = 2;
+localparam ADDR_WIDTH = 8;
+localparam DATA_WIDTH = 8;
 
-        .count_o  (count)
-    );
-    
-    assign uo_out  = count;
-    assign uio_out = count;
-    assign uio_oe  = '1;
+assign uio_oe = 8'h00;
+
+wire mem_done[CPU_COUNT-1:0];
+wire [DATA_WIDTH*2-1:0] data_out_cpu;
+wire [ADDR_WIDTH-1:0] reg_data [CPU_COUNT-1:0];
+wire [ADDR_WIDTH-1:0] ram_addr [CPU_COUNT-1:0];
+wire valid[CPU_COUNT-1:0];
+wire do_swap[CPU_COUNT-1:0];
+
+genvar i;
+generate
+    for (i = 0; i < CPU_COUNT; i = i + 1) begin
+        cpu_core cpu (
+            .clk(clk),
+            .rst_n(rst_n),
+            .ram_data_ready_i(mem_done[i]),
+            .data_word_in_i(data_out_cpu),
+            .ram_addr_o(ram_addr[i]),
+            .data_word_out_o(reg_data),
+            .ram_out_valid_o(valid[i]),
+            .ram_out_do_swap_o(do_swap[i])
+        );
+    end
+endgenerate
+
+mmu #(
+    .CPU_COUNT(CPU_COUNT),
+    .ADDR_WIDTH(ADDR_WIDTH),
+    .DATA_WIDTH(DATA_WIDTH)
+) dut (
+    .clk_i(clk),
+    .rst_ni(rst_n),
+    .reg_data(reg_data),
+    .ram_addr(ram_addr),
+    .valid(valid),
+    .do_swap(do_swap),
+    .fpga_in1(ui_in),
+    .fpga_in2(uio_in),
+    .mem_done(mem_done),
+    .data_out_cpu(data_out_cpu),
+    .fpga_out(uo_out)
+);
 
 endmodule

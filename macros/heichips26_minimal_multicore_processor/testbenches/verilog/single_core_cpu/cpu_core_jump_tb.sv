@@ -79,8 +79,7 @@ module memory_communicator_tb;
     $display("SET ram_data_ready_i to high");
     @(negedge clk);
     ram_data_ready_i <= 0;
-    // #10
-    // $finish;
+
     wait (ram_out_valid_o);
     #(5 * CLK_PERIOD_NS) 
     // OUTPUT IS READY, check
@@ -88,9 +87,6 @@ module memory_communicator_tb;
     if (ram_out_do_swap_o !== 0) $display("FAIL: ram_out_do_swap_o not 0 (got %0d)", ram_out_do_swap_o);
     if (ram_addr_o !== 67) $display("FAIL: ram_addr_o not 67 (got %0d)", ram_addr_o);
     if (data_word_out_o !== 0) $display("FAIL: data_word_out_o not 0 (got %0d)", data_word_out_o);
-
-
-        $finish;
 
 
     $display("Testing ADDI Passtrough");
@@ -109,17 +105,16 @@ module memory_communicator_tb;
     // OUTPUT IS READY, check
     if (ram_out_valid_o !== 1) $display("FAIL: ram_out_valid_o not 1 (got %0d)", ram_out_valid_o);
     if (ram_out_do_swap_o !== 0) $display("FAIL: ram_out_do_swap_o not 0 (got %0d)", ram_out_do_swap_o);
-    if (ram_addr_o !== 2) $display("FAIL: ram_out_do_swap_o not 2 (got %0d)", ram_addr_o);
+    if (ram_addr_o !== 68) $display("FAIL: ram_out_do_swap_o not 68 (got %0d)", ram_addr_o);
     if (data_word_out_o !== 0) $display("FAIL: data_word_out_o not 0 (got %0d)", data_word_out_o);
     $display("Word was saved in reg4");
 
     
-    $display("FIRST INSTRICTION DONE!!!!!!");
-    $display("Starting second instruction :=)");
+    $display("Try to jump on reg4 which is not zero");
     @(negedge clk);
     // Add 5 + register 4 and save to register 1 
     /////////////////// IMMEDIETATE_reg2_reg_1_opcode
-    data_word_in_i <= 16'b00000101_001_100_00;
+    data_word_in_i <= 16'b00000111_000_100_01;
     ram_data_ready_i <= 1;
     $display("SET ram_data_ready_i to high");
     @(negedge clk);
@@ -130,7 +125,7 @@ module memory_communicator_tb;
     if (ram_out_valid_o !== 1) $display("FAIL: ram_out_valid_o not 1 (got %0d)", ram_out_valid_o);
     if (ram_out_do_swap_o !== 0) $display("FAIL: ram_out_do_swap_o not 0 (got %0d)", ram_out_do_swap_o);
     // Now we are at the third instr
-    if (ram_addr_o !== 2) $display("FAIL: ram_out_do_swap_o not 2 (got %0d)", ram_addr_o);
+    if (ram_addr_o !== 69) $display("FAIL: ram_out_do_swap_o not 69 (got %0d)", ram_addr_o);
     if (data_word_out_o !== 0) $display("FAIL: data_word_out_o not 0 (got %0d)", data_word_out_o);
     
 

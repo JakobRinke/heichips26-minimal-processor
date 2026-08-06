@@ -34,7 +34,6 @@ always @(posedge clk) begin
 
         // Send the decode is done signal
         decoder_done <= 1;
-        $display("Sending initial instruction Request :D!!!");
     end else if (start_decoding == 1) begin
         // Data Signals are always mapped the same :)
         addr1[2:0] <= instruction[4:2];
@@ -47,7 +46,6 @@ always @(posedge clk) begin
 
         // Send the decode is done signal
         decoder_done <= 1;
-        $display("Processed Decode Request :D!!!");
       end
 end 
 

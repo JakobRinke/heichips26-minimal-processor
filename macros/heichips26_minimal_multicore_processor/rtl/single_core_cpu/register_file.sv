@@ -45,11 +45,9 @@ always @(posedge clk) begin
       data_2 <= 0;
     end
     done_reading <= 1;
-    $display("Read Registers %d and %d", addr1, addr2);
   end else if (done_mem == 1) begin
     registers[addr2] <= wb_data;
     done_writing <= 1;
-    $display("Write %d into Register %d", wb_data, addr2);
   end
 
 end;

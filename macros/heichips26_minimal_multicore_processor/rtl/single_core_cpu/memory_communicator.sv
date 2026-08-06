@@ -95,24 +95,23 @@ always @(clk) begin
 
       WAITING_FOR_INSTRUCTION: begin
         if (mem_done_i) begin
-          next_instr_o <= ram_data_i;
-          write_back_data_o <= 0;
+          next_instr_o = ram_data_i;
+          write_back_data_o = 0;
           /// IMPORTANT!!! INVALIDATE; End the request
-          valid <= 0;
-          current_state <= IDLE;
+          valid = 0;
+          current_state = IDLE;
           start_decoding_o = 1;
-          $display("Got the instruction from Memory Called: %16b", ram_data_i);
         end
       end
 
       WAITING_FOR_SWAP: begin
         if (mem_done_i) begin
              // Send the ram output back as data
-            write_back_data_o <= ram_data_i[7:0];
-            done_mem_o <= 1; // Start the writeback
+            write_back_data_o = ram_data_i[7:0];
             /// IMPORTANT!!! INVALIDATE; End the request
-            valid <= 0;
-            current_state <= IDLE;
+            valid = 0;
+            current_state = IDLE;
+            done_mem_o = 1; // Start the writeback
         end
       end
 

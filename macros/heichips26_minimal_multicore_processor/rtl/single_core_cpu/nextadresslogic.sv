@@ -11,7 +11,7 @@ module nextadresslogic(
 
 	// Demux related
 	wire [7:0] jump_by;
-	assign jump_by = (select_jump && (!data_1)) ? imm : 8'b00000001;
+	assign jump_by = (select_jump && (data_1==8'b0)) ? imm : 8'b00000001;
 	
 	// PC related
 	wire done_add;
@@ -37,7 +37,6 @@ module nextadresslogic(
 		if(done_add  == 1) begin
 			current_pc <= next_pc;
 			done_pc <= 1;
-      $display("requesting next instruction");
 		end
 		
 	end

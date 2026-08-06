@@ -1,71 +1,110 @@
-
-
 typedef enum {
-    RESET,
-    CHECK_CPU_0,
-    CHECK_CPU_1,
-    QUERY_SRAM_0,
-    QUERY_SRAM_1
-} State
+    IDLE,
+    LOAD_INST,
+    LOAD_ADDR,
+    LOAD_WAIT,
+    SWAP_INST,
+    SWAP_ADDR,
+    SWAP_DATA,
+    SWAP_END
+} State;
 
 module mem_mgr #(
     parameter CPU_COUNT = 2, // problem for mem_mgr_top to split into more/less
     parameter ADDR_WIDTH = 8,
-    parameter DATA_WIDTH = 16,
+    parameter DATA_WIDTH = 8
 )(
 
 
 //CPU
-    input logic               clk_i,
-    input logic               rst_ni,
+    input logic clk_i,
+    input logic rst_ni,
 
-    input [CPU_COUNT-1:0] logic [ADDR_WIDTH-1:0] reg_data,
-    input [CPU_COUNT-1:0] logic [ADDR_WIDTH-1:0] ram_addr,
-    input logic [CPU_COUNT-1:0] valid,
-    input logic [CPU_COUNT-1:0] do_swap,
-    output logic [CPU_COUNT-1:0] mem_done,
+    input logic [ADDR_WIDTH-1:0] reg_data [CPU_COUNT-1:0],
+    input logic [ADDR_WIDTH-1:0] ram_addr [CPU_COUNT-1:0],
+    input logic valid[CPU_COUNT-1:0],
+    input logic do_swap[CPU_COUNT-1:0],
+    output reg mem_done[CPU_COUNT-1:0],
 
-    output logic [DATA_WIDTH-1:0] data_out_cpu, //shared -> only read when mem_done_x enabled
+    output reg [DATA_WIDTH*2-1:0] data_out_cpu, //shared -> only read when mem_done_x enabled
 
     //FPGA
-    input logic [DATA_WIDTH-1:0]   data_in,
-
-    output logic [DATA_WIDTH-1:0]  sram_addr,
-    output logic [INSTR_WIDTH-1]   data_out
-
+    input [DATA_WIDTH - 1:0] fpga_in1,
+    input [DATA_WIDTH - 1:0] fpga_in2,
+    output reg [DATA_WIDTH - 1:0] fpga_out
 );
 
-    State current_state, next_state
+    State state;
 
+    localparam TARGET_CPU_NUM_LEN = $clog2(CPU_COUNT);
+    reg [TARGET_CPU_NUM_LEN - 1 : 0]target_cpu;
 
+    reg swap;
+
+    task set_swap (input [TARGET_CPU_NUM_LEN - 1 : 0]cpu);
+        if (do_swap[cpu]) swap <= 1;
+        else swap <= 0;
+    endtask
 
     // Counter implementation
     always_ff @(posedge clk_i) begin
         if (!rst_ni) begin
-            current_state <= RESET;
+            state <= IDLE;
         end else begin
-            current_state <= next_state;
-        end
-    end
-
-    always_comb begin
-        case (current_state)
-            RESET : begin
-                next_state = CHECK_CPU_0;
-            end
-            CHECK_CPU_0: begin
-                if (conditions) begin
-                    
+            case (state)
+                IDLE: begin
+                    mem_done[target_cpu] <= 0;
+                    // TODO: Make CPU selection parameterized
+                    if (valid[0]) begin 
+                        target_cpu <= {TARGET_CPU_NUM_LEN{1'd0}};
+                        set_swap(0);
+                        state <= LOAD_INST;
+                    end else if (valid[1]) begin 
+                        target_cpu <= {TARGET_CPU_NUM_LEN{1'd1}};
+                        set_swap(1);
+                        state <= LOAD_INST;
+                    end
                 end
-                next_state = CHECK_CPU_1;
-            end
-            CHECK_CPU_1: begin
-                next_state = CHECK_CPU_0;
-            end
-            default: begin
-                next_state = IDLE;
-            end
-        endcase
+                LOAD_INST: begin
+                    // second-LSB: Load operation, LSB: enable
+                    fpga_out <= {6'd0, 1'd0, 1'd1};
+                    state <= LOAD_ADDR;
+                end
+                LOAD_ADDR: begin
+                    fpga_out <= ram_addr[target_cpu];
+                    state <= LOAD_WAIT;
+                end
+                LOAD_WAIT: begin
+                    fpga_out <= 8'b0;
+                    // TODO: determine how long to wait for RAM results
+                    data_out_cpu <= {fpga_in1, fpga_in2};
+                    if (swap) begin
+                        state <= SWAP_INST;
+                    end else begin
+                        state <= IDLE;
+                        mem_done[target_cpu] <= 1;
+                    end
+                end
+                SWAP_INST: begin
+                    // second-LSB: Write operation, LSB: enable
+                    fpga_out <= {6'd0, 1'd1, 1'd1};
+                    state <= SWAP_ADDR;
+                end
+                SWAP_ADDR: begin
+                    fpga_out <= ram_addr[target_cpu];
+                    state <= SWAP_DATA;
+                end
+                SWAP_DATA: begin
+                    fpga_out <= reg_data[target_cpu];
+                    state <= SWAP_DATA;
+                end
+                SWAP_END: begin
+                    fpga_out <= 8'b0;
+                    state <= IDLE;
+                    mem_done[target_cpu] <= 1;
+                end
+            endcase
+        end
     end
 
 endmodule

@@ -1,5 +1,5 @@
 
-module cpu_core (
+module cpu_core #(parameter START_INSTRUCTION = 16'b00000000_000_000_01) (
   input wire clk,
   input wire rst_n,
 
@@ -9,10 +9,31 @@ module cpu_core (
   output wire [7:0] ram_addr_o,
   output wire [7:0] data_word_out_o,
   output wire ram_out_valid_o,
-  output wire ram_out_do_swap_o,
+  output wire ram_out_do_swap_o
 );
+wire [15:0] cpu_instruction;
+wire start_decoding_flow;
+wire do_swap_ctrl;
+wire [7:0] imm;
 
+wire [2:0] addr1;
+wire [2:0] addr2;
+wire done_decoding_flow;
+wire [7:0] data_1;
+wire [7:0] data_2;
+wire [7:0] wb_data;
+wire done_mem_flow;
 
+wire done_reading_flow;
+wire [7:0] alu_output;
+wire alu_done_flow;
+
+wire select_jump_ctrl;
+wire done_writing_flow;
+wire [7:0] current_pc;
+wire done_pc_flow;
+
+// Default Start instruction is jump to zero
 memory_communicator dut_memory_communicator (
   .clk      (clk),
   .rst_n    (rst_n),
@@ -49,11 +70,7 @@ memory_communicator dut_memory_communicator (
 
 );
 
-wire [15:0] cpu_instruction;
-wire start_decoding_flow;
-wire do_swap_ctrl;
-wire [7:0] imm;
-cpu_decoder cpu_decoder (
+cpu_decoder #(.START_INSTRUCTION(START_INSTRUCTION)) cpu_decoder (
     .clk      (clk),
     .rst_n    (rst_n),
 
@@ -67,15 +84,6 @@ cpu_decoder cpu_decoder (
     .decoder_done(done_decoding_flow)
   );
 
-
-
-wire [2:0] addr1;
-wire [2:0] addr2;
-wire done_decoding_flow;
-wire [7:0] data_1;
-wire [7:0] data_2;
-wire [7:0] wb_data;
-wire done_mem_flow;
 // DUT
 register_file dut_register_file (
   .clk      (clk),
@@ -95,9 +103,6 @@ register_file dut_register_file (
 );
 
 
-wire done_reading_flow;
-wire [7:0] alu_output;
-wire alu_done_flow;
 add8 addi_adder(
   .clk(clk),
   .rst_n(rst_n),
@@ -108,14 +113,12 @@ add8 addi_adder(
   .done(alu_done_flow)   
 );
 
-wire select_jump_ctrl;
-wire done_writing_flow;
-wire [7:0] current_pc;
-wire done_pc_flow;
+
 nextadresslogic dut_nextadresslogic(
-	.clk(clk)
+	.clk(clk),
 	.rst_n(rst_n),
 	.imm(imm),
+  .data_1(data_1),
 	.select_jump(select_jump_ctrl),
 	.done_writing(done_writing_flow),
 	.current_pc(current_pc),

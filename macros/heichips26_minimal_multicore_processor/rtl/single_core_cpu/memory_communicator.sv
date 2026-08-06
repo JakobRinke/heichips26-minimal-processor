@@ -66,7 +66,9 @@ always @(clk) begin
     case (current_state) 
       IDLE: begin
         if (done_alu_i==1) begin
+          
           if (do_swap_i==1) begin
+            $display("Got Swap Request By ALU!");
             // Swap requested!   -> Send a request to the Ram
             ram_addr_o <= data_1_i;
             ram_write_data_o <= data_2_i;
@@ -74,11 +76,13 @@ always @(clk) begin
             valid <= 1;
             current_state <= WAITING_FOR_SWAP;
           end else begin
+            $display("Got Passtrough Request By ALU!");
             /// Just send the alu data to the output
             write_back_data_o <= alu_data_i;
             done_mem_o <= 1; // Start the writeback
           end
         end else if (done_pc_i) begin
+          $display("Got Request by PC!");
           /// Instruction requested, send request to the Ram 
           ram_addr_o <= program_counter_i;
           ram_write_data_o <= 0;
@@ -92,11 +96,12 @@ always @(clk) begin
       WAITING_FOR_INSTRUCTION: begin
         if (mem_done_i) begin
           next_instr_o <= ram_data_i;
-          start_decoding_o <= 1;
           write_back_data_o <= 0;
           /// IMPORTANT!!! INVALIDATE; End the request
           valid <= 0;
           current_state <= IDLE;
+          start_decoding_o = 1;
+          $display("Got the instruction from Memory Called: %16b", ram_data_i);
         end
       end
 

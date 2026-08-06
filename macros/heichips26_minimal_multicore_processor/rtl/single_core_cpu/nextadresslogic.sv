@@ -31,7 +31,7 @@ module nextadresslogic(
 		if (done_pc == 1) done_pc <= 0;
 		if(rst_n == 0) begin
 			current_pc <= 8'b0;
-      done_pc <= 0;
+      			done_pc <= 0;
 		end
 		if(done_add  == 1) begin
 			current_pc <= next_pc;

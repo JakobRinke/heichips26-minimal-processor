@@ -9,6 +9,10 @@ async def generate_clock(dut):
 
     for _ in range(10):
         dut.clk.value = 0
+        dut.rst_n.value = 1
+        dut.start.value = 1
+        dut.op1.value = 2
+        dut.op2.value = 3
         await Timer(1, unit="ns")
         dut.clk.value = 1
         await Timer(1, unit="ns")

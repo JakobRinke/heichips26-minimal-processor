@@ -27,7 +27,7 @@ module nextadresslogic(
         	.done(done_add));
 	
 
-	always @(clk) begin
+	always @(posedge clk) begin
 		done_pc = 0;
 		if(rst_n == 0) begin
 			current_pc <= 8'b0;

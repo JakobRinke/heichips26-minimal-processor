@@ -3,8 +3,7 @@ typedef enum {
     IDLE,
     LOAD_INST,
     LOAD_ADDR,
-    LOAD_WAIT,
-    SWAP_INST,
+    LOAD_WAIT_SWAP_INST,
     SWAP_ADDR,
     SWAP_DATA,
     SWAP_END,
@@ -75,23 +74,20 @@ module mmu #(
                 end
                 LOAD_ADDR: begin
                     fpga_out <= ram_addr[target_cpu];
-                    state <= LOAD_WAIT;
+                    state <= LOAD_WAIT_SWAP_INST;
                 end
-                LOAD_WAIT: begin
-                    fpga_out <= 8'b0;
+                LOAD_WAIT_SWAP_INST: begin
                     // TODO: determine how long to wait for RAM results
                     data_out_cpu <= {fpga_in1, fpga_in2};
                     if (swap) begin
-                        state <= SWAP_INST;
+                        // second-LSB: Write operation, LSB: enable
+                        fpga_out <= {6'd0, 1'd1, 1'd1};
+                        state <= SWAP_ADDR;
                     end else begin
+                        fpga_out <= 8'b0;
                         state <= WAIT_CONFIRM;
                         mem_done[target_cpu] <= 1;
                     end
-                end
-                SWAP_INST: begin
-                    // second-LSB: Write operation, LSB: enable
-                    fpga_out <= {6'd0, 1'd1, 1'd1};
-                    state <= SWAP_ADDR;
                 end
                 SWAP_ADDR: begin
                     fpga_out <= ram_addr[target_cpu];

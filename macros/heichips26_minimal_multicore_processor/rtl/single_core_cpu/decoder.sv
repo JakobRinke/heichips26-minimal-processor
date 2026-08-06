@@ -6,9 +6,9 @@ module cpu_decoder(
     input wire start_decoding,
 
     // Data Signals
-    output reg addr1[2:0],
-    output reg addr2[2:0],
-    output reg imm[7:0],
+    output reg [2:0] addr1,
+    output reg [2:0] addr2,
+    output reg [7:0] imm,
 
     // Control Signals
     output reg do_swap,
@@ -16,13 +16,12 @@ module cpu_decoder(
 
 
     // Timing / Flow Signals
-    output reg decoder_done,
-
+    output reg decoder_done
 );
 
 
 always @(posedge clk) begin
-    decoder_done <= 0;
+    if (decoder_done == 1) decoder_done <= 0;
     if (rst_n == 0) begin
         addr1 <= 3'b0;
         addr2 <= 3'b0;
@@ -36,7 +35,7 @@ always @(posedge clk) begin
         imm[7:0] <= instruction[15:8];
         
         // Set Control Signals
-        do_jump <= instruction[0];
+        select_jump <= instruction[0];
         do_swap <= instruction[1]; 
 
         // Send the decode is done signal

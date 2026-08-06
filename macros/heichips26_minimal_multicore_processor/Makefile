@@ -280,7 +280,12 @@ mmu_mult_load:
 	gtkwave testbenches/waveforms/mmu_mult_load.vcd
 
 
-test_mmu_single_swap:
+mmu_single_swap:
 	verilator --timing --binary --trace-vcd testbenches/verilog/mmu_single_swap_tb.sv rtl/mmu.sv
 	./obj_dir/Vmmu_single_swap_tb 
 	gtkwave testbenches/waveforms/mmu_single_swap.vcd
+
+mmu_multi_swap:
+	verilator --timing --binary --trace-vcd testbenches/verilog/mmu_multi_swap_tb.sv rtl/mmu.sv
+	./obj_dir/Vmmu_multi_swap_tb 
+	gtkwave testbenches/waveforms/mmu_multi_swap.vcd

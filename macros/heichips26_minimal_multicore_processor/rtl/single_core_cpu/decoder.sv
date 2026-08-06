@@ -11,10 +11,8 @@ module cpu_decoder(
     output reg imm[7:0],
 
     // Control Signals
-    output reg we_addr2,
-    output reg enable_alu,
-    output reg enable_eq_z_select,
-    output reg enable_memory_mgr,
+    output reg do_swap;
+    output reg select_jump;
 
 
     // Timing / Flow Signals
@@ -29,43 +27,24 @@ always @(posedge clk) begin
         addr1 <= 3'b0;
         addr2 <= 3'b0;
         imm <= 8'b0;
-        we_addr2 <= 1'b0;
-        enable_alu <= 1'b0;
-        enable_eq_z_select <= 1'b0;
-        enable_memory_mgr <= 1'b0;
+        do_swap <= 1'b0;
+        select_jump <= 1'b0;
     end else if (start_decoding) begin
         // Data Signals are always mapped the same :)
         addr1[2:0] <= instruction[4:2];
         addr2[2:0] <= instruction[7:5];
         imm[7:0] <= instruction[15:8];
         
-        // Control Signals Add Instruction 
-        if (instruction[1:0] == 1'b00) begin
-            we_addr2 <= 1;
-            enable_alu <= 1;
-            enable_eq_z_select <= 0;
-            enable_memory_mgr <= 0;
-        // Control Signals Jump Instruction
-        end else if (instruction == 1'b01) begin
-            we_addr2 <= 0;
-            enable_alu <= 0;
-            enable_eq_z_select <= 1;
-            enable_memory_mgr <= 0;
-        end
-        // Control Signals Swap Instruction
-        end else if (instruction == 1'101) begin
-            we_addr2 <= 0;
-            enable_alu <= 0;
-            enable_eq_z_select <= 0;
-            enable_memory_mgr <= 1;
-        end
+        // Set Control Signals
+        do_jump <= instruction[0];
+        do_swap <= instruction[1]; 
 
-        
         // Send the decode is done signal
         decoder_done <= 1;
-    end 
+      end
+end 
 
-end
+
 
 
 endmodule

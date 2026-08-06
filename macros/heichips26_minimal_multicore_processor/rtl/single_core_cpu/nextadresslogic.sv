@@ -1,6 +1,6 @@
 // Next Adress Logic tracking location in program flow
 module nextadresslogic(
-	input wire clk
+	input wire clk,
 	input wire rst_n,
 	input wire [7:0] imm,
 	input wire select_jump,

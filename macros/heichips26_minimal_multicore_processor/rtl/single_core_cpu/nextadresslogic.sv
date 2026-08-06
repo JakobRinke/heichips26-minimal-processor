@@ -1,11 +1,11 @@
 // Next Adress Logic tracking location in program flow
 module nextadresslogic(
-	input reg clk
-	input reg rst_n,
-	input reg [7:0] imm,
-	input reg select_jump,
-	input reg done_writing,
-	output reg [7:0] current_pc
+	input wire clk
+	input wire rst_n,
+	input wire [7:0] imm,
+	input wire select_jump,
+	input wire done_writing,
+	output reg [7:0] current_pc,
 	output reg done_pc);
 
 	// Demux related
@@ -13,8 +13,8 @@ module nextadresslogic(
 	assign jump_by = select_jump ? imm : 8'b00000001;
 	
 	// PC related
-	reg done_add;
-	reg [7:0] next_pc;
+	wire done_add;
+	wire [7:0] next_pc;
 
 	// Adder related
 	// remember: done signal of adder is deasserted within adder module
@@ -28,9 +28,10 @@ module nextadresslogic(
 	
 
 	always @(posedge clk) begin
-		done_pc = 0;
+		if (done_pc == 1) done_pc <= 0;
 		if(rst_n == 0) begin
 			current_pc <= 8'b0;
+      done_pc <= 0;
 		end
 		if(done_add  == 1) begin
 			current_pc <= next_pc;

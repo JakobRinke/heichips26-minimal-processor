@@ -268,3 +268,13 @@ clean-all: ## Delete all generated files and folders of the macros and the TOP c
 	$(MAKE) clean
 .PHONY: clean-all
 # ================================================================================================
+
+mmu_single_load:
+	verilator --timing --binary --trace-vcd testbenches/verilog/mmu_single_load_tb.v rtl/mmu.sv
+	./obj_dir/Vmmu_single_load_tb 
+	gtkwave testbenches/waveforms/mmu_single_load.vcd
+
+mmu_mult_load:
+	verilator --timing --binary --trace-vcd testbenches/verilog/mmu_mult_load_tb.v rtl/mmu.sv
+	./obj_dir/Vmmu_mult_load_tb 
+	gtkwave testbenches/waveforms/mmu_mult_load.vcd

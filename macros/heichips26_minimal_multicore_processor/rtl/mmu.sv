@@ -6,7 +6,6 @@ typedef enum {
     LOAD_WAIT_SWAP_INST,
     SWAP_ADDR,
     SWAP_DATA,
-    SWAP_END,
     WAIT_CONFIRM
 } State;
 
@@ -95,14 +94,11 @@ module mmu #(
                 end
                 SWAP_DATA: begin
                     fpga_out <= reg_data[target_cpu];
-                    state <= SWAP_END;
-                end
-                SWAP_END: begin
-                    fpga_out <= 8'b0;
-                    state <= WAIT_CONFIRM;
                     mem_done[target_cpu] <= 1;
+                    state <= WAIT_CONFIRM;
                 end
                 WAIT_CONFIRM: begin
+                    fpga_out <= 8'b0;
                     mem_done[target_cpu] <= 0;
                     if (~valid[target_cpu]) state <= IDLE;
                 end

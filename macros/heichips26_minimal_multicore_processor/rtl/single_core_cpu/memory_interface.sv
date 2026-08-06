@@ -5,7 +5,7 @@ module memory_interface #(
     input  wire       rst_n     // reset_n
 
     input wire [7:0] ui_in, // Memory Controller input
-    output logic [7:0] uo_out, // Load
+    output logic [7:0] uo_out, 
 
     input wire [7:0] uio_in, //SRAM Input
     output logic [7:0] uio_out,
@@ -33,7 +33,7 @@ module memory_interface #(
                 byte_idx <= 3'd1;           // = 1
             end
 
-        end else if (byte_idx == 1) begin //write 
+        end else if (byte_idx == 1) begin 
             // ADDR-Byte to SRAM
             uio_out <= ui_in;
             uio_oe  <= 8'hFF;

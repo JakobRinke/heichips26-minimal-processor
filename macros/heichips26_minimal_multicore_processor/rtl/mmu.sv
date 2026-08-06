@@ -1,3 +1,4 @@
+`timescale 1ns/100ps
 typedef enum {
     IDLE,
     LOAD_INST,
@@ -6,7 +7,8 @@ typedef enum {
     SWAP_INST,
     SWAP_ADDR,
     SWAP_DATA,
-    SWAP_END
+    SWAP_END,
+    WAIT_CONFIRM
 } State;
 
 module mmu #(
@@ -50,10 +52,11 @@ module mmu #(
     always_ff @(posedge clk_i) begin
         if (!rst_ni) begin
             state <= IDLE;
+            swap <= 0;
+            target_cpu <= {TARGET_CPU_NUM_LEN{1'd0}};
         end else begin
             case (state)
                 IDLE: begin
-                    mem_done[target_cpu] <= 0;
                     // TODO: Make CPU selection parameterized
                     if (valid[0]) begin 
                         target_cpu <= {TARGET_CPU_NUM_LEN{1'd0}};
@@ -81,7 +84,7 @@ module mmu #(
                     if (swap) begin
                         state <= SWAP_INST;
                     end else begin
-                        state <= IDLE;
+                        state <= WAIT_CONFIRM;
                         mem_done[target_cpu] <= 1;
                     end
                 end
@@ -96,12 +99,16 @@ module mmu #(
                 end
                 SWAP_DATA: begin
                     fpga_out <= reg_data[target_cpu];
-                    state <= SWAP_DATA;
+                    state <= SWAP_END;
                 end
                 SWAP_END: begin
                     fpga_out <= 8'b0;
-                    state <= IDLE;
+                    state <= WAIT_CONFIRM;
                     mem_done[target_cpu] <= 1;
+                end
+                WAIT_CONFIRM: begin
+                    mem_done[target_cpu] <= 0;
+                    if (~valid[target_cpu]) state <= IDLE;
                 end
             endcase
         end

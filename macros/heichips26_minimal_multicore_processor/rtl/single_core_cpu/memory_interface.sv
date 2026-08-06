@@ -1,16 +1,15 @@
 
 module memory_interface #(
-    parameter int LOAD_LATENCY = 1   // Read
+    parameter int LOAD_LATENCY = 1) (   // Read
     input  wire       clk,      // clock
-    input  wire       rst_n     // reset_n
+    input  wire       rst_n,     // reset_n
 
     input wire [7:0] ui_in, // Memory Controller input
     output logic [7:0] uo_out, 
 
     input wire [7:0] uio_in, //SRAM Input
     output logic [7:0] uio_out,
-    output logic [7:0] uio_oe,
-
+    output logic [7:0] uio_oe
 );
 
     logic [2:0] byte_idx;

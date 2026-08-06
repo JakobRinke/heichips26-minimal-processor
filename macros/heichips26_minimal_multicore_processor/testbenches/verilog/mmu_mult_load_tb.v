@@ -53,7 +53,7 @@ endtask
 initial begin
     $dumpfile("testbenches/waveforms/mmu_mult_load.vcd");
     $dumpvars();
-    #100;
+    #50;
     rst_ni = 1;
     reg_data = {8'd1, 8'd2};
     ram_addr = {8'd3, 8'd4};

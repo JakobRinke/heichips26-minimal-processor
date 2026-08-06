@@ -1,7 +1,7 @@
 module add8(
-        input reg clk,
-        input reg rst_n,
-        input reg start,
+        input wire clk,
+        input wire rst_n,
+        input wire start,
         input wire [7:0] op1,
         input wire [7:0] op2,
         output wire [7:0] res,
@@ -21,4 +21,3 @@ module add8(
 
 
 endmodule
-~

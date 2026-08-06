@@ -26,15 +26,15 @@ wire [0:7] registers [7:0]
 always @(posedge clk) begin
   done_reading <= 0;
   done_writing <= 0;
-  if (rst_n = 0) begin
+  if (rst_n == 0) begin
     data_1 <= 0;
     data_2 <= 0;
-  end else if (done_mem = 1) begin
+  end else if (done_mem == 1) begin
     // Do reading
     data_1 <= registers[addr1];
     data_2 <= registers[addr2];
     done_reading <= 1
-  end else if (done_decoding) begin
+  end else if (done_decoding == 1) begin
     registers[addr2] <= data;
     done_writing <= 1;
   end

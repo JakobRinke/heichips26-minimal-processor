@@ -11,8 +11,8 @@ module cpu_decoder(
     output reg imm[7:0],
 
     // Control Signals
-    output reg do_swap;
-    output reg select_jump;
+    output reg do_swap,
+    output reg select_jump,
 
 
     // Timing / Flow Signals
@@ -23,13 +23,13 @@ module cpu_decoder(
 
 always @(posedge clk) begin
     decoder_done <= 0;
-    if (rst_n = 0) begin
+    if (rst_n == 0) begin
         addr1 <= 3'b0;
         addr2 <= 3'b0;
         imm <= 8'b0;
         do_swap <= 1'b0;
         select_jump <= 1'b0;
-    end else if (start_decoding) begin
+    end else if (start_decoding == 1) begin
         // Data Signals are always mapped the same :)
         addr1[2:0] <= instruction[4:2];
         addr2[2:0] <= instruction[7:5];

@@ -70,25 +70,25 @@ always @(clk) begin
           if (do_swap_i==1) begin
             $display("Got Swap Request By ALU!");
             // Swap requested!   -> Send a request to the Ram
-            ram_addr_o <= data_1_i;
-            ram_write_data_o <= data_2_i;
-            en_swap_o <= 1;
-            valid <= 1;
-            current_state <= WAITING_FOR_SWAP;
+            ram_addr_o = data_1_i;
+            ram_write_data_o = data_2_i;
+            en_swap_o = 1;
+            current_state = WAITING_FOR_SWAP;
+            valid = 1;
           end else begin
             $display("Got Passtrough Request By ALU!");
             /// Just send the alu data to the output
-            write_back_data_o <= alu_data_i;
-            done_mem_o <= 1; // Start the writeback
+            write_back_data_o = alu_data_i;
+            done_mem_o = 1; // Start the writeback
           end
         end else if (done_pc_i) begin
           $display("Got Request by PC!");
           /// Instruction requested, send request to the Ram 
-          ram_addr_o <= program_counter_i;
-          ram_write_data_o <= 0;
-          en_swap_o <= 0;
-          valid <= 1;
-          current_state <= WAITING_FOR_INSTRUCTION;
+          ram_addr_o = program_counter_i;
+          ram_write_data_o = 0;
+          en_swap_o = 0;
+          current_state = WAITING_FOR_INSTRUCTION;
+          valid = 1;
         end
       end
 

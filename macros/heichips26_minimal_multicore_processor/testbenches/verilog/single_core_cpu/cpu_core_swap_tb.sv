@@ -76,7 +76,7 @@ module memory_communicator_tb;
     /////////////////// IMMEDIETATE_reg2_reg_1_opcode
     data_word_in_i <= 16'b01000011_100_000_01;
     ram_data_ready_i <= 1;
-    $display("SET ram_data_ready_i to high");
+   
     @(negedge clk);
     ram_data_ready_i <= 0;
 
@@ -95,7 +95,7 @@ module memory_communicator_tb;
     /////////////////// IMMEDIETATE_reg2_reg_1_opcode
     data_word_in_i <= 16'b00000101_100_000_00;
     ram_data_ready_i <= 1;
-    $display("SET ram_data_ready_i to high");
+   
     @(negedge clk);
     ram_data_ready_i <= 0;
     // #10
@@ -105,7 +105,7 @@ module memory_communicator_tb;
     // OUTPUT IS READY, check
     if (ram_out_valid_o !== 1) $display("FAIL: ram_out_valid_o not 1 (got %0d)", ram_out_valid_o);
     if (ram_out_do_swap_o !== 0) $display("FAIL: ram_out_do_swap_o not 0 (got %0d)", ram_out_do_swap_o);
-    if (ram_addr_o !== 68) $display("FAIL: ram_out_do_swap_o not 68 (got %0d)", ram_addr_o);
+    if (ram_addr_o !== 68) $display("FAIL: ram_addr_o not 68 (got %0d)", ram_addr_o);
     if (data_word_out_o !== 0) $display("FAIL: data_word_out_o not 0 (got %0d)", data_word_out_o);
     $display("Word was saved in reg4");
 
@@ -116,7 +116,7 @@ module memory_communicator_tb;
     /////////////////// IMMEDIETATE_reg2_reg_1_opcode
     data_word_in_i <= 16'b00000111_000_100_01;
     ram_data_ready_i <= 1;
-    $display("SET ram_data_ready_i to high");
+   
     @(negedge clk);
     ram_data_ready_i <= 0;
     wait (ram_out_valid_o);
@@ -124,9 +124,84 @@ module memory_communicator_tb;
     // OUTPUT IS READY, check
     if (ram_out_valid_o !== 1) $display("FAIL: ram_out_valid_o not 1 (got %0d)", ram_out_valid_o);
     if (ram_out_do_swap_o !== 0) $display("FAIL: ram_out_do_swap_o not 0 (got %0d)", ram_out_do_swap_o);
-    // Now we are at the third instr
-    if (ram_addr_o !== 69) $display("FAIL: ram_out_do_swap_o not 69 (got %0d)", ram_addr_o);
+    if (ram_addr_o !== 69) $display("FAIL: ram_addr_o not 69 (got %0d)", ram_addr_o);
     if (data_word_out_o !== 0) $display("FAIL: data_word_out_o not 0 (got %0d)", data_word_out_o);
+
+
+    $display("Try to Swap on reg4 with ram[reg0]");
+    @(negedge clk);
+    // Add 5 + register 4 and save to register 1 
+    /////////////////// IMMEDIETATE_reg2_reg_1_opcode
+    data_word_in_i <= 16'b00000000_100_000_10;
+    ram_data_ready_i <= 1;
+   
+    @(negedge clk);
+    ram_data_ready_i <= 0;
+    ////// NOW WE SHOULD GET A SWAP REQUEST 
+    wait (ram_out_valid_o);
+    #(5 * CLK_PERIOD_NS) 
+    // OUTPUT IS READY, check
+    if (ram_out_valid_o !== 1) $display("FAIL: ram_out_valid_o not 1 (got %0d)", ram_out_valid_o);
+    if (ram_out_do_swap_o !== 1) $display("FAIL: ram_out_do_swap_o not 1 (got %0d)", ram_out_do_swap_o);
+    if (ram_addr_o !== 0) $display("FAIL: ram_addr_o not 0 (got %0d)", ram_addr_o);
+    if (data_word_out_o !== 5) $display("FAIL: data_word_out_o not 5 (got %0d)", data_word_out_o);
+    /////////  Process the swap request
+    @(negedge clk)
+    data_word_in_i = 89;
+    ram_data_ready_i <= 1;
+    @(negedge clk);
+    ram_data_ready_i <= 0;
+
+    // Wait for next inst-request
+    wait (ram_out_valid_o);
+    #(5 * CLK_PERIOD_NS) 
+    // OUTPUT IS READY, check
+    if (ram_out_valid_o !== 1) $display("FAIL: ram_out_valid_o not 1 (got %0d)", ram_out_valid_o);
+    if (ram_out_do_swap_o !== 0) $display("FAIL: ram_out_do_swap_o not 0 (got %0d)", ram_out_do_swap_o);
+    if (ram_addr_o !== 70) $display("FAIL: ram_addr_o not 70 (got %0d)", ram_addr_o);
+    if (data_word_out_o !== 0) $display("FAIL: data_word_out_o not 0 (got %0d)", data_word_out_o);
+    
+
+    ////////   NOW TRY TO SWAP BACK
+  
+    $display("Try to Swap on reg4 with ram[reg4]");
+    @(negedge clk);
+    // Add 5 + register 4 and save to register 1 
+    /////////////////// IMMEDIETATE_reg2_reg_1_opcode
+    data_word_in_i <= 16'b00000000_100_100_10;
+    ram_data_ready_i <= 1;
+   
+    @(negedge clk);
+    ram_data_ready_i <= 0;
+    ////// NOW WE SHOULD GET A SWAP REQUEST 
+    wait (ram_out_valid_o);
+    #(5 * CLK_PERIOD_NS) 
+    // OUTPUT IS READY, check
+    if (ram_out_valid_o !== 1) $display("FAIL: ram_out_valid_o not 1 (got %0d)", ram_out_valid_o);
+    if (ram_out_do_swap_o !== 1) $display("FAIL: ram_out_do_swap_o not 1 (got %0d)", ram_out_do_swap_o);
+    if (ram_addr_o !== 89) $display("FAIL: ram_addr_o not 89 (got %0d)", ram_addr_o);
+    if (data_word_out_o !== 89) $display("FAIL: data_word_out_o not 89 (got %0d)", data_word_out_o);
+    /////////  Process the swap request
+    @(negedge clk)
+    data_word_in_i = 69;
+    ram_data_ready_i <= 1;
+    @(negedge clk);
+    ram_data_ready_i <= 0;
+
+    // Wait for next inst-request
+    wait (ram_out_valid_o);
+    #(5 * CLK_PERIOD_NS) 
+    // OUTPUT IS READY, check
+    if (ram_out_valid_o !== 1) $display("FAIL: ram_out_valid_o not 1 (got %0d)", ram_out_valid_o);
+    if (ram_out_do_swap_o !== 0) $display("FAIL: ram_out_do_swap_o not 0 (got %0d)", ram_out_do_swap_o);
+    if (ram_addr_o !== 71) $display("FAIL: ram_addr_o not 70 (got %0d)", ram_addr_o);
+    if (data_word_out_o !== 0) $display("FAIL: data_word_out_o not 0 (got %0d)", data_word_out_o);
+    
+
+
+
+
+
 
 
 

@@ -11,26 +11,19 @@ team-members:
 - Simon Mönch
 slot-size: tiny # small, large, tiny
 analog-pins: 0 # 0-3, only for small or tiny projects
-short-description: This is a super cool project!
+short-description: A minimal multicore processor for the HeiChips26 Hackathon
 # Please add the documentation about your project here.
 # Why did you choose to create it? How does it work? How can it be tested, etc.?
 # If your project requires additional external hardware, e.g. a USB port,
 # please mention this so we can consider it when designing the HeiChips PCB.
 long-description: |
-  Is this thing on?
-  
-  This is a super cool project 👏
-  
-  * with
-  * bullet
-  * points
-  
-  **nice** *formatting* and [links](https://heichips.github.io/).
+  The instruction set supports: ADDI (Add Immediate), BEZ (Branch if Zero), SWAP (Swap Register with RAM at Address)
+  The Multicore supports n Cores and ensures Cache coherency and atomic concurrent access (no data loss) - a mutex can be implememted 
 
 # These paths are used to verify your
 # submission during the precheck.
 # Wildcards are allowed, but there
 # should only be a single match.
-gds-path: macros/heichips26_digital_project/final/gds/*.gds
-lef-path: macros/heichips26_digital_project/final/lef/*.lef
-header-path: macros/heichips26_digital_project/final/vh/*.vh
+gds-path: macros/heichips26_minimal_multicore_processor/final/gds/*.gds
+lef-path: macros/heichips26_minimal_multicore_processor/final/lef/*.lef
+header-path: macros/heichips26_minimal_multicore_processor/final/vh/*.vh

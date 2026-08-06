@@ -11,7 +11,7 @@ meta:
     # Magic reports some overlaps which can be ignored
     Checker.IllegalOverlap: null
 
-DESIGN_NAME: heichips26_digital_project
+DESIGN_NAME: heichips26_minimal_multicore_processor
 VERILOG_FILES: dir::../../rtl/*.sv
 CLOCK_PORT: clk
 CLOCK_NET: clk
@@ -36,7 +36,7 @@ FP_SIZING: absolute
 
 # Small DEF template
 DIE_AREA: [0, 0, 500, 200]
-FP_DEF_TEMPLATE: dir::heichips26_template_small.def
+FP_DEF_TEMPLATE: dir::heichips26_template_tiny.def
 
 # Large DEF template
 #DIE_AREA: [0, 0, 500, 415]

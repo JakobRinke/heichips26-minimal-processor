@@ -63,7 +63,7 @@ initial begin
     $dumpfile("testbenches/waveforms/mmu_single_swap.vcd");
     $dumpvars();
     $display("\n\n------------ Start Test ---------------\n\n");
-    #100;
+    #50;
     rst_ni = 1;
 
     reg_data = {8'd32, 8'd2};
@@ -85,13 +85,12 @@ initial begin
 
     test_valid(16'b0000000000000000, 8'b00000100, 30);
 
-    #50;
-    fpga_in1 = {8'd4};
-    fpga_in2 = {8'd0};
+    fpga_in1 = {8'd0};
+    fpga_in2 = {8'd4};
 
-    #50
+    #100;
 
-    test_valid(16'b0000000000000100, 8'b00000011, 40);
+    test_valid(16'b00000000_00000100, 8'b00000011, 40);
 
     #100
 

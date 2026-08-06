@@ -59,8 +59,6 @@ initial begin
     ram_addr = {8'd3, 8'd4};
     valid = {1, 0};
     do_swap = {0, 0};
-    fpga_in1 = {8'd5};
-    fpga_in2 = {8'd6};
     
     #100;
 
@@ -71,6 +69,9 @@ initial begin
     #100;
 
     test_fpga_out(8'b00000011, 2);
+
+    fpga_in1 = {8'd5};
+    fpga_in2 = {8'd6};
 
     #100;
 

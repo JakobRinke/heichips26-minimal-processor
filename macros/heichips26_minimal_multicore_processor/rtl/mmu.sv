@@ -9,7 +9,7 @@ typedef enum {
     SWAP_END
 } State;
 
-module mem_mgr #(
+module mmu #(
     parameter CPU_COUNT = 2, // problem for mem_mgr_top to split into more/less
     parameter ADDR_WIDTH = 8,
     parameter DATA_WIDTH = 8

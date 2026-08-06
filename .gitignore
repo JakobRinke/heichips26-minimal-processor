@@ -49,3 +49,6 @@ IHP-Open-PDK/
 
 # KLayout
 klayoutrc.*
+
+# Verilator Output
+macros/heichips26_minimal_multicore_processor/obj_dir

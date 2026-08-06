@@ -21,6 +21,8 @@ module mem_mgr #(
 
     input [CPU_COUNT-1:0] logic [ADDR_WIDTH-1:0] reg_data,
     input [CPU_COUNT-1:0] logic [ADDR_WIDTH-1:0] ram_addr,
+    input logic [CPU_COUNT-1:0] valid,
+    input logic [CPU_COUNT-1:0] do_swap,
     output logic [CPU_COUNT-1:0] mem_done,
 
     output logic [DATA_WIDTH-1:0] data_out_cpu, //shared -> only read when mem_done_x enabled
@@ -35,7 +37,7 @@ module mem_mgr #(
 
     State current_state, next_state
 
-    
+
 
     // Counter implementation
     always_ff @(posedge clk_i) begin

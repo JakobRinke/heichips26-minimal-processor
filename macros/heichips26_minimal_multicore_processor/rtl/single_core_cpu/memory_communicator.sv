@@ -13,7 +13,7 @@ module memory_communicator (
   input wire done_pc_i,
 
   // data input
-  input wire [7:0] data_1_i,
+  // input wire [7:0] data_1_i,
   input wire [7:0] data_2_i,
   input wire [7:0] alu_data_i,
   input wire [7:0] program_counter_i,
@@ -66,7 +66,8 @@ always @(posedge clk) begin
           if (do_swap_i==1) begin
             $display("Got Swap Request By ALU!");
             // Swap requested!   -> Send a request to the Ram
-            ram_addr_o <= data_1_i;
+            // ram_addr_o <= data_1_i;
+            ram_addr_o <= alu_data_i;
             ram_write_data_o <= data_2_i;
             en_swap_o <= 1;
             current_state <= WAITING_FOR_SWAP;

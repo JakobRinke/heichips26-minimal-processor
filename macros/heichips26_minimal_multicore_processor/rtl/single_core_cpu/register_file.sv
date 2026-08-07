@@ -21,7 +21,7 @@ module register_file(
   output reg done_writing
 );
 
-reg [0:7] registers [4:1];
+reg [0:7] registers [4:7];
 
 always @(posedge clk) begin
   done_reading <= 0;
@@ -44,9 +44,9 @@ always @(posedge clk) begin
 
     case (addr2)
       0: data_2 <= 0;
-      1: data_2 <= registers[4] & registers[5];
-      2: data_2 <= ~registers[4];
-      3: data_2 <=  registers[4] | registers[5];
+      1: data_2 <= 0;
+      2: data_2 <= 0;
+      3: data_2 <=  0;
       default:  data_2 <= registers[addr2];
     endcase
 

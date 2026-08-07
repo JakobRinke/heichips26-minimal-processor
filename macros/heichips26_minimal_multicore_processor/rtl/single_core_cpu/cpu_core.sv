@@ -39,7 +39,7 @@ memory_communicator dut_memory_communicator (
   .rst_n    (rst_n),
 
   // Connected with Reg
-  .data_1_i(data_1),
+  // .data_1_i(data_1),
   .data_2_i(data_2),
   .done_mem_o(done_mem_flow),
 
@@ -94,6 +94,8 @@ register_file dut_register_file (
   .done_mem(done_mem_flow),
   .done_decoding(done_decoding_flow),
   
+  // .current_pc(current_pc),
+
   .done_reading(done_reading_flow),
   .done_writing(done_writing_flow),
 

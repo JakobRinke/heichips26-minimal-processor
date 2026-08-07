@@ -36,7 +36,8 @@ FINAL_DIR      	:= final
 # is needed for linting and RTL simulation of the whole design.
 MODULES_SYNTH := \
 	$(SRC_DIR)/heichips26_digital_project.sv \
-	$(MACROS_DIR)/counter/rtl/counter.sv
+	$(SRC_DIR)/*.sv \
+	$(SRC_DIR)/singe_core_cpu/*.sv
 
 MODULES_SIM := \
 	$(MODULES_SYNTH)
@@ -69,10 +70,10 @@ lint-verilog: ## Lint Verilog source files with Verilator (usage: make lint-veri
 	verilator --lint-only -I"$(SRC_DIR)" $(_LINT_SRCS)
 .PHONY: lint-verilog
 
-lint-verilog-all: ## Lint all Verilog source files (counter sub-macro + heichips26_digital_project)
-	$(MAKE) -C $(MACROS_DIR)/counter lint-verilog-all
-	$(MAKE) lint-verilog
-.PHONY: lint-verilog-all
+# lint-verilog-all: ## Lint all Verilog source files (counter sub-macro + heichips26_digital_project)
+# 	$(MAKE) -C $(MACROS_DIR)/counter lint-verilog-all
+# 	$(MAKE) lint-verilog
+# .PHONY: lint-verilog-all
 # ================================================================================================
 
 
@@ -198,12 +199,12 @@ copy-netlist: ## Copy final output spice, pnl and nl netlists from the last Libr
 
 
 # Build Targets
-build-counter: ## Lint, build, verify and simulate the counter macro
-	@$(MAKE) -C $(MACROS_DIR)/counter all
-.PHONY: build-counter
+# build-counter: ## Lint, build, verify and simulate the counter macro
+# 	@$(MAKE) -C $(MACROS_DIR)/counter all
+# .PHONY: build-counter
 
 build-macros: ## Lint, build, verify and simulate all macros
-	$(MAKE) build-counter
+# 	$(MAKE) build-counter
 #	ToDo: further macros
 .PHONY: build-macros
 
@@ -254,12 +255,12 @@ clean: ## Delete all generated files and folders of the TOP cell (LibreLane outp
 	@$(MAKE) -C fpga clean
 .PHONY: clean
 
-clean-counter: ## Delete all generated files and folders of the counter macro
-	@$(MAKE) -C $(MACROS_DIR)/counter clean
-.PHONY: clean-counter
+# clean-counter: ## Delete all generated files and folders of the counter macro
+# 	@$(MAKE) -C $(MACROS_DIR)/counter clean
+# .PHONY: clean-counter
 
 clean-macros: ## Delete all generated files and folders of all macros
-	$(MAKE) clean-counter
+# 	$(MAKE) clean-counter
 #	ToDo: further macros
 .PHONY: clean-macros
 

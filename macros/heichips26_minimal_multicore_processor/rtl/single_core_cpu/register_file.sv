@@ -24,8 +24,8 @@ module register_file(
 reg [0:7] registers [7:0];
 
 always @(posedge clk) begin
-  if (done_reading == 1) done_reading <= 0;
-  if (done_writing == 1) done_writing <= 0;
+  done_reading <= 0;
+  done_writing <= 0;
   
   if (rst_n == 0) begin
     done_reading <= 0;

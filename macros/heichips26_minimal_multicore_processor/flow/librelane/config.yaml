@@ -12,7 +12,7 @@ meta:
     Checker.IllegalOverlap: null
 
 DESIGN_NAME: heichips26_minimal_multicore_processor
-VERILOG_FILES: dir::../../rtl/*.sv
+VERILOG_FILES: [dir::../../rtl/*.sv, dir::../../rtl/single_core_cpu/*.sv] 
 CLOCK_PORT: clk
 CLOCK_NET: clk
 CLOCK_PERIOD: 10 # 10ns = 100MHz
@@ -31,16 +31,9 @@ RIGHT_MARGIN_MULT: 6
 FP_SIZING: absolute
 
 # Tiny DEF template
-#DIE_AREA: [0, 0, 200, 200]
-#FP_DEF_TEMPLATE: dir::heichips26_template_tiny.def
-
-# Small DEF template
 DIE_AREA: [0, 0, 200, 200]
 FP_DEF_TEMPLATE: dir::heichips26_template_tiny.def
-
-# Large DEF template
-#DIE_AREA: [0, 0, 500, 415]
-#FP_DEF_TEMPLATE: dir::heichips26_template_large.def
+# PL_TARGET_DENSITY_PCT: 95
 
 # Don't use power rings or TopMetal1 layer
 PDN_MULTILAYER: false
@@ -49,27 +42,8 @@ PDN_VERTICAL_LAYER: Metal4
 PDN_HORIZONTAL_LAYER: Metal3
 
 # Enable for better SystemVerilog support
-#USE_SLANG: true
+USE_SLANG: true
 
-MACROS:
-  counter:
-    gds:
-      - dir::../../macros/counter/final/gds/counter.gds
-    lef:
-      - dir::../../macros/counter/final/lef/counter.lef
-    vh:
-      - dir::../../macros/counter/final/vh/counter.vh
-    lib:
-      nom_typ_1p20V_25C:
-        - dir::../../macros/counter/final/lib/nom_typ_1p20V_25C/counter__nom_typ_1p20V_25C.lib
-      nom_fast_1p32V_m40C:
-        - dir::../../macros/counter/final/lib/nom_fast_1p32V_m40C/counter__nom_fast_1p32V_m40C.lib
-      nom_slow_1p08V_125C:
-        - dir::../../macros/counter/final/lib/nom_slow_1p08V_125C/counter__nom_slow_1p08V_125C.lib
-    spef:
-      nom:
-        - dir::../../macros/counter/final/spef/nom/counter.nom.spef
-    instances:
-      counter_0:
-        location: [100, 50]
-        orientation: N
+SYNTH_STRATEGY: "AREA 2"
+
+# MACROS:

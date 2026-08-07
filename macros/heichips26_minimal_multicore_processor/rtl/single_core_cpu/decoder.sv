@@ -21,7 +21,7 @@ module cpu_decoder  #(parameter START_INSTRUCTION = 16'b00000000_000_000_01) (
 
 
 always @(posedge clk) begin
-    if (decoder_done == 1) decoder_done <= 0;
+    decoder_done <= 0;
     if (rst_n == 0) begin
         // Kickstart The CPUS
         addr1[2:0] <= START_INSTRUCTION[4:2];

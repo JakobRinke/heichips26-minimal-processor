@@ -1,12 +1,10 @@
 `timescale 1ns/100ps
 typedef enum {
     IDLE,
-    LOAD_INST,
-    LOAD_ADDR,
-    LOAD_WAIT_SWAP_INST,
-    SWAP_ADDR,
-    SWAP_DATA,
-    WAIT_CONFIRM
+    RAM_INST,
+    RAM_ADDR,
+    WAIT_READ,
+    WAIT_WRITE
 } State;
 
 module mmu #(
@@ -55,52 +53,46 @@ module mmu #(
         end else begin
             case (state)
                 IDLE: begin
+                    mem_done[target_cpu] <= 1'b0;
                     // TODO: Make CPU selection parameterized
                     if (valid[0]) begin 
                         target_cpu <= {TARGET_CPU_NUM_LEN{1'd0}};
                         set_swap(0);
-                        state <= LOAD_INST;
+                        state <= RAM_INST;
                     end else if (valid[1]) begin 
                         target_cpu <= {TARGET_CPU_NUM_LEN{1'd1}};
                         set_swap(1);
-                        state <= LOAD_INST;
+                        state <= RAM_INST;
                     end
                 end
-                LOAD_INST: begin
-                    // second-LSB: Load operation, LSB: enable
-                    fpga_out <= {6'd0, 1'd0, 1'd1};
-                    state <= LOAD_ADDR;
+                RAM_INST: begin
+                    // second-LSB: operation, LSB: enable
+                    fpga_out <= {6'd0, do_swap, 1'd1};
+                    state <= RAM_ADDR;
                 end
-                LOAD_ADDR: begin
+                RAM_ADDR: begin
                     fpga_out <= ram_addr[target_cpu];
-                    state <= LOAD_WAIT_SWAP_INST;
+                    state <= WAIT_READ;
                 end
-                LOAD_WAIT_SWAP_INST: begin
+                WAIT_READ: begin
                     // TODO: determine how long to wait for RAM results
-                    data_out_cpu <= {fpga_in1, fpga_in2};
-                    if (swap) begin
-                        // second-LSB: Write operation, LSB: enable
-                        fpga_out <= {6'd0, 1'd1, 1'd1};
-                        state <= SWAP_ADDR;
-                    end else begin
-                        fpga_out <= 8'b0;
-                        state <= WAIT_CONFIRM;
-                        mem_done[target_cpu] <= 1;
+                    if(fpga_in1[1:0] != 2'b11) begin
+                        if (do_swap) begin
+                            data_out_cpu <= {fpga_in1, fpga_in2};
+                            fpga_out <= reg_data[target_cpu];
+                            state <= WAIT_WRITE;
+                        end else begin
+                            data_out_cpu <= {fpga_in2, fpga_in1};
+                            state <= IDLE;
+                            mem_done[target_cpu] <= 1'b1;
+                        end
                     end
                 end
-                SWAP_ADDR: begin
-                    fpga_out <= ram_addr[target_cpu];
-                    state <= SWAP_DATA;
-                end
-                SWAP_DATA: begin
-                    fpga_out <= reg_data[target_cpu];
-                    mem_done[target_cpu] <= 1;
-                    state <= WAIT_CONFIRM;
-                end
-                WAIT_CONFIRM: begin
-                    fpga_out <= 8'b0;
-                    mem_done[target_cpu] <= 0;
-                    if (~valid[target_cpu]) state <= IDLE;
+                WAIT_WRITE: begin
+                    if (fpga_in1[1:0] == 2'b11) begin
+                        mem_done[target_cpu] <= 1'b1;
+                        state <= IDLE;
+                    end 
                 end
             endcase
         end

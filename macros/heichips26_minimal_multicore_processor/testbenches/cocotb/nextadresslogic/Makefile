@@ -3,8 +3,12 @@
 # defaults
 SIM ?= icarus
 TOPLEVEL_LANG ?= verilog
+WAVES=1 pytest heichips2026_nextadresslogic_tb
+
 
 VERILOG_SOURCES += $(PWD)/../../rtl/single_core_cpu/nextadresslogic.sv
+VERILOG_SOURCES += $(PWD)/../../rtl/single_core_cpu/add8.sv
+
 # use VHDL_SOURCES for VHDL files
 
 # COCOTB_TOPLEVEL is the name of the toplevel module in your Verilog or VHDL file

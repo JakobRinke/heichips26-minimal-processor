@@ -15,7 +15,7 @@ DESIGN_NAME: heichips26_minimal_multicore_processor
 VERILOG_FILES: [dir::../../rtl/*.sv, dir::../../rtl/single_core_cpu/*.sv] 
 CLOCK_PORT: clk
 CLOCK_NET: clk
-CLOCK_PERIOD: 10 # 10ns = 100MHz
+CLOCK_PERIOD: 3.3 # 10ns = 100MHz
 
 # SDC files
 PNR_SDC_FILE: dir::impl.sdc

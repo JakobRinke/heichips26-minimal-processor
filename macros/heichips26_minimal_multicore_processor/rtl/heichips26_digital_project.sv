@@ -25,6 +25,7 @@ localparam ADDR_WIDTH = 8;
 localparam DATA_WIDTH = 8;
 
 assign uio_oe = 8'h00;
+assign uio_out = 8'h00;
 
 wire mem_done[CPU_COUNT-1:0];
 wire [DATA_WIDTH*2-1:0] data_out_cpu;
@@ -42,7 +43,7 @@ generate
             .ram_data_ready_i(mem_done[i]),
             .data_word_in_i(data_out_cpu),
             .ram_addr_o(ram_addr[i]),
-            .data_word_out_o(reg_data),
+            .data_word_out_o(reg_data[i]),
             .ram_out_valid_o(valid[i]),
             .ram_out_do_swap_o(do_swap[i])
         );

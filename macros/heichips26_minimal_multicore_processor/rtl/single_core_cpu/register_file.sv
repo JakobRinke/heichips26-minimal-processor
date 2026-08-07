@@ -47,7 +47,7 @@ always @(posedge clk) begin
       1: data_2 <= 0;
       2: data_2 <= 0;
       3: data_2 <=  0;
-      default:  data_2 <= registers[addr2];
+      default: data_2 <= registers[addr2];
     endcase
 
     done_reading <= 1;

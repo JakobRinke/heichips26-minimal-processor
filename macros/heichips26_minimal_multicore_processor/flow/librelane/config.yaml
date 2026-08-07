@@ -44,6 +44,10 @@ PDN_HORIZONTAL_LAYER: Metal3
 # Enable for better SystemVerilog support
 USE_SLANG: true
 
-SYNTH_STRATEGY: "AREA 2"
+SYNTH_STRATEGY: "AREA 0"
+SYNTH_ABC_AREA_USE_NF: true
+
+SYNTH_HIERARCHY_MODE: keep
+SLANG_ARGUMENTS: ["--keep-hierarchy"]
 
 # MACROS:

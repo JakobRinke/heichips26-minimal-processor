@@ -86,7 +86,7 @@ module memory_communicator_tb;
     // OUTPUT IS READY, check
     if (ram_out_valid_o !== 1) $display("FAIL: ram_out_valid_o not 1 (got %0d)", ram_out_valid_o);
     if (ram_out_do_swap_o !== 0) $display("FAIL: ram_out_do_swap_o not 0 (got %0d)", ram_out_do_swap_o);
-    if (ram_addr_o !== 1) $display("FAIL: ram_out_do_swap_o not 1 (got %0d)", ram_addr_o);
+    if (ram_addr_o !== 2) $display("FAIL: ram_out_do_swap_o not 2 (got %0d)", ram_addr_o);
     if (data_word_out_o !== 0) $display("FAIL: data_word_out_o not 0 (got %0d)", data_word_out_o);
     
     $display("FIRST INSTRICTION DONE!!!!!!");
@@ -106,7 +106,7 @@ module memory_communicator_tb;
     if (ram_out_valid_o !== 1) $display("FAIL: ram_out_valid_o not 1 (got %0d)", ram_out_valid_o);
     if (ram_out_do_swap_o !== 0) $display("FAIL: ram_out_do_swap_o not 0 (got %0d)", ram_out_do_swap_o);
     // Now we are at the third instr
-    if (ram_addr_o !== 2) $display("FAIL: ram_out_do_swap_o not 2 (got %0d)", ram_addr_o);
+    if (ram_addr_o !== 4) $display("FAIL: ram_out_do_swap_o not 2 (got %0d)", ram_addr_o);
     if (data_word_out_o !== 0) $display("FAIL: data_word_out_o not 0 (got %0d)", data_word_out_o);
     
 

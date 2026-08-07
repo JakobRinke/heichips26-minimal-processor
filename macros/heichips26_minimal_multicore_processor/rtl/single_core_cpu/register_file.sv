@@ -21,7 +21,7 @@ module register_file(
   output reg done_writing
 );
 
-reg [0:7] registers [7:0];
+reg [0:7] registers [4:1];
 
 always @(posedge clk) begin
   done_reading <= 0;
@@ -34,19 +34,25 @@ always @(posedge clk) begin
     data_2 <= 0;
   end else if (done_decoding== 1) begin
     // Do reading
-    if (addr1 != 0) begin
-      data_1 <= registers[addr1];
-    end else begin
-      data_1 <= 0;
-    end
-    if (addr2 != 0) begin
-      data_2 <= registers[addr2];
-    end else begin
-      data_2 <= 0;
-    end
+    case (addr1)
+      0: data_1 <= 0;
+      1: data_1 <= registers[4] & registers[5];
+      2: data_1 <= ~registers[4];
+      3: data_1 <= registers[4] | registers[5];
+      default:  data_1 <= registers[addr1];
+    endcase
+
+    case (addr2)
+      0: data_2 <= 0;
+      1: data_2 <= registers[4] & registers[5];
+      2: data_2 <= ~registers[4];
+      3: data_2 <=  registers[4] | registers[5];
+      default:  data_2 <= registers[addr2];
+    endcase
+
     done_reading <= 1;
   end else if (done_mem == 1) begin
-    registers[addr2] <= wb_data;
+    if (addr2[2]) registers[addr2] <= wb_data;
     done_writing <= 1;
   end
 

@@ -11,7 +11,7 @@ module nextadresslogic(
 
 	// Demux related
 	wire [7:0] jump_by;
-	assign jump_by = (select_jump && (data_1==8'b0)) ? imm : 8'b00000001;
+	assign jump_by = (select_jump && (data_1==8'b0)) ? imm : 8'b00000010;
 	
 	// PC related
 	wire done_add;

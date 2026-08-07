@@ -105,7 +105,7 @@ module memory_communicator_tb;
     // OUTPUT IS READY, check
     if (ram_out_valid_o !== 1) $display("FAIL: ram_out_valid_o not 1 (got %0d)", ram_out_valid_o);
     if (ram_out_do_swap_o !== 0) $display("FAIL: ram_out_do_swap_o not 0 (got %0d)", ram_out_do_swap_o);
-    if (ram_addr_o !== 68) $display("FAIL: ram_out_do_swap_o not 68 (got %0d)", ram_addr_o);
+    if (ram_addr_o !== 69) $display("FAIL: ram_out_do_swap_o not 68 (got %0d)", ram_addr_o);
     if (data_word_out_o !== 0) $display("FAIL: data_word_out_o not 0 (got %0d)", data_word_out_o);
     $display("Word was saved in reg4");
 
@@ -125,7 +125,7 @@ module memory_communicator_tb;
     if (ram_out_valid_o !== 1) $display("FAIL: ram_out_valid_o not 1 (got %0d)", ram_out_valid_o);
     if (ram_out_do_swap_o !== 0) $display("FAIL: ram_out_do_swap_o not 0 (got %0d)", ram_out_do_swap_o);
     // Now we are at the third instr
-    if (ram_addr_o !== 69) $display("FAIL: ram_out_do_swap_o not 69 (got %0d)", ram_addr_o);
+    if (ram_addr_o !== 71) $display("FAIL: ram_out_do_swap_o not 69 (got %0d)", ram_addr_o);
     if (data_word_out_o !== 0) $display("FAIL: data_word_out_o not 0 (got %0d)", data_word_out_o);
 
 

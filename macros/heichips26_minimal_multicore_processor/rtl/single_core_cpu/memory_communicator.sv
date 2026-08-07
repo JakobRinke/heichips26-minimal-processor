@@ -23,10 +23,7 @@ module memory_communicator (
   output reg start_decoding_o,
 
   // data output
-  output reg [15:0] next_instr_o,
-  output reg [7:0] write_back_data_o,
-
-
+  output reg [15:0] writeback_inst_and_data,
 
   ///////////////   OUTSIDE COMM /////////////////////////
   input wire mem_done_i,
@@ -53,8 +50,7 @@ always @(posedge clk) begin
 
   if (rst_n==0) begin
     // reset all outputs
-    next_instr_o <= 0;
-    write_back_data_o <= 0;
+    writeback_inst_and_data <= 0;
     ram_addr_o <= 0;
     ram_write_data_o <= 0;
     en_swap_o <= 0;
@@ -78,7 +74,7 @@ always @(posedge clk) begin
           end else begin
             $display("Got Passtrough Request By ALU!");
             /// Just send the alu data to the output
-            write_back_data_o <= alu_data_i;
+            writeback_inst_and_data <= alu_data_i;
             done_mem_o <= 1; // Start the writeback
           end
         end else if (done_pc_i) begin
@@ -95,8 +91,7 @@ always @(posedge clk) begin
 
       WAITING_FOR_INSTRUCTION: begin
         if (mem_done_i) begin
-          next_instr_o <= ram_data_i;
-          write_back_data_o <= 0;
+          writeback_inst_and_data <= ram_data_i;
           /// IMPORTANT!!! INVALIDATE; End the request
           valid <= 0;
           current_state <= IDLE;
@@ -107,7 +102,8 @@ always @(posedge clk) begin
       WAITING_FOR_SWAP: begin
         if (mem_done_i) begin
              // Send the ram output back as data
-            write_back_data_o <= ram_data_i[7:0];
+            writeback_inst_and_data[7:0] <= ram_data_i[7:0];
+
             /// IMPORTANT!!! INVALIDATE; End the request
             valid <= 0;
             current_state <= IDLE;

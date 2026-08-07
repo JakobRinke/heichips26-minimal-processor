@@ -11,7 +11,7 @@ module cpu_core #(parameter START_INSTRUCTION = 16'b00000000_000_000_01) (
   output wire ram_out_valid_o,
   output wire ram_out_do_swap_o
 );
-wire [15:0] cpu_instruction;
+wire [15:0] writeback_inst_and_data;
 wire start_decoding_flow;
 wire do_swap_ctrl;
 wire [7:0] imm;
@@ -42,7 +42,6 @@ memory_communicator dut_memory_communicator (
   .data_1_i(data_1),
   .data_2_i(data_2),
   .done_mem_o(done_mem_flow),
-  .write_back_data_o(wb_data),
 
 
   // Connected to Alu
@@ -56,7 +55,7 @@ memory_communicator dut_memory_communicator (
 
   // Connceted with decoder
   .start_decoding_o(start_decoding_flow),
-  .next_instr_o(cpu_instruction),
+  .writeback_inst_and_data(writeback_inst_and_data),
   .do_swap_i (do_swap_ctrl),
 
   ///////// OUTSIDE COMMUNICATION  ///////////////
@@ -74,7 +73,7 @@ cpu_decoder #(.START_INSTRUCTION(START_INSTRUCTION)) cpu_decoder (
     .clk      (clk),
     .rst_n    (rst_n),
 
-    .instruction(cpu_instruction),
+    .instruction(writeback_inst_and_data),
     .start_decoding(start_decoding_flow),
     .addr1(addr1),
     .addr2(addr2),
@@ -91,7 +90,7 @@ register_file dut_register_file (
 
   .addr1(addr1),
   .addr2(addr2),
-  .wb_data(wb_data),
+  .wb_data(writeback_inst_and_data[7:0]),
   .done_mem(done_mem_flow),
   .done_decoding(done_decoding_flow),
   

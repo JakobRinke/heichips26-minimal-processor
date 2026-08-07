@@ -4,7 +4,8 @@ typedef enum {
     RAM_INST,
     RAM_ADDR,
     WAIT_READ,
-    WAIT_WRITE
+    WAIT_WRITE,
+    WAIT_CONFIRM
 } State;
 
 module mmu #(
@@ -53,7 +54,6 @@ module mmu #(
         end else begin
             case (state)
                 IDLE: begin
-                    mem_done[target_cpu] <= 1'b0;
                     // TODO: Make CPU selection parameterized
                     if (valid[0]) begin 
                         target_cpu <= {TARGET_CPU_NUM_LEN{1'd0}};
@@ -84,7 +84,7 @@ module mmu #(
                         end else begin
                             data_out_cpu <= {fpga_in2, fpga_in1};
                             fpga_out <= 8'h00;
-                            state <= IDLE;
+                            state <= WAIT_CONFIRM;
                             mem_done[target_cpu] <= 1'b1;
                         end
                     end
@@ -92,8 +92,14 @@ module mmu #(
                 WAIT_WRITE: begin
                     if (fpga_in1[1:0] == 2'b11) begin
                         mem_done[target_cpu] <= 1'b1;
-                        state <= IDLE;
+                        state <= WAIT_CONFIRM;
                     end 
+                end
+                WAIT_CONFIRM: begin
+                    mem_done[target_cpu] <= 1'b0;
+                    if (~valid[target_cpu]) begin
+                        state <= IDLE;
+                    end
                 end
             endcase
         end

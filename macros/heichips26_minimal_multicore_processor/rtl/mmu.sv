@@ -83,6 +83,7 @@ module mmu #(
                             state <= WAIT_WRITE;
                         end else begin
                             data_out_cpu <= {fpga_in2, fpga_in1};
+                            fpga_out <= 8'h00;
                             state <= IDLE;
                             mem_done[target_cpu] <= 1'b1;
                         end

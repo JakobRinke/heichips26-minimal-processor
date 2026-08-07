@@ -1,21 +1,10 @@
 `timescale 1ns/100ps
-typedef enum {
-    IDLE,
-    RAM_INST,
-    RAM_ADDR,
-    WAIT_READ,
-    WAIT_WRITE,
-    WAIT_CONFIRM
-} State;
-
 module mmu #(
     parameter CPU_COUNT = 2, // problem for mem_mgr_top to split into more/less
     parameter ADDR_WIDTH = 8,
     parameter DATA_WIDTH = 8
 )(
-
-
-//CPU
+    //CPU
     input logic clk_i,
     input logic rst_ni,
 
@@ -33,7 +22,14 @@ module mmu #(
     output reg [DATA_WIDTH - 1:0] fpga_out
 );
 
-    State state;
+    localparam IDLE = 3'b000;
+    localparam RAM_INST = 3'b001;
+    localparam RAM_ADDR = 3'b010;
+    localparam WAIT_READ = 3'b011;
+    localparam WAIT_WRITE = 3'b100;
+    localparam WAIT_CONFIRM = 3'b101;
+
+    reg [2:0]state;
 
     localparam TARGET_CPU_NUM_LEN = $clog2(CPU_COUNT);
     reg [TARGET_CPU_NUM_LEN - 1 : 0]target_cpu;

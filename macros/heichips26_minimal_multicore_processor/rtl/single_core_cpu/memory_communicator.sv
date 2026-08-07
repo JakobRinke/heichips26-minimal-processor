@@ -19,14 +19,11 @@ module memory_communicator (
   input wire [7:0] program_counter_i,
 
   // Flow Output
-  output wire done_mem_o,
-  output wire start_decoding_o,
+  output reg done_mem_o,
+  output reg start_decoding_o,
 
   // data output
-  output reg [15:0] next_instr_o,
-  output reg [7:0] write_back_data_o,
-
-
+  output reg [15:0] writeback_inst_and_data,
 
   ///////////////   OUTSIDE COMM /////////////////////////
   input wire mem_done_i,
@@ -43,23 +40,23 @@ localparam IDLE = 2'b00;
 localparam WAITING_FOR_INSTRUCTION = 2'b01;
 localparam WAITING_FOR_SWAP = 2'b10;
 
-assign done_mem_o = (current_state == WAITING_FOR_SWAP && mem_done_i) ||
-                    (current_state == IDLE && done_alu_i && !do_swap_i);
-
-assign start_decoding_o = (current_state == WAITING_FOR_INSTRUCTION && mem_done_i);
-
 reg [1:0] current_state;
 
 always @(posedge clk) begin
 
+  // Always reset pulse registers
+  done_mem_o <= 0;
+  start_decoding_o <= 0;
+
   if (rst_n==0) begin
     // reset all outputs
-    next_instr_o <= 0;
-    write_back_data_o <= 0;
+    writeback_inst_and_data <= 0;
     ram_addr_o <= 0;
     ram_write_data_o <= 0;
     en_swap_o <= 0;
     valid <= 0;
+    done_mem_o <= 0;
+    start_decoding_o <= 0;
     current_state <= IDLE;
   end else begin
     case (current_state) 
@@ -77,9 +74,9 @@ always @(posedge clk) begin
           end else begin
             $display("Got Passtrough Request By ALU!");
             /// Just send the alu data to the output
-            write_back_data_o <= alu_data_i;
+            writeback_inst_and_data <= alu_data_i;
+            done_mem_o <= 1; // Start the writeback
           end
-
         end else if (done_pc_i) begin
           $display("Got Request by PC!");
           /// Instruction requested, send request to the Ram 
@@ -94,21 +91,23 @@ always @(posedge clk) begin
 
       WAITING_FOR_INSTRUCTION: begin
         if (mem_done_i) begin
-          next_instr_o <= ram_data_i;
-          write_back_data_o <= 0;
+          writeback_inst_and_data <= ram_data_i;
           /// IMPORTANT!!! INVALIDATE; End the request
           valid <= 0;
           current_state <= IDLE;
+          start_decoding_o <= 1;
         end
       end
 
       WAITING_FOR_SWAP: begin
         if (mem_done_i) begin
              // Send the ram output back as data
-            write_back_data_o <= ram_data_i[7:0];
+            writeback_inst_and_data[7:0] <= ram_data_i[7:0];
+
             /// IMPORTANT!!! INVALIDATE; End the request
             valid <= 0;
             current_state <= IDLE;
+            done_mem_o <= 1; // Start the writeback
         end
       end
     endcase

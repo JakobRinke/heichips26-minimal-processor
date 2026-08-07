@@ -72,7 +72,7 @@ initial begin
     valid = {1, 0};
     do_swap = {1, 0};
 
-    fpga_in1 = 0;
+    fpga_in1 = 3;
     fpga_in2 = 0;
     
     #100;
@@ -87,30 +87,60 @@ initial begin
     ram_addr = {4, 9};
 
     test_cpu_out(0, 2);
-    test_fpga_out(8'b00000001, 3);
+    test_fpga_out(8'b00000011, 3);
 
     #100;
 
     test_cpu_out(0, 4);
     test_fpga_out(8'b00000100, 5);
 
+    fpga_in1 = 3;
+    fpga_in2 = 0;
+
+    #100;
+    test_cpu_out(0, 6);
+    test_fpga_out(8'b00000100, 7);
+
+    #100;
+    test_cpu_out(0, 61);
+    test_fpga_out(8'b00000100, 71);
+
     fpga_in1 = 0;
     fpga_in2 = 4;
 
-    #100;
-    test_cpu_out(16'b00000000_00000100, 6);
-    test_fpga_out(8'b00000011, 7);
-
     #100
+    
     test_cpu_out(16'b00000000_00000100, 8);
-    test_fpga_out(8'b00000100, 9);
+    test_fpga_out(8'b00100000, 9);
+    
+    fpga_in1 = 3;
+    fpga_in2 = 0;
 
     #100
     test_cpu_out(16'b00000000_00000100, 10);
     test_fpga_out(8'b00100000, 11);
 
+    #100
+
+    test_fpga_out(8'b00100000, 12);
+
+    #100
+
+    test_fpga_out(8'b00100000, 12);
+
+    #100
+
+    test_fpga_out(8'b00100000, 12);
+    fpga_in1 = 0;
+    fpga_in2 = 0;
+
+    #100
+    
+    fpga_in1 = 3;
+    fpga_in2 = 0;
+
     if (!(mem_done[1] == 1)) begin
-        fail(12);
+        fail(13);
     end 
 
     valid = {0, 1};
@@ -127,40 +157,60 @@ initial begin
 
     #100
 
-    test_fpga_out(0, 140);
+    test_fpga_out(0, 15);
 
     #100
 
-    test_fpga_out(8'b00000001, 16);
+    test_fpga_out(8'b00000011, 16);
 
     #100
 
     test_fpga_out(8'b00001001, 17);
-    fpga_in1 = 0;
-    fpga_in2 = 32;
+    fpga_in1 = 3;
+    fpga_in2 = 0;
     #100
 
-    test_fpga_out(8'b00000011, 18);
+    test_fpga_out(8'b00001001, 18);
 
     #100
 
     test_fpga_out(8'b00001001, 19);
-
+    fpga_in1 = 0;
+    fpga_in2 = 32;
 
     #100
 
     test_fpga_out(8'b00010110, 20);
     test_cpu_out(16'b00000000_00100000, 21);
 
+    fpga_in1 = 3;
+    fpga_in2 = 0;
+
+    #100
+
+    fpga_in1 = 0;
+    fpga_in2 = 0;
+
+    #100
+
+    fpga_in1 = 3;
+    fpga_in2 = 0;
+
     if (!(mem_done[0] == 1)) begin
         fail(22);
     end 
 
     #100
-
+    valid = {0, 0};
     if (!(mem_done[0] == 0)) begin
         fail(23);
     end 
+
+    #100
+
+    test_fpga_out(0, 24);
+    
+
 
     $display("Finished without errors.");
     $finish;

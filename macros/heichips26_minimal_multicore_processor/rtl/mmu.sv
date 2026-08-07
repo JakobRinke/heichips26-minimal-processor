@@ -60,6 +60,7 @@ module mmu #(
                         set_swap(1);
                         state <= RAM_INST;
                     end
+
                 end
                 RAM_INST: begin
                     // second-LSB: operation, LSB: enable
@@ -86,7 +87,7 @@ module mmu #(
                     end
                 end
                 WAIT_WRITE: begin
-                    if (fpga_in1[1:0] == 2'b11) begin
+                    if (fpga_in1[1:0] != 2'b11) begin
                         mem_done[target_cpu] <= 1'b1;
                         state <= WAIT_CONFIRM;
                     end 
@@ -95,7 +96,11 @@ module mmu #(
                     mem_done[target_cpu] <= 1'b0;
                     if (~valid[target_cpu]) begin
                         state <= IDLE;
+                        fpga_out <= 0;
                     end
+                end
+                default: begin
+                    state <= IDLE;
                 end
             endcase
         end

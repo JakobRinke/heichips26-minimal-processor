@@ -36,17 +36,17 @@ always @(posedge clk) begin
     // Do reading
     case (addr1)
       0: data_1 <= 0;
-      1: data_1 <= registers[1] & registers[2];
-      2: data_1 <= ~registers[1];
-      3: data_1 <= registers[1] | registers[2];
+      1: data_1 <= registers[4] & registers[5];
+      2: data_1 <= ~registers[4];
+      3: data_1 <= registers[4] | registers[5];
       default:  data_1 <= registers[addr1];
     endcase
 
     case (addr2)
       0: data_2 <= 0;
-      1: data_2 <= registers[1] & registers[2];
-      2: data_2 <= ~registers[1];
-      3: data_2 <=  registers[1] | registers[2];
+      1: data_2 <= registers[4] & registers[5];
+      2: data_2 <= ~registers[4];
+      3: data_2 <=  registers[4] | registers[5];
       default:  data_2 <= registers[addr2];
     endcase
 

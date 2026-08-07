@@ -3,8 +3,10 @@
 It works on 200um x 200um and can have a clock frequency of up to 300 MHz
 ![CPU explained](CPU_explained.png)
 
+## TOP Level Architecture
+![Top Level](top_level_architecture.drawio.svg)
 
-### ISA
+## ISA
 The CPU only does support 3 Instructions:
   - ADDI (Add Immediate)
   - JMPZ (Jump if Register is Zero)
@@ -15,12 +17,11 @@ More info on the ISA is ![here](workloads/README.md)
 And a example assembly program is ![here](workloads/assembly/simple_addition.nand)
 
 
-### CPU Architecture
+## CPU Architecture
 Here is a simple Architecture Stream.
 ![CPU Architecture](cpu_arch.drawio.png)
 
 The Memory Communicatior manages the memory Access and makes each CPU able to communicate with the MMU
 
 
-### TOP Level Architecture
 TODO

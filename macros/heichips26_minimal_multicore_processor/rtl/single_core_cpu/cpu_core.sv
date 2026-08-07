@@ -94,6 +94,7 @@ register_file dut_register_file (
   .wb_data(wb_data),
   .done_mem(done_mem_flow),
   .done_decoding(done_decoding_flow),
+  .current_pc(current_pc),
   
   .done_reading(done_reading_flow),
   .done_writing(done_writing_flow),

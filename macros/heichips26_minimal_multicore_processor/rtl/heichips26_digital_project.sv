@@ -37,7 +37,7 @@ wire do_swap[CPU_COUNT-1:0];
 genvar i;
 generate
     for (i = 0; i < CPU_COUNT; i = i + 1) begin
-        cpu_core cpu (
+        cpu_core cpu #(.START_INSTRUCTION(i*2))(
             .clk(clk),
             .rst_n(rst_n),
             .ram_data_ready_i(mem_done[i]),

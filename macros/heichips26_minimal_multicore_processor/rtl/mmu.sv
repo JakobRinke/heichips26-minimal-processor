@@ -67,7 +67,7 @@ module mmu #(
                 end
                 RAM_INST: begin
                     // second-LSB: operation, LSB: enable
-                    fpga_out <= {6'd0, do_swap, 1'd1};
+                    fpga_out <= {6'd0, do_swap[target_cpu], 1'd1};
                     state <= RAM_ADDR;
                 end
                 RAM_ADDR: begin
@@ -77,7 +77,7 @@ module mmu #(
                 WAIT_READ: begin
                     // TODO: determine how long to wait for RAM results
                     if(fpga_in1[1:0] != 2'b11) begin
-                        if (do_swap) begin
+                        if (do_swap[target_cpu]) begin
                             data_out_cpu <= {fpga_in1, fpga_in2};
                             fpga_out <= reg_data[target_cpu];
                             state <= WAIT_WRITE;

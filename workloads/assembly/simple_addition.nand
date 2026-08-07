@@ -1,0 +1,24 @@
+; m = m + n
+; Value m in memory adress *m should be added with value n in memory adress *n and wrote back.
+; Remember: adresses *m and *n are well known at compile time
+; temporarily store adresses for later swap 
+addi x0 x1 *m
+addi x0 x2 *n
+
+; Swap to get the values
+; Keep in mind: Data in x1 and x2 is destroydding numbers in memory together and write backed 
+swap x1 x1 ; value of *m is in x1
+swap x2 x2 ; value of *n is in x2
+addi x2 x3 #0 ; value of *n is in x3 (for restoring original value in *n later) 
+
+; If x2 is zero (if n==0) then jump by 4 forward out of the loop
+jmpz x2 #4
+addi x1 x1 #1   ; add 1
+addi x2 x2 #255 ; subtract 1
+jmpz x0 #253    ; looping until added as much to x1 as subtracted from x2
+
+; Now: x2 is 0 and x1 is m+n. x3 is n. Use x2 as temporary storage.
+addi x0 x2 *m 
+swap x1 x2
+addi x0 x2 *n
+swap x3 x2

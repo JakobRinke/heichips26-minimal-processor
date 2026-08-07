@@ -64,14 +64,14 @@ module memory_interface #(
             fpga_in1 <= 8'h03;   // busy
             fpga_in2 <= 8'h00;
 
-        end else if (state == S_IDLE) begin
+        end else if (state == S_IDLE) begin //command load or swap
             fpga_in1 <= 8'h03;
             if (fpga_out[0]) begin
                 is_swap <= fpga_out[1];
                 state   <= S_ADDR;
             end
 
-        end else if (state == S_ADDR) begin
+        end else if (state == S_ADDR) begin //adress slicing
             block    <= fpga_out[7:2];
             offset   <= fpga_out[1:0];
             wait_cnt <= 4'd0;
@@ -84,14 +84,14 @@ module memory_interface #(
                 wait_cnt <= wait_cnt + 1'b1;
             end
 
-        end else if (state == S_READ_READY) begin
+        end else if (state == S_READ_READY) begin //read out sram sliced
             case (offset)
                 2'b00: begin fpga_in1 <= sram_dout[7:0];   fpga_in2 <= sram_dout[15:8];  end
                 2'b01: begin fpga_in1 <= sram_dout[15:8];  fpga_in2 <= sram_dout[23:16]; end
                 2'b10: begin fpga_in1 <= sram_dout[23:16]; fpga_in2 <= sram_dout[31:24]; end
                 2'b11: begin fpga_in1 <= sram_dout[31:24]; fpga_in2 <= sram_dout[7:0];   end
             endcase
-            state <= is_swap ? S_WRITE_WAIT : S_IDLE;
+            state <= is_swap ? S_WRITE_WAIT : S_IDLE; //write if is_swap, idle if load
 
         end else if (state == S_WRITE_WAIT) begin
             fpga_in1 <= 8'h00;   // busy

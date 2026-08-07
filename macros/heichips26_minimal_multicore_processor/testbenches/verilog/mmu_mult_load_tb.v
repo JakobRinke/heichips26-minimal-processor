@@ -59,6 +59,7 @@ initial begin
     ram_addr = {8'd3, 8'd4};
     valid = {1, 0};
     do_swap = {0, 0};
+    fpga_in1 = 8'h03;
     
     #100;
 
@@ -70,21 +71,20 @@ initial begin
 
     test_fpga_out(8'b00000011, 2);
 
-    fpga_in1 = {8'd5};
-    fpga_in2 = {8'd6};
+    fpga_in1 = 8'h00;
+    fpga_in2 = 8'd6;
 
     #100;
 
+    fpga_in1 = 8'h03;
     test_fpga_out(8'b00000000, 3);
     if (!(mem_done[1] == 1)) fail(4);
-
-    #100;
-
-    if (!(mem_done[1] == 0)) fail(5);
 
     valid = {0, 1};
 
     #100;
+
+    if (!(mem_done[1] == 0)) fail(5);
 
     #100;
 
@@ -96,16 +96,23 @@ initial begin
 
     test_fpga_out(8'b00000100, 7);
 
+    // Wait for a few cycles
+    #400
+
+    fpga_in1 = 8'h00;
+    fpga_in2 = 8'hFF;
+
     #100;
 
+    fpga_in1 = 8'h03;
     test_fpga_out(8'b00000000, 8);
     if (!(mem_done[0] == 1)) fail(9);
+
+    valid = {0, 0};
 
     #100;
 
     if (!(mem_done[0] == 0)) fail(10);
-
-    valid = {0, 0};
 
     #100;
 
@@ -123,8 +130,15 @@ initial begin
 
     #100;
 
+    fpga_in1 = 8'h00;
+    fpga_in2 = 8'hAA;
+
+    #100;
+
     test_fpga_out(8'b00000000, 13);
     if (!(mem_done[1] == 1)) fail(14);
+
+    valid = {0, 0};
 
     #100;
 

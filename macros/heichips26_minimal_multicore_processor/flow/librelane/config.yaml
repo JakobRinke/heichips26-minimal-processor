@@ -49,5 +49,3 @@ SYNTH_ABC_AREA_USE_NF: true
 
 # SYNTH_HIERARCHY_MODE: keep
 # SLANG_ARGUMENTS: ["--keep-hierarchy"]
-
-# MACROS:

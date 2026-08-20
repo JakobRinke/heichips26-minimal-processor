@@ -11,13 +11,21 @@ The two cores use the MMU for all memory interactions, including fetching of ins
 ## ISA
 | Instruction     | Description                                        |
 |-----------------|----------------------------------------------------|
-| ADDI Ra Rb #imm | Jump to PC + #imm if, and only if, R = 0           |
-| JMPZ R #imm     | Rb = Ra + #imm                                     |
+| ADDI R2 R1 #imm | R2 = R1 + #imm                                     |
+| JMPZ R1 #imm    | Jump to PC + #imm if, and only if, R = 0           |
 | SWAP Ra Rb      | Swap Ra with value at address saved in Rb (atomic) |
 
 More info on the ISA can be found ![here](workloads/README.md).
 
 And an exemplary assembly program can be found ![here](workloads/assembly/simple_addition.nand).
+
+Each instruction as a width of 16 bit and holds the following
+| Bits            | Description                                        |
+|-----------------|----------------------------------------------------|
+|  1:0            | opcode, 00=ADDI; 01=JMPZ; 10=SWAP                  |
+|  4:2            | R1 ID                                              |
+|  7:5            | R2 ID                                              |
+| 15:8            | 8 Bit Immediate                                    |
 
 ## CPU Architecture
 ![CPU Architecture](cpu_arch.drawio.png)

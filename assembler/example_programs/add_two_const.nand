@@ -1,0 +1,31 @@
+// Save Const 0x10 at 0xFF
+ADDI x6, x0, 0x10
+ADDI x7, x0, 0xFF
+SWAP x7, x6
+// Save Const 0x53 at 0xFE
+ADDI x6, x0, 0x53
+ADDI x7, x0, 0xFE
+SWAP x7, x6
+// Now Load *a from address 0xFF and save in reg x4
+ADDI x7, x0, 0xFF
+SWAP x7, x6
+ADDI x4, x6, 0x0
+SWAP x7, x6
+// Second Load *b from address 0xFE and save in reg x5
+ADDI x7, x0, 0xFE
+SWAP x7, x6
+ADDI x5, x6, 0x0
+SWAP x7, x6
+// Now add what is in x5 to x4 unitl x5 is zero
+add_start:
+    JMPZ x5, add_end
+    ADDI x4, x4, 0x1
+    ADDI x5, x5, 0xFF
+    JMPZ x0, add_start
+add_end:
+// Now the output is in reg 4. Store it in *c at address 0xFD
+ADDI x7, x0, 0xFD
+SWAP x7, x4
+// Trap with foreverloop
+end:
+    JMPZ x0, end

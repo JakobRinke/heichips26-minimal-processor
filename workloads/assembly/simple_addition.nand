@@ -2,14 +2,14 @@
 ; Value m in memory adress *m should be added with value n in memory adress *n and wrote back.
 ; Remember: adresses *m and *n are well known at compile time
 ; temporarily store adresses for later swap 
-addi x0 x4 *m
-addi x0 x5 *n
+addi x4 x0 *m
+addi x5 x0 *n
 
 ; Swap to get the values
 ; Keep in mind: Data in x4 and x2 is destroydding numbers in memory together and write backed 
 swap x4 x4 ; value of *m is in x4
 swap x5 x5 ; value of *n is in x5
-addi x5 x6 #0 ; value of *n is in x6 (for restoring original value in *n later) 
+addi x6 x5 #0 ; value of *n is in x6 (for restoring original value in *n later) 
 
 ; If x5 is zero (if n==0) then jump by 4 forward out of the loop
 jmpz x5 #4
@@ -18,7 +18,7 @@ addi x5 x5 #255 ; subtract 1
 jmpz x0 #253    ; looping until added as much to x4 as subtracted from x5
 
 ; Now: x5 is 0 and x4 is m+n. x6 is n. Use x5 as temporary storage.
-addi x0 x5 *m 
+addi x5 x0 *m 
 swap x4 x5
-addi x0 x5 *n
+addi x5 x0 *n
 swap x6 x5

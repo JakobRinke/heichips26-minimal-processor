@@ -31,10 +31,10 @@ class Interpreter:
 
     def step(self):
         instruction = (self.memory[self.pc] << 8) + self.memory[self.pc + 1]  # Combine the next two bytes to form the instruction
-        opcode = (instruction) & 0x3  # Extract the opcode (first 2 bits)
-        reg1 = (instruction >> 2) & 0x7  # Extract the first register (next 3 bits)
-        reg2 = (instruction >> 5) & 0x7  # Extract the second register (next 3 bits)
-        imm = (instruction >> 8) & 0xFF  # Extract the immediate value (last 8 bits)
+        opcode = (instruction >> 8) & 0x3  # Extract the opcode (first 2 bits)
+        reg1 = (instruction >> 10) & 0x7  # Extract the first register (next 3 bits)
+        reg2 = (instruction >> 13) & 0x7  # Extract the second register (next 3 bits)
+        imm = (instruction) & 0xFF  # Extract the immediate value (last 8 bits)
 
         if opcode == 0:  # ADDI
             self.registers[reg2] = int8_add(self.get_reg_val(reg1, 1), imm)

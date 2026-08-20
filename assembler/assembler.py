@@ -132,8 +132,9 @@ def convert_binary(lines:list):
         else:
             raise Exception(f"Unknown instruction: {l}")
 
-        binary_lines.append(imm)
         binary_lines.append(reg2 + reg1 + opcode)
+        binary_lines.append(imm)
+        
 
 
     return binary_lines

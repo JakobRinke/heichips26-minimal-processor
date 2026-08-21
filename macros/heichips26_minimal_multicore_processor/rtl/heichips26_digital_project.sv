@@ -37,7 +37,8 @@ wire do_swap[CPU_COUNT-1:0];
 genvar i;
 generate
     for (i = 0; i < CPU_COUNT; i = i + 1) begin
-        cpu_core #(.START_INSTRUCTION(i*2)) cpu (
+        /// Start instruction is a jump and the jump adress (imm) is set to CPU index * 2 
+        cpu_core #(.START_INSTRUCTION((i * 2 << 8) | 16'b00000000_000_000_01)) cpu (
             .clk(clk),
             .rst_n(rst_n),
             .ram_data_ready_i(mem_done[i]),

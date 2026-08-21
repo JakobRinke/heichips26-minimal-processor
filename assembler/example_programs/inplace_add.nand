@@ -1,0 +1,31 @@
+// m = m + n
+// Value m in memory adress *m should be added with value n in memory adress *n and wrote back.
+// Remember: adresses *m=0xFF and *n=0xFE are well known at compile time
+// temporarily store adresses for later SWAP 
+ADDI x4, x0, 0xFF
+ADDI x5, x0, 0xFE
+// Swap to get the values
+// Keep in mind: Data in x4 and x2 is destroydding numbers in memory together and write backed 
+// value of *m=0xFF is in x4
+SWAP x4, x4
+// value of *n=0xFE is in x5
+SWAP x5, x5
+// value of *n is in x6 (for restoring original value in *n later) 
+ADDI x6, x5, 0x0 
+// If x5 is zero (if n==0) then jump by 4 forward out of the loop
+add_start:
+    JMPZ x5, add_end 
+    // add 1
+    ADDI x4, x4, 0x01 
+    // subtract 1 
+    ADDI x5, x5, 0xFF
+    // immediate is decimal -3: looping until added as much to x4 as subtracted from x5
+    JMPZ x0, add_start   
+add_end:
+// Now: x5 is 0 and x4 is m+n. x6 is n. Use x5 as temporary storage.
+ADDI x5, x0, 0xFF 
+SWAP x4, x5
+ADDI x5, x0, 0xFE
+SWAP x6, x5
+end:
+    JMPZ x0, end

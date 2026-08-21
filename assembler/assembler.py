@@ -33,7 +33,7 @@ def remove_comments(lines:list):
             pass # skip comment lines
         elif "//" in str(l):
             new_lines.append(str(l).split("//")[0])
-        else:
+        elif not str(l).strip() == "":
             new_lines.append(l)
     return new_lines
 
@@ -129,6 +129,8 @@ def convert_binary(lines:list):
             print(operators)
             reg2 = reg_code_to_3bit_binary(operators[1].strip())
             imm = "00000000"  # Unused for SWAP
+        elif l.strip() == "":
+            continue  # Skip empty lines
         else:
             raise Exception(f"Unknown instruction: {l}")
 
@@ -146,10 +148,10 @@ def assemble_single(lines:list):
     lines = remove_white_spaces(lines)
     lines = remove_comments(lines)
     lines = merge_markers_with_inst(lines)
-    lines = detect_double_markers(lines)
-    lines = resolve_markers(lines)
     for l in lines:
         print(l)
+    lines = detect_double_markers(lines)
+    lines = resolve_markers(lines)
     binary_lines = convert_binary(lines)
     return binary_lines
 

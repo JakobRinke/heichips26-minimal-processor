@@ -1,0 +1,41 @@
+// Jump to core Code
+JMPZ x0, core1
+JMPZ x0, core2
+
+// Core 1: Compute the sum of 15 and 67 and save it at 0xFF
+core1:
+    ADDI x4, x0, 15
+    ADDI x5, x0, 67
+    loop_add_1_start:
+        JMPZ x5, loop_add_1_end
+        ADDI x4, x4, 1
+        ADDI x5, x5, -1
+        JMPZ x0, loop_add_1_start
+    loop_add_1_end:
+    
+    // Store at 0xFF
+    ADDI x7, x0, 0xFF
+    SWAP x7, x4
+
+    // Trap
+    END1:
+    JMPZ x0, END1
+
+// Core 2: Compute the sum of 42 and 69 and save it at 0xFE
+core2:
+    ADDI x4, x0, 42
+    ADDI x5, x0, 69
+    loop_add_2_start:
+        JMPZ x5, loop_add_2_end
+        ADDI x4, x4, 1
+        ADDI x5, x5, -1
+        JMPZ x0, loop_add_2_start
+    loop_add_2_end:
+    
+    // Store at 0xFE
+    ADDI x7, x0, 0xFE
+    SWAP x7, x4
+
+    // Trap
+    END2:
+    JMPZ x0, END2

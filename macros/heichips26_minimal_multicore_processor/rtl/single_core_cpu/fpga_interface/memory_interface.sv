@@ -1,5 +1,6 @@
 `default_nettype none
 
+
 module memory_interface #(
     parameter int SRAM_READ_LATENCY = 1
 ) (
@@ -19,29 +20,44 @@ module memory_interface #(
     input  wire  [31:0] sram_dout
 );
 
-    localparam S_IDLE       = 3'd0;
-    localparam S_ADDR       = 3'd1;
-    localparam S_READ_WAIT  = 3'd2;
-    localparam S_READ_READY = 3'd3;
-    localparam S_WRITE_WAIT = 3'd4;   
-    localparam S_WRITE      = 3'd5;
-    localparam S_WRITE_DONE = 3'd6;
+    localparam S_IDLE        = 4'd0;
+    localparam S_ADDR        = 4'd1;
+    localparam S_READ_WAIT   = 4'd2;
+    localparam S_READ_READY  = 4'd3;
+    localparam S_READ2_ADDR  = 4'd4;   // only entered when offset == 2'b11
+    localparam S_READ2_WAIT  = 4'd5;
+    localparam S_READ2_READY = 4'd6;
+    localparam S_WRITE_WAIT  = 4'd7;
+    localparam S_WRITE       = 4'd8;
+    localparam S_WRITE_DONE  = 4'd9;
 
-    logic [2:0] state;
+    logic [3:0] state;
     logic       is_swap;
-    logic [5:0] block;    // ADDR[7:2]
-    logic [1:0] offset;   // ADDR[1:0]
+    logic       armed;      // seen fpga_out[0]==0 since the last command; required before accepting a new '1'
+    logic [5:0] block;      // ADDR[7:2]
+    logic [1:0] offset;     // ADDR[1:0]
     logic [3:0] wait_cnt;
+    logic [7:0] byte3_pending;  // holds the offset==3 byte until the cross-word partner is also ready
+
+    wire [5:0] block_plus1 = block + 6'd1;
 
     always_comb begin
-        sram_addr = {4'b0000, (state == S_ADDR) ? fpga_out[7:2] : block};
+        unique case (state)
+            S_ADDR:
+                sram_addr = {4'b0000, fpga_out[7:2]};
+            S_READ2_ADDR, S_READ2_WAIT, S_READ2_READY:
+                sram_addr = {4'b0000, block_plus1};
+            default:
+                sram_addr = {4'b0000, block};
+        endcase
+
         sram_men  = 1'b0;
         sram_wen  = 1'b0;
         sram_ren  = 1'b0;
         sram_din  = 32'b0;
         sram_bm   = 32'b0;
 
-        if (state == S_ADDR) begin
+        if (state == S_ADDR || state == S_READ2_ADDR) begin
             sram_men = 1'b1;
             sram_ren = 1'b1;
 
@@ -61,17 +77,21 @@ module memory_interface #(
         if (!rst_n) begin
             state    <= S_IDLE;
             wait_cnt <= 4'd0;
+            armed    <= 1'b0;
             fpga_in1 <= 8'h03;   // busy
             fpga_in2 <= 8'h00;
 
-        end else if (state == S_IDLE) begin //command load or swap
+        end else if (state == S_IDLE) begin // command load or swap, rising-edge gated
             fpga_in1 <= 8'h03;
-            if (fpga_out[0]) begin
+            if (fpga_out[0] !== 1'b1) begin
+                armed <= 1'b1;
+            end else if (armed) begin
                 is_swap <= fpga_out[1];
+                armed   <= 1'b0;
                 state   <= S_ADDR;
             end
 
-        end else if (state == S_ADDR) begin //adress slicing
+        end else if (state == S_ADDR) begin // address slicing
             block    <= fpga_out[7:2];
             offset   <= fpga_out[1:0];
             wait_cnt <= 4'd0;
@@ -84,14 +104,34 @@ module memory_interface #(
                 wait_cnt <= wait_cnt + 1'b1;
             end
 
-        end else if (state == S_READ_READY) begin //read out sram sliced
+        end else if (state == S_READ_READY) begin
             case (offset)
                 2'b00: begin fpga_in1 <= sram_dout[7:0];   fpga_in2 <= sram_dout[15:8];  end
                 2'b01: begin fpga_in1 <= sram_dout[15:8];  fpga_in2 <= sram_dout[23:16]; end
                 2'b10: begin fpga_in1 <= sram_dout[23:16]; fpga_in2 <= sram_dout[31:24]; end
-                2'b11: begin fpga_in1 <= sram_dout[31:24]; fpga_in2 <= sram_dout[7:0];   end
+                2'b11: begin byte3_pending <= sram_dout[31:24]; end
             endcase
-            state <= is_swap ? S_WRITE_WAIT : S_IDLE; //write if is_swap, idle if load
+            if (offset == 2'b11) begin
+                wait_cnt <= 4'd0;
+                state    <= S_READ2_ADDR;
+            end else begin
+                state <= is_swap ? S_WRITE_WAIT : S_IDLE;
+            end
+
+        end else if (state == S_READ2_ADDR) begin
+            state <= S_READ2_WAIT;
+
+        end else if (state == S_READ2_WAIT) begin
+            if (wait_cnt == SRAM_READ_LATENCY[3:0] - 1) begin
+                state <= S_READ2_READY;
+            end else begin
+                wait_cnt <= wait_cnt + 1'b1;
+            end
+
+        end else if (state == S_READ2_READY) begin
+            fpga_in1 <= byte3_pending;
+            fpga_in2 <= sram_dout[7:0];   // byte 0 of the following word
+            state    <= is_swap ? S_WRITE_WAIT : S_IDLE;
 
         end else if (state == S_WRITE_WAIT) begin
             fpga_in1 <= 8'h00;   // busy
@@ -102,9 +142,11 @@ module memory_interface #(
             state    <= S_WRITE_DONE;
 
         end else begin // S_WRITE_DONE
-            fpga_in1 <= 8'h03;   // ready, "11" back - no opcode 
+            fpga_in1 <= 8'h03;   // ready, "11" back - no opcode
             state    <= S_IDLE;
         end
     end
 
 endmodule
+
+`default_nettype wire

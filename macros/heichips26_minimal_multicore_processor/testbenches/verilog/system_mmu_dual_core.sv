@@ -90,7 +90,7 @@ module memory_communicator_tb;
         fpga_in2 <= memory[address + 1];
         fpga_in1 <= memory[address];
 
-        repeat(2) @(posedge clk); /// Wait
+        repeat(1) @(posedge clk); /// Wait
         fpga_in1 <= 8'b00000011; // End the transaction, reset the signal
       end
 

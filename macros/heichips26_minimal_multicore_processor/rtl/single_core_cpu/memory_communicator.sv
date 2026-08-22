@@ -64,7 +64,6 @@ always @(posedge clk) begin
         if (done_alu_i==1) begin
           
           if (do_swap_i==1) begin
-            $display("Got Swap Request By ALU!");
             // Swap requested!   -> Send a request to the Ram
             // ram_addr_o <= data_1_i;
             ram_addr_o <= alu_data_i;
@@ -73,13 +72,11 @@ always @(posedge clk) begin
             current_state <= WAITING_FOR_SWAP;
             valid <= 1;
           end else begin
-            $display("Got Passtrough Request By ALU!");
             /// Just send the alu data to the output
             writeback_inst_and_data <= alu_data_i;
             done_mem_o <= 1; // Start the writeback
           end
         end else if (done_pc_i) begin
-          $display("Got Request by PC!");
           /// Instruction requested, send request to the Ram 
           ram_addr_o <= program_counter_i;
           ram_write_data_o <= 0;
@@ -104,7 +101,6 @@ always @(posedge clk) begin
         if (mem_done_i) begin
              // Send the ram output back as data
             writeback_inst_and_data[7:0] <= ram_data_i[7:0];
-
             /// IMPORTANT!!! INVALIDATE; End the request
             valid <= 0;
             current_state <= IDLE;

@@ -87,8 +87,8 @@ module mmu #(
                     end
                 end
                 WAIT_WRITE: begin
-                    fpga_out <= 8'h00;
                     if (fpga_in1[1:0] != 2'b11) begin
+                        fpga_out <= 8'h00;
                         mem_done[target_cpu] <= 1'b1;
                         state <= WAIT_CONFIRM;
                     end 

@@ -14,6 +14,12 @@ def hex_or_dec_to_8bit_binary(value):
         v = (1 << 8) + v  # Convert negative to two's complement
     return format(v, '08b')
 
+def hex_or_dec_to_int(value):
+    if value.startswith("0x"):
+        return int(value, 16)
+    else:
+        return int(value)
+
 def reg_code_to_3bit_binary(reg):
     # format xi where i is 0-7
     if reg.startswith("x"):
@@ -24,12 +30,31 @@ def reg_code_to_3bit_binary(reg):
         raise ValueError(f"Invalid register name: {reg}")
 
 def remove_white_spaces(lines):
-    return [l.strip(" \t\n") for l in lines]
+    lines = [l.strip(" \t\n") for l in lines]
+    # also remove all spaces before and after each :
+    for i in range(len(lines)):
+        if ":" in lines[i]:
+            parts = lines[i].split(":")
+            parts = [p.strip() for p in parts]
+            lines[i] = ":".join(parts)
+    return lines
+
+def get_set_start(lines:list):
+    set_start = {}
+    for l in lines:
+        if l.startswith("#set_start"):
+            parts = l.split()
+            if len(parts) != 3:
+                raise Exception(f"Invalid #set_start directive: {l}")
+            part_1_int = hex_or_dec_to_int(parts[1])
+            part_2_int = hex_or_dec_to_8bit_binary(parts[2])
+            set_start[part_1_int] = part_2_int
+    return set_start
 
 def remove_comments(lines:list):
     new_lines = []
     for l in lines:
-        if str(l).startswith("//"):
+        if str(l).startswith("//") or str(l).startswith("#"):
             pass # skip comment lines
         elif "//" in str(l):
             new_lines.append(str(l).split("//")[0])
@@ -67,7 +92,7 @@ def detect_double_markers(lines:list):
     # Now replace all marker references with the merged marker names
     for i in range(len(new_lines)):
         for old_marker, new_marker in marker_merge.items():
-            new_lines[i] = new_lines[i].replace(old_marker + ":", new_marker + ":")
+            new_lines[i] = new_lines[i].replace(" " + old_marker, " " +new_marker)
     return new_lines
 
 def resolve_markers(lines:list):
@@ -136,16 +161,24 @@ def convert_binary(lines:list):
 
         binary_lines.append(reg2 + reg1 + opcode)
         binary_lines.append(imm)
-        
-
 
     return binary_lines
 
-
+def replace_set_starts(binary_lines:list, set_starts:dict):
+    new_lines = []
+    for i, l in enumerate(binary_lines):
+        q = l
+        for key, value in set_starts.items():
+            if key == i:
+                q = value
+                print(f"Replacing {key} with {value}")
+        new_lines.append(q)
+    return new_lines
 
 
 def assemble_single(lines:list):
     lines = remove_white_spaces(lines)
+    set_starts = get_set_start(lines)
     lines = remove_comments(lines)
     lines = merge_markers_with_inst(lines)
     for l in lines:
@@ -153,6 +186,12 @@ def assemble_single(lines:list):
     lines = detect_double_markers(lines)
     lines = resolve_markers(lines)
     binary_lines = convert_binary(lines)
+    # make binary lines 256 lines long by adding 0s at the end
+    while len(binary_lines) < 256:
+        binary_lines.append("00000000")
+
+    binary_lines = replace_set_starts(binary_lines, set_starts)
+
     return binary_lines
 
 import sys

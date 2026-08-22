@@ -1,0 +1,40 @@
+// Define the start value for the mutex
+#set_start 0xFE 1
+
+// Jump to core Code
+JMPZ x0, shared_code
+JMPZ x0, shared_code
+
+// Both Cores: : Always lock, load x at addr 0xFF add 1 to it and then store it again then unlock 100 times
+shared_code:
+    ADDI x4, x0, 100
+    ADDI x7, x0, 0xFF
+    //Define the Mutex at address 0xFE
+    ADDI x6, x0, 0xFE
+
+    // Loop until x4 is zero
+    loop_add_1_start:
+        JMPZ x4, loop_add_1_end
+
+        // Lock the Mutex, busy wait
+        ADDI x5, x0, 0
+        mutex1: SWAP x6, x5
+        JMPZ x5, mutex1
+        
+        // load x form 0xFF into x5; add one and write back
+        SWAP x7, x5
+        ADDI x5, x5, 1
+        SWAP x7, x5 
+
+        // Unlock the Mutex, busy wait
+        ADDI x5, x0, 1
+        SWAP x6, x5
+
+        // Sub 1 from x4
+        ADDI x4, x4, -1
+        JMPZ x0, loop_add_1_start
+    loop_add_1_end:
+    
+    // Trap
+    END1:
+    JMPZ x0, END1

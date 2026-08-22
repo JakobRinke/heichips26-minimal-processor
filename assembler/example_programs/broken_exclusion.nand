@@ -1,0 +1,25 @@
+// Jump to core Code
+JMPZ x0, shared_code
+JMPZ x0, shared_code
+
+// Both Cores: Always load x at addr 0xFF add 1 to it and then store it again 100 times
+shared_code:
+    ADDI x4, x0, 100
+    ADDI x7, x0, 0xFF
+    // Loop until x4 is zero
+    loop_add_1_start:
+        JMPZ x4, loop_add_1_end
+        
+        // load x form 0xFF into x5; add one and write back
+        SWAP x7, x5
+        ADDI x5, x5, 1
+        SWAP x7, x5 
+
+        // Sub 1 from x4
+        ADDI x4, x4, -1
+        JMPZ x0, loop_add_1_start
+    loop_add_1_end:
+    
+    // Trap
+    END1:
+    JMPZ x0, END1

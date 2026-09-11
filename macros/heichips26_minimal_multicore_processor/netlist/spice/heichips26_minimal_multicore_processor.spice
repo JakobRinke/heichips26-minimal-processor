@@ -1,0 +1,2979 @@
+* NGSPICE file created from heichips26_minimal_multicore_processor.ext - technology: ihp-sg13cmos5l
+
+* Black-box entry subcircuit for sg13cmos5l_a21oi_1 abstract view
+.subckt sg13cmos5l_a21oi_1 Y A1 A2 B1 VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_inv_1 abstract view
+.subckt sg13cmos5l_inv_1 Y A VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_fill_1 abstract view
+.subckt sg13cmos5l_fill_1 VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_fill_2 abstract view
+.subckt sg13cmos5l_fill_2 VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_tiehi abstract view
+.subckt sg13cmos5l_tiehi L_HI VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_o21ai_1 abstract view
+.subckt sg13cmos5l_o21ai_1 Y A1 A2 B1 VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_nor2_1 abstract view
+.subckt sg13cmos5l_nor2_1 Y A B VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_buf_1 abstract view
+.subckt sg13cmos5l_buf_1 X A VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_dfrbpq_1 abstract view
+.subckt sg13cmos5l_dfrbpq_1 Q CLK D RESET_B VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_decap_8 abstract view
+.subckt sg13cmos5l_decap_8 VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_a22oi_1 abstract view
+.subckt sg13cmos5l_a22oi_1 Y A1 A2 B1 B2 VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_and2_1 abstract view
+.subckt sg13cmos5l_and2_1 X A B VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_dlygate4sd3_1 abstract view
+.subckt sg13cmos5l_dlygate4sd3_1 X A VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_xor2_1 abstract view
+.subckt sg13cmos5l_xor2_1 X A B VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_or2_1 abstract view
+.subckt sg13cmos5l_or2_1 X A B VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_nand2_1 abstract view
+.subckt sg13cmos5l_nand2_1 Y A B VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_xnor2_1 abstract view
+.subckt sg13cmos5l_xnor2_1 Y A B VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_nor3_1 abstract view
+.subckt sg13cmos5l_nor3_1 Y A B C VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_nand3_1 abstract view
+.subckt sg13cmos5l_nand3_1 Y A B C VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_nand4_1 abstract view
+.subckt sg13cmos5l_nand4_1 Y A B C D VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_a221oi_1 abstract view
+.subckt sg13cmos5l_a221oi_1 Y A1 A2 B1 B2 C1 VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_mux4_1 abstract view
+.subckt sg13cmos5l_mux4_1 X A0 A1 A2 A3 S0 S1 VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_a21o_1 abstract view
+.subckt sg13cmos5l_a21o_1 X A1 A2 B1 VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_nand2b_1 abstract view
+.subckt sg13cmos5l_nand2b_1 Y A_N B VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_decap_4 abstract view
+.subckt sg13cmos5l_decap_4 VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_buf_8 abstract view
+.subckt sg13cmos5l_buf_8 X A VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_inv_2 abstract view
+.subckt sg13cmos5l_inv_2 Y A VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_nor2b_1 abstract view
+.subckt sg13cmos5l_nor2b_1 Y A B_N VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_mux2_1 abstract view
+.subckt sg13cmos5l_mux2_1 X A0 A1 S VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_tielo abstract view
+.subckt sg13cmos5l_tielo L_LO VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_and4_1 abstract view
+.subckt sg13cmos5l_and4_1 X A B C D VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_inv_4 abstract view
+.subckt sg13cmos5l_inv_4 Y A VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_and3_1 abstract view
+.subckt sg13cmos5l_and3_1 X A B C VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_nor4_1 abstract view
+.subckt sg13cmos5l_nor4_1 Y A B C D VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_or3_1 abstract view
+.subckt sg13cmos5l_or3_1 X A B C VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13cmos5l_antennanp abstract view
+.subckt sg13cmos5l_antennanp A VDD VSS
+.ends
+
+.subckt heichips26_minimal_multicore_processor VGND VPWR clk ena rst_n ui_in[0] ui_in[1]
++ ui_in[2] ui_in[3] ui_in[4] ui_in[5] ui_in[6] ui_in[7] uio_in[0] uio_in[1] uio_in[2]
++ uio_in[3] uio_in[4] uio_in[5] uio_in[6] uio_in[7] uio_oe[0] uio_oe[1] uio_oe[2]
++ uio_oe[3] uio_oe[4] uio_oe[5] uio_oe[6] uio_oe[7] uio_out[0] uio_out[1] uio_out[2]
++ uio_out[3] uio_out[4] uio_out[5] uio_out[6] uio_out[7] uo_out[0] uo_out[1] uo_out[2]
++ uo_out[3] uo_out[4] uo_out[5] uo_out[6] uo_out[7]
+X_2106_ _2106_/Y _2081_/A _2093_/B _2110_/A2 VPWR VGND sg13cmos5l_a21oi_1
+X_2037_ _2550_/D _2037_/A VPWR VGND sg13cmos5l_inv_1
+XFILLER_22_166 VPWR VGND sg13cmos5l_fill_1
+XFILLER_26_96 VPWR VGND sg13cmos5l_fill_2
+X_2355__185 _2355_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_42_62 VPWR VGND sg13cmos5l_fill_2
+XFILLER_5_321 VPWR VGND sg13cmos5l_fill_1
+X_1606_ _1606_/Y _1582_/B _1603_/A _1422_/A VPWR VGND sg13cmos5l_o21ai_1
+X_1399_ _1399_/Y _1399_/A _1876_/A VPWR VGND sg13cmos5l_nor2_1
+X_1468_ _1468_/Y _1467_/A _1467_/C _1467_/B VPWR VGND sg13cmos5l_o21ai_1
+X_1537_ _2441_/D _1547_/A _1537_/B VPWR VGND sg13cmos5l_nor2_1
+Xfanout127 fanout127/X input1/X VPWR VGND sg13cmos5l_buf_1
+Xfanout116 _2137_/A fanout120/X VPWR VGND sg13cmos5l_buf_1
+Xfanout105 _1584_/A fanout113/X VPWR VGND sg13cmos5l_buf_1
+X_2586_ _2586_/Q clkload7/A _2586_/D _2586_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2513__170 _2513_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2440_ _2440_/Q clkload6/A _2440_/D _2440_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1322_ _1322_/Y _1901_/A VPWR VGND sg13cmos5l_inv_1
+X_2371_ _2371_/Q _2514_/CLK _2371_/D _2371_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_49_394 VPWR VGND sg13cmos5l_decap_8
+X_2569_ _2569_/Q clkload5/A _2569_/D _2569_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_0_68 VPWR VGND sg13cmos5l_fill_1
+XFILLER_46_331 VPWR VGND sg13cmos5l_fill_1
+XFILLER_46_397 VPWR VGND sg13cmos5l_decap_8
+X_1871_ _1872_/B _1330_/A _1857_/Y _1858_/X _1362_/A VPWR VGND sg13cmos5l_a22oi_1
+X_1940_ _1943_/B _1933_/A _1932_/B _1929_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2423_ _2423_/Q clkload0/A _2423_/D _2423_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2354_ _2354_/Q clkload3/A _2354_/D _2354_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2285_ _2386_/D _1311_/Y _2284_/B _2284_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2497__202 _2497_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_43_356 VPWR VGND sg13cmos5l_fill_1
+X_2549__372 _2549_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2070_ _2070_/Y _2093_/A _2096_/B _2098_/A2 VPWR VGND sg13cmos5l_a21oi_1
+X_1785_ _1794_/A _2545_/Q _2492_/Q VPWR VGND sg13cmos5l_nor2_1
+X_1854_ _1854_/Y _1854_/A1 _1876_/B _1853_/Y _1420_/A VPWR VGND sg13cmos5l_a22oi_1
+X_1923_ _1924_/B _2492_/Q _1961_/B VPWR VGND sg13cmos5l_and2_1
+Xhold703 _2231_/A _2361_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold714 _1914_/B _1913_/X VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold725 hold725/X _2296_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold736 _1652_/A _1651_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold747 _1955_/A _2540_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold769 _2021_/A _2020_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold758 hold758/X _2404_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2406_ _2406_/Q _2604_/CLK _2406_/D _2406_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2337_ _2337_/Q _2361_/CLK _2337_/D _2337_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2268_ _2378_/D _1311_/Y _2265_/B _2267_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2199_ _2345_/D _1323_/Y _2200_/B _2198_/Y VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_45_40 VPWR VGND sg13cmos5l_fill_2
+X_1570_ _1570_/Y _2567_/Q _1563_/A _1548_/X VPWR VGND sg13cmos5l_o21ai_1
+X_2365__165 _2365_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_19_150 VPWR VGND sg13cmos5l_fill_1
+X_2122_ _2148_/B _2128_/B _1412_/X _2131_/D VPWR VGND sg13cmos5l_a21oi_1
+X_2053_ _2555_/D _2062_/A _2053_/B VPWR VGND sg13cmos5l_nor2_1
+X_1768_ _2498_/D _1338_/Y _1768_/A2 _1767_/Y VPWR VGND sg13cmos5l_o21ai_1
+X_1837_ _1837_/Y _2509_/Q _1398_/X _1399_/Y hold507/X VPWR VGND sg13cmos5l_a22oi_1
+X_1906_ _1908_/C _2547_/Q _2546_/Q VPWR VGND sg13cmos5l_nor2_1
+Xhold500 _1519_/B _1518_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold511 _1482_/B _1481_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold522 _1836_/B _1835_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold533 _2200_/A _2346_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold544 _2335_/D _2179_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_1699_ _1700_/A hold801/X _1734_/B _2480_/D _1698_/Y VPWR VGND sg13cmos5l_a22oi_1
+Xhold555 _2243_/A _2366_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold566 hold566/X _2257_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold577 _2176_/A _2334_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold588 _2333_/D _2175_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold599 _2601_/D _2153_/X VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xoutput20 uo_out[2] _2601_/Q VPWR VGND sg13cmos5l_buf_1
+X_2403__346 _2403_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_31_123 VPWR VGND sg13cmos5l_fill_2
+X_1622_ _1622_/X _1622_/A _1622_/B VPWR VGND sg13cmos5l_xor2_1
+X_1484_ _1484_/X _2469_/Q _2416_/Q VPWR VGND sg13cmos5l_or2_1
+X_1553_ _1553_/Y _1548_/X _1551_/Y _1552_/Y VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_11_0 VPWR VGND sg13cmos5l_fill_2
+X_2532__408 _2532_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2105_ _2105_/Y input7/X _2108_/B VPWR VGND sg13cmos5l_nand2_1
+X_2036_ _2037_/A hold779/X _1968_/Y _2036_/B1 _2035_/Y VPWR VGND sg13cmos5l_a22oi_1
+XFILLER_5_311 VPWR VGND sg13cmos5l_fill_1
+XFILLER_5_377 VPWR VGND sg13cmos5l_fill_1
+XFILLER_36_237 VPWR VGND sg13cmos5l_fill_2
+XFILLER_8_182 VPWR VGND sg13cmos5l_fill_2
+X_1536_ _1537_/B _1358_/A _1544_/A2 _1531_/Y _1307_/A VPWR VGND sg13cmos5l_a22oi_1
+X_1605_ _1605_/Y _1605_/A _1605_/B VPWR VGND sg13cmos5l_xnor2_1
+X_2585_ _2585_/Q clkload8/A _2585_/D _2585_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1398_ _1398_/X _1876_/A _1398_/B VPWR VGND sg13cmos5l_or2_1
+X_1467_ _1469_/A _1467_/A _1467_/B _1467_/C VPWR VGND sg13cmos5l_nor3_1
+Xfanout128 _1748_/B _1920_/B1 VPWR VGND sg13cmos5l_buf_1
+Xfanout117 _2139_/A _1914_/A VPWR VGND sg13cmos5l_buf_1
+Xfanout106 _1515_/A _1730_/A VPWR VGND sg13cmos5l_buf_1
+X_2391__386 _2391_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2019_ _2019_/Y _2019_/A _2019_/B VPWR VGND sg13cmos5l_nand2_1
+XFILLER_12_77 VPWR VGND sg13cmos5l_fill_1
+XFILLER_2_314 VPWR VGND sg13cmos5l_fill_1
+XFILLER_18_259 VPWR VGND sg13cmos5l_fill_2
+XFILLER_49_373 VPWR VGND sg13cmos5l_decap_8
+X_1321_ _1321_/Y _2537_/Q VPWR VGND sg13cmos5l_inv_1
+X_2370_ _2370_/Q _2514_/CLK _2370_/D _2370_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2566__301 _2566_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1519_ _2434_/D _1733_/A _1519_/B VPWR VGND sg13cmos5l_nor2_1
+X_2568_ _2568_/Q clkload5/A _2568_/D _2568_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2499_ _2499_/Q _2590_/CLK _2499_/D _2499_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_15_218 VPWR VGND sg13cmos5l_fill_1
+XFILLER_23_284 VPWR VGND sg13cmos5l_fill_1
+XFILLER_23_32 VPWR VGND sg13cmos5l_fill_2
+XFILLER_46_376 VPWR VGND sg13cmos5l_decap_8
+XFILLER_14_273 VPWR VGND sg13cmos5l_fill_1
+X_1870_ _2523_/D _1872_/A _1870_/B VPWR VGND sg13cmos5l_nor2_1
+X_2422_ _2422_/Q clkload0/A _2422_/D _2422_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2353_ _2353_/Q _2361_/CLK _2353_/D _2353_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_37_365 VPWR VGND sg13cmos5l_fill_2
+X_2284_ _2284_/Y _2284_/A _2284_/B VPWR VGND sg13cmos5l_nor2_1
+X_1999_ _2003_/A _2225_/A _2209_/A _2031_/C VPWR VGND sg13cmos5l_nand3_1
+X_2397__370 _2397_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_18_76 VPWR VGND sg13cmos5l_fill_2
+XFILLER_43_368 VPWR VGND sg13cmos5l_fill_2
+XFILLER_7_203 VPWR VGND sg13cmos5l_fill_2
+X_2556__344 _2556_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1922_ _1925_/A _1919_/A _1919_/B _1916_/Y VPWR VGND sg13cmos5l_o21ai_1
+X_1784_ _1787_/A _1779_/A _1779_/B _1777_/X VPWR VGND sg13cmos5l_a21oi_1
+X_1853_ _1853_/Y _1853_/A _1876_/B VPWR VGND sg13cmos5l_nand2_1
+Xhold704 _1314_/A _2451_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold715 _1328_/A _2527_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold726 _1396_/B _2542_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold737 hold737/X _2469_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2383__403 _2383_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_41_0 VPWR VGND sg13cmos5l_fill_1
+Xhold759 hold759/X _2437_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold748 _2540_/D _1960_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2405_ _2405_/Q clkload1/A _2405_/D _2405_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2336_ _2336_/Q clkload3/A _2336_/D _2336_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2267_ _2267_/Y _2267_/A _2267_/B VPWR VGND sg13cmos5l_nor2_1
+X_2198_ _2198_/Y _2198_/A _2200_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_16_313 VPWR VGND sg13cmos5l_fill_2
+XFILLER_28_195 VPWR VGND sg13cmos5l_fill_2
+X_2121_ _2131_/D _2065_/C _1416_/Y _1389_/A VPWR VGND sg13cmos5l_o21ai_1
+X_2052_ _2053_/B _1979_/A hold514/X hold613/X hold648/X VPWR VGND sg13cmos5l_a22oi_1
+XFILLER_34_198 VPWR VGND sg13cmos5l_fill_2
+X_1905_ _1908_/B _2544_/Q _2543_/Q VPWR VGND sg13cmos5l_nor2_1
+X_1698_ _1698_/Y _1698_/A _1698_/B _1698_/C _1698_/D VPWR VGND sg13cmos5l_nand4_1
+X_1767_ _1767_/Y hold651/X _1767_/A2 _2139_/A VPWR VGND sg13cmos5l_a21oi_1
+X_1836_ _2508_/D _2050_/A _1836_/B VPWR VGND sg13cmos5l_nor2_1
+Xhold501 hold501/X _2421_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold512 hold512/X _2476_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold523 _2196_/A _2344_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold534 _2190_/A _2341_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold545 _2265_/A _2377_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold556 _2366_/D _2244_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold567 _2373_/D _2258_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold578 hold578/X _2176_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold589 _1420_/A _2517_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2539__394 _2539_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2319_ _2319_/Y _2320_/A1 _2412_/Q _1352_/A VPWR VGND sg13cmos5l_o21ai_1
+XFILLER_25_165 VPWR VGND sg13cmos5l_fill_1
+X_2574__285 _2574_/RESET_B VPWR VGND sg13cmos5l_tiehi
+Xoutput21 uo_out[3] _2602_/Q VPWR VGND sg13cmos5l_buf_1
+X_1552_ _1552_/Y hold742/X _1548_/X _1389_/A VPWR VGND sg13cmos5l_o21ai_1
+X_1621_ _1621_/X _1621_/A _1621_/B VPWR VGND sg13cmos5l_and2_1
+X_2523__151 _2523_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1483_ _1485_/A _2469_/Q _2416_/Q VPWR VGND sg13cmos5l_and2_1
+X_2104_ _2573_/D _1360_/Y _2110_/A2 _2102_/Y _2103_/Y VPWR VGND sg13cmos5l_a22oi_1
+X_2035_ _2035_/Y _2035_/A _2035_/B VPWR VGND sg13cmos5l_nand2_1
+X_1819_ _1819_/Y _2549_/Q _2496_/Q VPWR VGND sg13cmos5l_nand2_1
+XFILLER_26_98 VPWR VGND sg13cmos5l_fill_1
+X_2583__318 _2583_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_44_271 VPWR VGND sg13cmos5l_fill_1
+X_2484__227 _2484_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1535_ _2440_/D _1547_/A _1535_/B VPWR VGND sg13cmos5l_nor2_1
+X_1604_ _1605_/B _1598_/A _1595_/Y _1596_/X VPWR VGND sg13cmos5l_a21oi_1
+Xfanout129 _1967_/B _1920_/B1 VPWR VGND sg13cmos5l_buf_1
+Xfanout118 _1979_/B _1914_/A VPWR VGND sg13cmos5l_buf_1
+Xfanout107 _1730_/A fanout113/X VPWR VGND sg13cmos5l_buf_1
+X_2584_ _2584_/Q clkload8/A _2584_/D _2584_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1397_ _1397_/Y _1876_/A _1398_/B VPWR VGND sg13cmos5l_nor2_1
+X_1466_ _1467_/C _2413_/Q _2466_/Q _1452_/A _1452_/B _1450_/X VPWR VGND sg13cmos5l_a221oi_1
+X_2018_ _2019_/B _2023_/A _2014_/X _2017_/Y VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_18_227 VPWR VGND sg13cmos5l_fill_1
+XFILLER_41_230 VPWR VGND sg13cmos5l_fill_2
+X_1320_ _1320_/Y _2538_/Q VPWR VGND sg13cmos5l_inv_1
+X_2409__342 _2409_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_1_392 VPWR VGND sg13cmos5l_decap_8
+XFILLER_49_352 VPWR VGND sg13cmos5l_decap_8
+X_2559__331 _2559_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1449_ _2421_/D _1776_/A _1449_/B VPWR VGND sg13cmos5l_nor2_1
+X_1518_ _1518_/Y _2434_/Q _1501_/B _1522_/B1 hold499/X VPWR VGND sg13cmos5l_a22oi_1
+X_2567_ _2567_/Q clkload5/A _2567_/D _2567_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2498_ _2498_/Q _2595_/CLK _2498_/D _2498_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_23_55 VPWR VGND sg13cmos5l_fill_1
+XFILLER_14_252 VPWR VGND sg13cmos5l_fill_2
+X_2589__324 _2589_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2450__292 _2450_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2411__254 _2411_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2421_ _2421_/Q _2600_/CLK _2421_/D _2421_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2352_ _2352_/Q clkload3/A _2352_/D _2352_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2283_ _2385_/D _1312_/Y _2282_/B _2282_/Y VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_20_233 VPWR VGND sg13cmos5l_fill_2
+X_1998_ _1998_/X _2358_/Q _2350_/Q _2342_/Q _2334_/Q _2395_/Q _2396_/Q VPWR VGND sg13cmos5l_mux4_1
+XFILLER_42_391 VPWR VGND sg13cmos5l_decap_8
+X_1852_ _1876_/B _1856_/A _1877_/A _1407_/C VPWR VGND sg13cmos5l_o21ai_1
+X_1921_ _2535_/D _1953_/A1 _1919_/Y _1920_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1783_ _1783_/Y _1780_/Y _1781_/Y _1782_/Y VPWR VGND sg13cmos5l_a21oi_1
+Xhold705 _1585_/B _2455_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold716 _2227_/A _2359_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold727 _1451_/B _2465_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold738 _2116_/C _2588_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold749 _2298_/A _2393_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_34_0 VPWR VGND sg13cmos5l_fill_1
+X_2404_ _2404_/Q clkload1/A _2404_/D _2404_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2335_ _2335_/Q _2361_/CLK _2335_/D _2335_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2266_ _2377_/D _1312_/Y _2265_/B hold546/X VPWR VGND sg13cmos5l_a21oi_1
+X_2197_ _2344_/D _1324_/Y _2200_/B _2196_/Y VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_20_56 VPWR VGND sg13cmos5l_fill_2
+XFILLER_28_141 VPWR VGND sg13cmos5l_fill_2
+XFILLER_29_98 VPWR VGND sg13cmos5l_fill_2
+XFILLER_31_306 VPWR VGND sg13cmos5l_fill_1
+X_2120_ _2120_/Y _2127_/A _2119_/Y _2117_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2051_ _2051_/X _2359_/Q _2211_/A _2194_/A _2178_/A _2397_/Q _2398_/Q VPWR VGND sg13cmos5l_mux4_1
+X_1835_ _1835_/Y _2508_/Q _1841_/A2 _1399_/Y hold521/X VPWR VGND sg13cmos5l_a22oi_1
+X_1904_ _1904_/Y _1901_/Y _1903_/X _2139_/A VPWR VGND sg13cmos5l_a21oi_1
+X_1697_ _1698_/D _2298_/A _2282_/A _1705_/C VPWR VGND sg13cmos5l_nand3_1
+X_1766_ _1766_/Y _1329_/Y _1766_/A2 _1765_/Y VPWR VGND sg13cmos5l_a21oi_1
+Xhold502 _1449_/B _1448_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold513 _1517_/B _1516_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold524 hold524/X _2506_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold535 hold535/X _2190_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold546 hold546/X _2265_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold557 _2263_/A _2376_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold568 hold568/X _2504_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold579 _2334_/D _2177_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2344__207 _2344_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2500__196 _2500_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2318_ _2318_/Y _2320_/A1 _1309_/Y _2317_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2249_ _2249_/Y _2249_/A _2249_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_13_306 VPWR VGND sg13cmos5l_fill_2
+XFILLER_13_317 VPWR VGND sg13cmos5l_fill_2
+Xoutput22 uo_out[4] _2603_/Q VPWR VGND sg13cmos5l_buf_1
+X_1482_ _2425_/D _1733_/A _1482_/B VPWR VGND sg13cmos5l_nor2_1
+X_1551_ _1551_/Y _1364_/A _1550_/A hold785/X VPWR VGND sg13cmos5l_a21oi_1
+X_1620_ _1622_/B _1621_/A _1620_/B VPWR VGND sg13cmos5l_nand2_1
+X_2103_ _2103_/Y _2078_/A _2093_/B _2110_/A2 VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_47_291 VPWR VGND sg13cmos5l_fill_2
+X_2034_ _2035_/B _2023_/A _2030_/X _2033_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1818_ _2505_/D _2059_/A _1818_/B VPWR VGND sg13cmos5l_nor2_1
+X_1749_ _1749_/Y _1767_/A2 hold671/X _1748_/B VPWR VGND sg13cmos5l_o21ai_1
+XFILLER_26_55 VPWR VGND sg13cmos5l_fill_1
+XFILLER_41_401 VPWR VGND sg13cmos5l_fill_2
+X_2531__410 _2531_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2334__228 _2334_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1465_ _1467_/B _2467_/Q _2414_/Q VPWR VGND sg13cmos5l_xnor2_1
+X_1534_ _1535_/B _1357_/A _1544_/A2 _1531_/Y _1308_/A VPWR VGND sg13cmos5l_a22oi_1
+X_1603_ _1605_/A _1603_/A _1603_/B VPWR VGND sg13cmos5l_xnor2_1
+Xfanout119 _1914_/A fanout120/X VPWR VGND sg13cmos5l_buf_1
+Xfanout108 _1733_/A _2059_/A VPWR VGND sg13cmos5l_buf_1
+X_2583_ _2583_/Q clkload7/A _2583_/D _2583_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2460__272 _2460_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_42_209 VPWR VGND sg13cmos5l_fill_1
+X_1396_ _1398_/B _1396_/A _1396_/B VPWR VGND sg13cmos5l_nor2_1
+X_2017_ _2017_/Y _2360_/Q _2024_/B _2016_/Y VPWR VGND sg13cmos5l_o21ai_1
+XFILLER_41_253 VPWR VGND sg13cmos5l_fill_2
+XFILLER_1_371 VPWR VGND sg13cmos5l_decap_8
+XFILLER_5_143 VPWR VGND sg13cmos5l_fill_2
+XFILLER_32_220 VPWR VGND sg13cmos5l_fill_1
+X_1448_ _1448_/Y hold501/X _1522_/A2 _1447_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1517_ _2433_/D _1733_/A _1517_/B VPWR VGND sg13cmos5l_nor2_1
+X_2566_ _2566_/Q clkload5/A _2566_/D _2566_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2497_ _2497_/Q clkload8/A _2497_/D _2497_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_23_220 VPWR VGND sg13cmos5l_fill_2
+X_1379_ _1381_/B _1377_/B _1374_/D _1378_/B VPWR VGND sg13cmos5l_o21ai_1
+Xfanout90 _2127_/A _2580_/Q VPWR VGND sg13cmos5l_buf_1
+X_2420_ _2420_/Q clkload4/A _2420_/D _2420_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2602__252 _2602_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2351_ _2351_/Q _2361_/CLK _2351_/D _2351_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2282_ _2282_/Y _2282_/A _2282_/B VPWR VGND sg13cmos5l_nor2_1
+X_1997_ _2545_/D _1997_/A VPWR VGND sg13cmos5l_inv_1
+X_2549_ _2549_/Q _2595_/CLK _2549_/D _2549_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_28_389 VPWR VGND sg13cmos5l_fill_1
+XFILLER_7_205 VPWR VGND sg13cmos5l_fill_1
+X_2510__176 _2510_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1851_ _2516_/D _1851_/A _1851_/B VPWR VGND sg13cmos5l_and2_1
+X_1920_ _1920_/Y _1953_/A1 _1917_/A _1920_/B1 VPWR VGND sg13cmos5l_o21ai_1
+X_1782_ _1782_/Y hold722/X _1854_/A1 _1748_/B VPWR VGND sg13cmos5l_o21ai_1
+Xhold706 _1584_/B _1583_/X VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold717 _1366_/A _2563_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold728 _1660_/A _1659_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold739 _1370_/A _2567_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2403_ _2403_/Q _2604_/CLK _2403_/D _2403_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2334_ _2334_/Q _2361_/CLK _2334_/D _2334_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2265_ _2265_/Y _2265_/A _2265_/B VPWR VGND sg13cmos5l_nor2_1
+X_2196_ _2196_/Y _2196_/A _2200_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_3_252 VPWR VGND sg13cmos5l_fill_1
+X_2050_ _2554_/D _2050_/A _2050_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_22_318 VPWR VGND sg13cmos5l_fill_2
+X_1765_ _1765_/Y _1766_/A2 _2497_/Q _1851_/A VPWR VGND sg13cmos5l_o21ai_1
+X_1834_ _1834_/Y _1828_/Y _1833_/X _1776_/A VPWR VGND sg13cmos5l_a21oi_1
+X_1903_ _1903_/X _1884_/A _1831_/Y _1902_/Y VPWR VGND sg13cmos5l_a21o_1
+X_1696_ _1698_/C _2298_/A _2282_/A _1645_/X VPWR VGND sg13cmos5l_o21ai_1
+Xhold503 hold503/X _2554_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold514 hold514/X _2555_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold525 _1827_/B _1826_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold536 _2341_/D _2191_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold547 _2184_/A _2338_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold558 hold558/X _2263_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold569 _1809_/B _1808_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2494__208 _2494_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2317_ _2317_/Y _2320_/A1 _2411_/Q _1352_/A VPWR VGND sg13cmos5l_o21ai_1
+X_2248_ _2368_/D _1313_/Y _2249_/B _2247_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2179_ _2179_/Y _1325_/Y _2184_/B _2178_/Y VPWR VGND sg13cmos5l_a21oi_1
+Xoutput23 uo_out[5] _2604_/Q VPWR VGND sg13cmos5l_buf_1
+XFILLER_0_244 VPWR VGND sg13cmos5l_fill_1
+X_1481_ _1481_/Y hold510/X _1501_/B _1480_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1550_ _1550_/Y _1550_/A _1550_/B VPWR VGND sg13cmos5l_nor2_1
+X_2447__298 _2447_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2102_ _2102_/Y input6/X _2108_/B VPWR VGND sg13cmos5l_nand2_1
+X_2033_ _2033_/Y _2362_/Q _2024_/B _2032_/Y VPWR VGND sg13cmos5l_o21ai_1
+X_1748_ _2488_/D hold594/X _1748_/B VPWR VGND sg13cmos5l_nand2b_1
+X_1817_ _1817_/Y hold505/X _1828_/B _1816_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1679_ _1682_/B _2294_/A _1703_/B VPWR VGND sg13cmos5l_or2_1
+XFILLER_38_281 VPWR VGND sg13cmos5l_fill_1
+XFILLER_45_218 VPWR VGND sg13cmos5l_fill_2
+X_2552__360 _2552_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_32_402 VPWR VGND sg13cmos5l_fill_2
+X_1602_ _1612_/A _2458_/Q _1603_/B VPWR VGND sg13cmos5l_nor2_1
+X_2582_ _2582_/Q clkload7/A _2582_/D _2582_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1395_ _1876_/A _2584_/Q _1395_/B VPWR VGND sg13cmos5l_nand2_1
+X_1464_ _1464_/Y _1461_/Y _1462_/Y _1463_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1533_ _2439_/D _1547_/A _1533_/B VPWR VGND sg13cmos5l_nor2_1
+Xfanout109 _2062_/A _2059_/A VPWR VGND sg13cmos5l_buf_1
+XFILLER_27_207 VPWR VGND sg13cmos5l_decap_4
+X_2016_ _2016_/Y _2360_/Q _2352_/Q _1974_/X VPWR VGND sg13cmos5l_o21ai_1
+XFILLER_41_232 VPWR VGND sg13cmos5l_fill_1
+XFILLER_49_387 VPWR VGND sg13cmos5l_decap_8
+Xclkbuf_leaf_12_clk _2590_/CLK clkbuf_leaf_9_clk/A VPWR VGND sg13cmos5l_buf_8
+X_1516_ _1516_/Y _2433_/Q _1501_/B _1522_/B1 hold512/X VPWR VGND sg13cmos5l_a22oi_1
+X_2565_ _2565_/Q clkload5/A _2565_/D _2565_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1378_ _1549_/A _1378_/A _1378_/B VPWR VGND sg13cmos5l_nand2_1
+X_1447_ _1447_/Y _1470_/A _1550_/B _1446_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2496_ _2496_/Q clkload8/A _2496_/D _2496_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_14_254 VPWR VGND sg13cmos5l_fill_1
+Xfanout91 _1766_/A2 _1763_/A1 VPWR VGND sg13cmos5l_buf_1
+Xfanout80 _1788_/A hold663/X VPWR VGND sg13cmos5l_buf_1
+XFILLER_37_324 VPWR VGND sg13cmos5l_fill_1
+Xclkbuf_leaf_1_clk _2605_/CLK clkbuf_leaf_2_clk/A VPWR VGND sg13cmos5l_buf_8
+X_2422__363 _2422_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2350_ _2350_/Q _2361_/CLK _2350_/D _2350_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2281_ _2384_/D _1313_/Y _2282_/B _2280_/Y VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_20_235 VPWR VGND sg13cmos5l_fill_1
+X_1996_ _1996_/Y _1786_/A _2063_/B _2036_/B1 _1995_/Y VPWR VGND sg13cmos5l_a22oi_1
+X_2548_ _2548_/Q _2595_/CLK _2548_/D _2548_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2479_ _2479_/Q _2514_/CLK _2479_/D _2479_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+Xclkload0 clkload0/Y clkload0/A VPWR VGND sg13cmos5l_inv_1
+XFILLER_19_357 VPWR VGND sg13cmos5l_fill_2
+X_1781_ _1781_/Y _2535_/Q _1399_/A _1841_/A2 VPWR VGND sg13cmos5l_a21oi_1
+X_1850_ _2515_/D _2062_/A _1850_/B VPWR VGND sg13cmos5l_nor2_1
+X_2563__307 _2563_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2528__416 _2528_/RESET_B VPWR VGND sg13cmos5l_tiehi
+Xhold707 _1364_/A _2561_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold718 _2223_/A _2357_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold729 _2233_/A _2362_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2402_ _2402_/Q _2604_/CLK _2402_/D _2402_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2333_ _2333_/Q _2361_/CLK _2333_/D _2333_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2457__278 _2457_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2264_ _2376_/D _1313_/Y _2265_/B hold558/X VPWR VGND sg13cmos5l_a21oi_1
+X_2195_ _2195_/Y _1325_/Y _2200_/B _2194_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1979_ _2559_/D _1979_/A _1979_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_29_67 VPWR VGND sg13cmos5l_fill_2
+XFILLER_34_179 VPWR VGND sg13cmos5l_fill_2
+X_1902_ _1902_/Y _2568_/Q _1884_/A _1875_/X VPWR VGND sg13cmos5l_o21ai_1
+X_1764_ _1764_/Y _1330_/Y _1766_/A2 _1763_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1833_ _1833_/X _1396_/A _1831_/Y _1832_/Y VPWR VGND sg13cmos5l_a21o_1
+Xhold504 _1842_/B _1841_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold515 _1844_/B _1843_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold526 hold526/X _2558_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_1695_ _1698_/B _2298_/A _1703_/B VPWR VGND sg13cmos5l_or2_1
+Xhold537 _2239_/A _2364_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold548 _2261_/A _2375_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold559 hold559/X _2500_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2316_ _2316_/Y _2316_/A1 _1310_/Y hold674/X VPWR VGND sg13cmos5l_a21oi_1
+X_2470__253 _2470_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2247_ _2247_/Y _2247_/A _2249_/B VPWR VGND sg13cmos5l_nor2_1
+X_2178_ _2178_/Y _2178_/A _2184_/B VPWR VGND sg13cmos5l_nor2_1
+Xoutput24 uo_out[6] _2605_/Q VPWR VGND sg13cmos5l_buf_1
+XFILLER_16_113 VPWR VGND sg13cmos5l_fill_1
+XFILLER_44_400 VPWR VGND sg13cmos5l_decap_4
+X_2380__409 _2380_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1480_ _1480_/Y _1343_/Y _1383_/A _1479_/Y VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_47_293 VPWR VGND sg13cmos5l_fill_1
+X_2101_ _2572_/D _1359_/Y _2110_/A2 _2099_/Y _2100_/Y VPWR VGND sg13cmos5l_a22oi_1
+X_2032_ _2032_/Y _2362_/Q _2354_/Q _1974_/X VPWR VGND sg13cmos5l_o21ai_1
+X_1678_ _1682_/A _2405_/Q _1678_/B VPWR VGND sg13cmos5l_nand2_1
+X_1747_ _2487_/D _1322_/Y _2326_/A2 _1746_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1816_ _1816_/Y _1788_/A _1814_/Y _1815_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2402__350 _2402_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_41_403 VPWR VGND sg13cmos5l_fill_1
+X_2407__250 _2407_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_12_171 VPWR VGND sg13cmos5l_fill_1
+XFILLER_44_285 VPWR VGND sg13cmos5l_fill_1
+X_1532_ _1533_/B _1356_/A _1544_/A2 _1531_/Y _1309_/A VPWR VGND sg13cmos5l_a22oi_1
+X_1601_ _1603_/B _2414_/Q _1609_/C VPWR VGND sg13cmos5l_and2_1
+X_2605__240 _2605_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2581_ _2581_/Q clkload7/A _2581_/D _2581_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1394_ _1394_/Y _1395_/B VPWR VGND sg13cmos5l_inv_1
+X_1463_ _1463_/Y hold698/X _1505_/B1 _1422_/A VPWR VGND sg13cmos5l_o21ai_1
+XFILLER_35_230 VPWR VGND sg13cmos5l_fill_1
+X_2432__343 _2432_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2015_ _2019_/A _2229_/A _2213_/A _2031_/C VPWR VGND sg13cmos5l_nand3_1
+XFILLER_10_108 VPWR VGND sg13cmos5l_fill_2
+XFILLER_2_329 VPWR VGND sg13cmos5l_fill_2
+XFILLER_26_296 VPWR VGND sg13cmos5l_fill_2
+XFILLER_41_255 VPWR VGND sg13cmos5l_fill_1
+X_2333__230 _2333_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_5_145 VPWR VGND sg13cmos5l_fill_1
+XFILLER_49_366 VPWR VGND sg13cmos5l_decap_8
+X_2520__157 _2520_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2379__411 _2379_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1515_ _2432_/D _1515_/A _1515_/B VPWR VGND sg13cmos5l_nor2_1
+X_2564_ _2564_/Q clkload4/A _2564_/D _2564_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2495_ _2495_/Q _2525_/CLK _2495_/D _2495_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1377_ _1378_/B _1376_/A _1377_/B VPWR VGND sg13cmos5l_nand2b_1
+X_1446_ _1446_/Y _2455_/Q _1470_/A _1505_/B1 VPWR VGND sg13cmos5l_o21ai_1
+XFILLER_23_222 VPWR VGND sg13cmos5l_fill_1
+XFILLER_2_126 VPWR VGND sg13cmos5l_fill_2
+XFILLER_46_336 VPWR VGND sg13cmos5l_decap_4
+XFILLER_46_369 VPWR VGND sg13cmos5l_decap_8
+XFILLER_14_233 VPWR VGND sg13cmos5l_fill_1
+Xfanout92 _1763_/A1 hold594/X VPWR VGND sg13cmos5l_buf_1
+Xfanout81 _1582_/B _1615_/A VPWR VGND sg13cmos5l_buf_1
+Xfanout70 _2095_/A2 _2065_/Y VPWR VGND sg13cmos5l_buf_1
+X_2280_ _2280_/Y _2280_/A _2282_/B VPWR VGND sg13cmos5l_nor2_1
+X_2351__193 _2351_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1995_ _1995_/Y _1995_/A _1995_/B VPWR VGND sg13cmos5l_nand2_1
+X_1429_ _2589_/D _1429_/A _1429_/B VPWR VGND sg13cmos5l_and2_1
+X_2547_ _2547_/Q _2595_/CLK _2547_/D _2547_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2478_ _2478_/Q _2478_/CLK _2478_/D _2478_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_36_380 VPWR VGND sg13cmos5l_fill_2
+XFILLER_34_46 VPWR VGND sg13cmos5l_fill_2
+XFILLER_36_391 VPWR VGND sg13cmos5l_fill_1
+Xclkload1 clkload1/Y clkload1/A VPWR VGND sg13cmos5l_inv_1
+XFILLER_3_402 VPWR VGND sg13cmos5l_fill_2
+X_2480__233 _2480_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_19_325 VPWR VGND sg13cmos5l_fill_2
+XFILLER_46_122 VPWR VGND sg13cmos5l_fill_1
+XFILLER_10_291 VPWR VGND sg13cmos5l_fill_2
+X_1780_ _1780_/Y _1788_/A _1881_/B VPWR VGND sg13cmos5l_nand2_1
+Xhold708 _2221_/A _2356_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold719 _2300_/A _2394_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2401_ _2401_/Q _2604_/CLK _2401_/D _2401_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2332_ _2332_/Q clkload2/A _2332_/D _2332_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2263_ _2263_/Y _2263_/A _2265_/B VPWR VGND sg13cmos5l_nor2_1
+X_2194_ _2194_/Y _2194_/A _2200_/B VPWR VGND sg13cmos5l_nor2_1
+X_1978_ _1978_/Y _1978_/A _1978_/B _1978_/C _1978_/D VPWR VGND sg13cmos5l_nand4_1
+XFILLER_28_111 VPWR VGND sg13cmos5l_fill_1
+XFILLER_16_328 VPWR VGND sg13cmos5l_fill_2
+XFILLER_3_232 VPWR VGND sg13cmos5l_fill_2
+XFILLER_15_361 VPWR VGND sg13cmos5l_fill_2
+X_1832_ _1832_/Y _2541_/Q _1396_/A _1854_/A1 VPWR VGND sg13cmos5l_o21ai_1
+X_1901_ _1901_/Y _1901_/A _1901_/B VPWR VGND sg13cmos5l_nand2_1
+X_1694_ _1698_/A _1694_/A _1694_/B VPWR VGND sg13cmos5l_nand2_1
+X_1763_ _1763_/Y _1763_/A1 _2496_/Q _1748_/B VPWR VGND sg13cmos5l_o21ai_1
+Xhold505 hold505/X _2505_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold516 _1324_/A _2531_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold527 _1850_/B _1849_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold538 _2364_/D _2240_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold549 _2375_/D _2262_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2387__395 _2387_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2315_ _2315_/Y _2316_/A1 _1376_/A _2065_/A VPWR VGND sg13cmos5l_o21ai_1
+X_2246_ _2246_/Y _1314_/Y _2251_/B _2245_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2177_ _2177_/Y _1326_/Y _2182_/B hold578/X VPWR VGND sg13cmos5l_a21oi_1
+Xoutput25 uo_out[7] _2599_/Q VPWR VGND sg13cmos5l_buf_1
+X_2371__152 _2371_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2493__210 _2493_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2100_ _2100_/Y _2075_/A _2093_/B _2110_/A2 VPWR VGND sg13cmos5l_a21oi_1
+X_2419__369 _2419_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2031_ _2035_/A _2233_/A _2217_/A _2031_/C VPWR VGND sg13cmos5l_nand3_1
+XFILLER_15_191 VPWR VGND sg13cmos5l_fill_1
+X_1815_ _1815_/Y _2539_/Q _1788_/A _1397_/Y VPWR VGND sg13cmos5l_o21ai_1
+X_1677_ _1678_/B _2391_/Q _2383_/Q _2375_/Q _2367_/Q _2399_/Q _2400_/Q VPWR VGND sg13cmos5l_mux4_1
+X_1746_ _1746_/Y _2326_/A2 hold754/X _1920_/B1 VPWR VGND sg13cmos5l_o21ai_1
+X_2229_ _2229_/Y _2229_/A _2233_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_8_110 VPWR VGND sg13cmos5l_fill_2
+XFILLER_32_90 VPWR VGND sg13cmos5l_fill_2
+X_1462_ _1462_/Y _2457_/Q _1383_/A _1522_/A2 VPWR VGND sg13cmos5l_a21oi_1
+X_1531_ _1531_/Y _1376_/Y _1530_/Y _1544_/A2 VPWR VGND sg13cmos5l_a21oi_1
+X_1600_ _1600_/Y _1582_/B _1598_/Y _1599_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2580_ _2580_/Q clkload8/A _2580_/D _2580_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1393_ _1395_/B hold671/X _1396_/A VPWR VGND sg13cmos5l_nand2b_1
+XFILLER_35_253 VPWR VGND sg13cmos5l_fill_1
+X_2014_ _2014_/X _2360_/Q _2352_/Q _2344_/Q _2336_/Q _2395_/Q _2396_/Q VPWR VGND sg13cmos5l_mux4_1
+XFILLER_12_49 VPWR VGND sg13cmos5l_fill_1
+XFILLER_2_319 VPWR VGND sg13cmos5l_fill_2
+X_1729_ _1730_/B _1650_/A hold440/X _1709_/X hold640/X VPWR VGND sg13cmos5l_a22oi_1
+X_2361__173 _2361_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_1_385 VPWR VGND sg13cmos5l_decap_8
+XFILLER_49_345 VPWR VGND sg13cmos5l_decap_8
+XFILLER_17_264 VPWR VGND sg13cmos5l_fill_2
+X_1445_ _1550_/B _1585_/A _1445_/B VPWR VGND sg13cmos5l_xnor2_1
+X_1514_ _1514_/Y _2432_/Q _1501_/B _1522_/B1 hold448/X VPWR VGND sg13cmos5l_a22oi_1
+X_2563_ _2563_/Q clkload5/A _2563_/D _2563_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2494_ _2494_/Q _2525_/CLK _2494_/D _2494_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1376_ _1376_/Y _1376_/A _1383_/A VPWR VGND sg13cmos5l_nor2_1
+X_2467__259 _2467_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_48_34 VPWR VGND sg13cmos5l_fill_2
+Xfanout93 _2326_/A2 _1767_/A2 VPWR VGND sg13cmos5l_buf_1
+Xfanout82 _1615_/A _1638_/A VPWR VGND sg13cmos5l_buf_1
+Xfanout71 _2063_/B _1968_/Y VPWR VGND sg13cmos5l_buf_1
+Xfanout60 _1633_/B _1580_/X VPWR VGND sg13cmos5l_buf_1
+X_1994_ _1995_/B _2023_/A _1990_/X _1993_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1428_ _1428_/Y _1355_/Y _1412_/X _1427_/Y VPWR VGND sg13cmos5l_o21ai_1
+X_2546_ _2546_/Q _2595_/CLK _2546_/D _2546_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2477_ _2477_/Q _2600_/CLK _2477_/D _2477_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1359_ _1359_/Y _1359_/A VPWR VGND sg13cmos5l_inv_1
+Xclkload2 clkload2/Y clkload2/A VPWR VGND sg13cmos5l_inv_2
+Xhold709 _2356_/D _2222_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2400_ _2400_/Q clkload1/A _2400_/D _2400_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2331_ _2331_/Q _2531_/CLK _2331_/D _2331_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2262_ _2262_/Y _1314_/Y _2267_/B _2261_/Y VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_37_101 VPWR VGND sg13cmos5l_fill_2
+X_2193_ _2193_/Y _1326_/Y _2192_/B _2192_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2429__349 _2429_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1977_ _1978_/D _1977_/A _1977_/B _2031_/C VPWR VGND sg13cmos5l_nand3_1
+X_2529_ _2529_/Q _2595_/CLK _2529_/D _2529_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_10_60 VPWR VGND sg13cmos5l_fill_1
+X_2456__280 _2456_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_42_181 VPWR VGND sg13cmos5l_fill_1
+X_1831_ _1831_/Y _1831_/A _1831_/B VPWR VGND sg13cmos5l_xnor2_1
+X_1900_ _2532_/D _2139_/A _1900_/B VPWR VGND sg13cmos5l_nor2_1
+X_1693_ _1694_/B _2393_/Q _2385_/Q _2377_/Q _2369_/Q _2399_/Q _2400_/Q VPWR VGND sg13cmos5l_mux4_1
+X_1762_ _1762_/Y _1331_/Y _1766_/A2 _1761_/Y VPWR VGND sg13cmos5l_a21oi_1
+Xhold506 _1818_/B _1817_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold517 _1896_/B _1895_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold528 _1360_/A _2573_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold539 hold539/X _2426_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2314_ _2409_/D _2328_/A1 _2314_/B VPWR VGND sg13cmos5l_nand2b_1
+X_2245_ _2245_/Y _2245_/A _2251_/B VPWR VGND sg13cmos5l_nor2_1
+X_2176_ _2176_/Y _2176_/A _2182_/B VPWR VGND sg13cmos5l_nor2_1
+X_2585__320 _2585_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_12_376 VPWR VGND sg13cmos5l_fill_1
+X_2030_ _2030_/X _2362_/Q _2354_/Q _2346_/Q _2338_/Q _2395_/Q _2396_/Q VPWR VGND sg13cmos5l_mux4_1
+XFILLER_47_251 VPWR VGND sg13cmos5l_fill_2
+X_1745_ _2486_/D _1323_/Y _2326_/A2 _1744_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1814_ _1814_/Y _1814_/A _1814_/B VPWR VGND sg13cmos5l_xnor2_1
+X_1676_ _2467_/D _1676_/A VPWR VGND sg13cmos5l_inv_1
+X_2348__199 _2348_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2228_ _2359_/D _1325_/Y _2233_/B _2227_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2159_ _2159_/Y hold510/X _2166_/A2 _2166_/B1 _2433_/Q _2145_/A VPWR VGND sg13cmos5l_a221oi_1
+X_2477__239 _2477_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_17_402 VPWR VGND sg13cmos5l_fill_2
+X_1392_ _2586_/D _1914_/A _1392_/B VPWR VGND sg13cmos5l_nor2_1
+X_1461_ _1461_/Y _1470_/A _1557_/B VPWR VGND sg13cmos5l_nand2_1
+X_1530_ _1530_/Y _1530_/A _2583_/Q VPWR VGND sg13cmos5l_nor2_1
+X_2013_ _2547_/D _2013_/A VPWR VGND sg13cmos5l_inv_1
+Xclkbuf_leaf_15_clk clkload3/A clkbuf_2_1__f_clk/X VPWR VGND sg13cmos5l_buf_8
+X_1728_ _1728_/X _2393_/Q _2385_/Q _2265_/A _2249_/A _2401_/Q _2402_/Q VPWR VGND sg13cmos5l_mux4_1
+X_1659_ _1659_/Y _1451_/B _1734_/B _2480_/D _1658_/Y VPWR VGND sg13cmos5l_a22oi_1
+X_2506__184 _2506_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_1_342 VPWR VGND sg13cmos5l_decap_8
+XFILLER_32_235 VPWR VGND sg13cmos5l_fill_2
+X_2570__293 _2570_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2562_ _2562_/Q clkload5/A _2562_/D _2562_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1375_ _1375_/Y _2578_/Q _1524_/B hold481/X VPWR VGND sg13cmos5l_o21ai_1
+X_1444_ _1452_/A _1444_/A _1445_/B VPWR VGND sg13cmos5l_and2_1
+X_1513_ _2431_/D _1730_/A _1513_/B VPWR VGND sg13cmos5l_nor2_1
+Xclkbuf_leaf_4_clk clkload5/A clkbuf_leaf_7_clk/A VPWR VGND sg13cmos5l_buf_8
+X_2493_ _2493_/Q _2525_/CLK _2493_/D _2493_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_2_128 VPWR VGND sg13cmos5l_fill_1
+Xfanout94 _1767_/A2 _1768_/A2 VPWR VGND sg13cmos5l_buf_1
+Xfanout83 _1470_/A _2593_/Q VPWR VGND sg13cmos5l_buf_1
+Xfanout72 _1734_/B _1639_/Y VPWR VGND sg13cmos5l_buf_1
+Xfanout61 _2108_/B _2096_/B VPWR VGND sg13cmos5l_buf_1
+Xfanout50 _2131_/B _1424_/X VPWR VGND sg13cmos5l_buf_1
+X_2368__158 _2368_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_45_393 VPWR VGND sg13cmos5l_decap_8
+X_1993_ _1993_/Y _2223_/A _2024_/B _1992_/Y VPWR VGND sg13cmos5l_o21ai_1
+X_2545_ _2545_/Q _2595_/CLK _2545_/D _2545_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1358_ _1358_/Y _1358_/A VPWR VGND sg13cmos5l_inv_1
+X_1427_ _1427_/Y hold434/X _1421_/A _2139_/A VPWR VGND sg13cmos5l_a21oi_1
+X_2476_ _2476_/Q _2600_/CLK _2476_/D _2476_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+Xclkload3 clkload3/X clkload3/A VPWR VGND sg13cmos5l_buf_8
+XFILLER_42_363 VPWR VGND sg13cmos5l_fill_1
+X_2330_ _2407_/D _2330_/A1 _1312_/Y _2308_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2261_ _2261_/Y _2261_/A _2267_/B VPWR VGND sg13cmos5l_nor2_1
+X_2192_ _2192_/Y _2192_/A _2192_/B VPWR VGND sg13cmos5l_nor2_1
+X_1976_ _2031_/C _2484_/Q _2483_/Q _1976_/C VPWR VGND sg13cmos5l_nor3_1
+XFILLER_29_26 VPWR VGND sg13cmos5l_fill_1
+X_2528_ _2528_/Q _2595_/CLK _2528_/D _2528_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2459_ _2459_/Q clkload4/A _2459_/D _2459_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2358__179 _2358_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_43_138 VPWR VGND sg13cmos5l_fill_2
+XFILLER_3_201 VPWR VGND sg13cmos5l_fill_1
+XFILLER_15_363 VPWR VGND sg13cmos5l_fill_1
+X_1761_ _1761_/Y _1766_/A2 _2495_/Q _1851_/A VPWR VGND sg13cmos5l_o21ai_1
+X_1830_ _1831_/B _2550_/Q _2497_/Q VPWR VGND sg13cmos5l_xor2_1
+X_1692_ _2469_/D _1692_/A VPWR VGND sg13cmos5l_inv_1
+Xhold507 hold507/X _2552_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold518 _1357_/A _2570_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold529 _1312_/A _2453_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2313_ _2408_/D _2330_/A1 _1311_/Y _2312_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2244_ _2244_/Y _1315_/Y _2251_/B _2243_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2175_ _2175_/Y _1327_/Y _2184_/B _2174_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1959_ _1959_/Y _1967_/A _1955_/A _1967_/B VPWR VGND sg13cmos5l_o21ai_1
+XFILLER_0_215 VPWR VGND sg13cmos5l_fill_2
+X_2516__164 _2516_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_12_366 VPWR VGND sg13cmos5l_fill_1
+X_2597__269 _2597_/RESET_B VPWR VGND sg13cmos5l_tiehi
+Xclkbuf_0_clk clkbuf_0_clk/X clk VPWR VGND sg13cmos5l_buf_8
+X_1744_ _1744_/Y _2326_/A2 hold797/X _1429_/A VPWR VGND sg13cmos5l_o21ai_1
+X_1813_ _1814_/B _1813_/A _1812_/X VPWR VGND sg13cmos5l_nor2b_1
+X_1675_ _1676_/A hold733/X _1734_/B _1650_/Y _1674_/Y VPWR VGND sg13cmos5l_a22oi_1
+XFILLER_38_252 VPWR VGND sg13cmos5l_fill_1
+X_2227_ _2227_/Y _2227_/A _2233_/B VPWR VGND sg13cmos5l_nor2_1
+X_2158_ _2158_/Y hold568/X _2166_/A2 _2166_/B1 _2512_/Q VPWR VGND sg13cmos5l_a22oi_1
+X_2089_ _2568_/D _1371_/Y _2113_/A2 _2087_/Y _2088_/Y VPWR VGND sg13cmos5l_a22oi_1
+XFILLER_42_26 VPWR VGND sg13cmos5l_fill_1
+XFILLER_44_200 VPWR VGND sg13cmos5l_fill_2
+X_2418__371 _2418_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1391_ _1391_/Y _1405_/A _1354_/Y _1390_/Y hold696/X VPWR VGND sg13cmos5l_a22oi_1
+X_1460_ _1557_/B _1460_/A _1460_/B VPWR VGND sg13cmos5l_xnor2_1
+X_2012_ _2012_/Y hold811/X _2063_/B _2036_/B1 _2011_/Y VPWR VGND sg13cmos5l_a22oi_1
+X_1658_ _1658_/Y _1658_/A _1658_/B _1658_/C _1658_/D VPWR VGND sg13cmos5l_nand4_1
+X_1727_ _2477_/D _1733_/A _1727_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_37_37 VPWR VGND sg13cmos5l_fill_2
+X_1589_ _1590_/B _1589_/A _1589_/B VPWR VGND sg13cmos5l_xor2_1
+XFILLER_1_365 VPWR VGND sg13cmos5l_fill_2
+Xhold690 _2290_/A _2389_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2340__215 _2340_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_17_266 VPWR VGND sg13cmos5l_fill_1
+X_1512_ _1512_/Y _2431_/Q _1501_/B _1522_/B1 hold474/X VPWR VGND sg13cmos5l_a22oi_1
+X_2561_ _2561_/Q clkload5/A _2561_/D _2561_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2492_ _2492_/Q clkload7/A _2492_/D _2492_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1374_ _1374_/Y _2581_/Q _1383_/A _2065_/A _1374_/D VPWR VGND sg13cmos5l_nand4_1
+X_1443_ _2420_/D _1584_/A _1443_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_23_236 VPWR VGND sg13cmos5l_fill_2
+Xfanout73 _1884_/A _1890_/A VPWR VGND sg13cmos5l_buf_1
+Xfanout62 _2096_/B _2111_/B VPWR VGND sg13cmos5l_buf_1
+Xfanout51 _1849_/B1 _1399_/Y VPWR VGND sg13cmos5l_buf_1
+Xfanout40 _2298_/B _2286_/Y VPWR VGND sg13cmos5l_buf_1
+Xfanout95 _2324_/A2 _1768_/A2 VPWR VGND sg13cmos5l_buf_1
+Xfanout84 _1377_/B _2593_/Q VPWR VGND sg13cmos5l_buf_1
+XFILLER_37_306 VPWR VGND sg13cmos5l_fill_1
+XFILLER_45_372 VPWR VGND sg13cmos5l_decap_8
+XFILLER_9_284 VPWR VGND sg13cmos5l_fill_1
+Xclkload10 clkload10/X _2531_/CLK VPWR VGND sg13cmos5l_buf_8
+X_2466__261 _2466_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1992_ _1992_/Y _2357_/Q _2207_/A _1974_/X VPWR VGND sg13cmos5l_o21ai_1
+X_2544_ _2544_/Q _2595_/CLK _2544_/D _2544_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2475_ _2475_/Q _2478_/CLK _2475_/D _2475_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_28_328 VPWR VGND sg13cmos5l_fill_2
+X_1357_ _1357_/Y _1357_/A VPWR VGND sg13cmos5l_inv_1
+X_1426_ _2588_/D _2065_/C _1425_/Y _1423_/Y VPWR VGND sg13cmos5l_a21oi_1
+Xclkload4 clkload4/Y clkload4/A VPWR VGND sg13cmos5l_inv_2
+X_2376__417 _2376_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_46_103 VPWR VGND sg13cmos5l_fill_1
+XFILLER_42_342 VPWR VGND sg13cmos5l_fill_2
+X_2260_ _2260_/Y _1315_/Y _2267_/B _2259_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2191_ _2191_/Y _1327_/Y _2192_/B hold535/X VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_1_86 VPWR VGND sg13cmos5l_fill_2
+XFILLER_33_375 VPWR VGND sg13cmos5l_fill_1
+X_1975_ _1978_/C _1977_/A _1977_/B _1974_/X VPWR VGND sg13cmos5l_o21ai_1
+X_1409_ _1409_/Y _2065_/C VPWR VGND sg13cmos5l_inv_1
+X_2527_ _2527_/Q _2531_/CLK _2527_/D _2527_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2458_ _2458_/Q _2605_/CLK _2458_/D _2458_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2389_ _2389_/Q _2604_/CLK _2389_/D _2389_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1691_ _1692_/A hold737/X _1734_/B _2480_/D _1690_/Y VPWR VGND sg13cmos5l_a22oi_1
+X_1760_ _1760_/Y _1332_/Y _1766_/A2 _1759_/Y VPWR VGND sg13cmos5l_a21oi_1
+Xhold508 _1838_/B _1837_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2567__299 _2567_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2428__351 _2428_/RESET_B VPWR VGND sg13cmos5l_tiehi
+Xhold519 hold519/X _2479_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2312_ _2312_/Y _2330_/A1 _1709_/A _2314_/B VPWR VGND sg13cmos5l_o21ai_1
+XFILLER_38_401 VPWR VGND sg13cmos5l_fill_2
+X_2243_ _2243_/Y _2243_/A _2251_/B VPWR VGND sg13cmos5l_nor2_1
+X_2174_ _2174_/Y _2174_/A _2184_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_21_356 VPWR VGND sg13cmos5l_fill_1
+X_1889_ _2529_/D _1326_/Y _1876_/Y _1887_/Y _1888_/Y _1979_/B VPWR VGND sg13cmos5l_a221oi_1
+X_1958_ _1958_/Y _1958_/A _1958_/B VPWR VGND sg13cmos5l_xnor2_1
+XFILLER_47_253 VPWR VGND sg13cmos5l_fill_1
+X_1674_ _1674_/Y _1674_/A _1674_/B _1674_/C _1674_/D VPWR VGND sg13cmos5l_nand4_1
+X_1743_ _2485_/D _1324_/Y _2326_/A2 _1742_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1812_ _1812_/X _2548_/Q _2495_/Q VPWR VGND sg13cmos5l_or2_1
+X_2545__383 _2545_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2226_ _2358_/D _1326_/Y _2225_/B _2225_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2157_ _2157_/X _2156_/Y hold603/X _2169_/S VPWR VGND sg13cmos5l_mux2_1
+X_2088_ _2088_/Y input9/X _2093_/B _2113_/A2 VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_29_220 VPWR VGND sg13cmos5l_fill_2
+XFILLER_29_231 VPWR VGND sg13cmos5l_fill_2
+XFILLER_12_197 VPWR VGND sg13cmos5l_fill_2
+X_1390_ _1390_/Y _1396_/A _2542_/Q VPWR VGND sg13cmos5l_nor2b_1
+X_2011_ _2011_/Y _2011_/A _2011_/B VPWR VGND sg13cmos5l_nand2_1
+X_1588_ _1588_/Y _2412_/Q _2456_/Q _1588_/C VPWR VGND sg13cmos5l_nor3_1
+X_1657_ _1658_/D _2288_/A _2272_/A _1705_/C VPWR VGND sg13cmos5l_nand3_1
+X_1726_ _1727_/B _1650_/A hold499/X _1709_/X hold638/X VPWR VGND sg13cmos5l_a22oi_1
+X_2476__241 _2476_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2209_ _2209_/Y _2209_/A _2209_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_1_399 VPWR VGND sg13cmos5l_decap_4
+Xhold680 hold680/X _2363_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold691 hold691/X _2290_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_49_359 VPWR VGND sg13cmos5l_decap_8
+Xheichips26_minimal_multicore_processor_140 uio_out[1] VPWR VGND sg13cmos5l_tielo
+Xclkbuf_2_0__f_clk clkbuf_leaf_2_clk/A clkbuf_0_clk/X VPWR VGND sg13cmos5l_buf_8
+X_2490__216 _2490_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_32_237 VPWR VGND sg13cmos5l_fill_1
+XFILLER_4_182 VPWR VGND sg13cmos5l_fill_2
+X_1442_ _1442_/Y hold600/X _1522_/A2 _1383_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1511_ _2430_/D _1776_/A _1511_/B VPWR VGND sg13cmos5l_nor2_1
+X_2560_ _2560_/Q clkload9/A _2560_/D _2560_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2491_ _2491_/Q clkload9/A _2491_/D _2491_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1373_ _1524_/B _1389_/A _1386_/A VPWR VGND sg13cmos5l_nand2_1
+XFILLER_48_381 VPWR VGND sg13cmos5l_decap_8
+X_1709_ _1709_/X _1709_/A _1709_/B VPWR VGND sg13cmos5l_and2_1
+Xfanout96 _1768_/A2 hold594/X VPWR VGND sg13cmos5l_buf_1
+Xfanout85 _2117_/A _2146_/A2 VPWR VGND sg13cmos5l_buf_1
+Xfanout74 _1563_/A _1386_/Y VPWR VGND sg13cmos5l_buf_1
+Xfanout63 _2111_/B _1415_/X VPWR VGND sg13cmos5l_buf_1
+Xfanout52 _1828_/B _1841_/A2 VPWR VGND sg13cmos5l_buf_1
+Xfanout41 _2267_/B _2265_/B VPWR VGND sg13cmos5l_buf_1
+Xfanout30 _2200_/B _2192_/B VPWR VGND sg13cmos5l_buf_1
+XFILLER_8_0 VPWR VGND sg13cmos5l_fill_2
+XFILLER_45_340 VPWR VGND sg13cmos5l_fill_2
+XFILLER_45_351 VPWR VGND sg13cmos5l_decap_8
+Xclkload11 clkload11/Y _2590_/CLK VPWR VGND sg13cmos5l_inv_2
+X_1991_ _1995_/A _2223_/A _2207_/A _2031_/C VPWR VGND sg13cmos5l_nand3_1
+X_1425_ _1425_/Y _2131_/B VPWR VGND sg13cmos5l_inv_1
+X_2543_ _2543_/Q _2595_/CLK _2543_/D _2543_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2474_ _2474_/Q _2478_/CLK _2474_/D _2474_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1356_ _1356_/Y _1356_/A VPWR VGND sg13cmos5l_inv_1
+X_2577__279 _2577_/RESET_B VPWR VGND sg13cmos5l_tiehi
+Xclkload5 clkload5/Y clkload5/A VPWR VGND sg13cmos5l_inv_1
+X_2445__302 _2445_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2367__160 _2367_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_42_332 VPWR VGND sg13cmos5l_decap_8
+XFILLER_42_398 VPWR VGND sg13cmos5l_decap_4
+XFILLER_1_98 VPWR VGND sg13cmos5l_fill_2
+X_2190_ _2190_/Y _2190_/A _2192_/B VPWR VGND sg13cmos5l_nor2_1
+X_1974_ _1974_/X _2482_/Q _1974_/B VPWR VGND sg13cmos5l_and2_1
+X_1408_ _2065_/C input2/X input3/X VPWR VGND sg13cmos5l_nand2_1
+X_2526_ _2526_/Q clkload8/A _2526_/D _2526_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2457_ _2457_/Q _2605_/CLK _2457_/D _2457_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2388_ _2388_/Q _2478_/CLK _2388_/D _2388_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_43_129 VPWR VGND sg13cmos5l_fill_1
+XFILLER_45_16 VPWR VGND sg13cmos5l_fill_1
+X_1339_ _1915_/B _1778_/B VPWR VGND sg13cmos5l_inv_1
+XFILLER_19_61 VPWR VGND sg13cmos5l_fill_2
+XFILLER_42_140 VPWR VGND sg13cmos5l_fill_1
+X_1690_ _1690_/Y _1690_/A _1690_/B _1690_/C _1690_/D VPWR VGND sg13cmos5l_nand4_1
+Xhold509 hold509/X _2499_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2311_ _2405_/D _2330_/A1 _1314_/Y _2310_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2242_ _2242_/Y _1317_/Y _2249_/B _2241_/Y VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_18_192 VPWR VGND sg13cmos5l_fill_1
+X_2357__181 _2357_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2173_ _2173_/Y _1328_/Y _2182_/B _2172_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1957_ _1958_/B _1941_/Y _1950_/Y _1948_/A VPWR VGND sg13cmos5l_o21ai_1
+X_1888_ _1888_/Y _1367_/A _1877_/A _1901_/B VPWR VGND sg13cmos5l_a21oi_1
+Xoutput18 uo_out[0] _2600_/Q VPWR VGND sg13cmos5l_buf_1
+X_2509_ _2509_/Q _2590_/CLK _2509_/D _2509_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2592__327 _2592_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_12_324 VPWR VGND sg13cmos5l_fill_2
+X_1811_ _1813_/A _2548_/Q _2495_/Q VPWR VGND sg13cmos5l_and2_1
+X_1673_ _1674_/D _2292_/A _2276_/A _1705_/C VPWR VGND sg13cmos5l_nand3_1
+X_1742_ _1742_/Y _2326_/A2 _2219_/A _1429_/A VPWR VGND sg13cmos5l_o21ai_1
+XFILLER_23_0 VPWR VGND sg13cmos5l_fill_1
+X_2225_ _2225_/Y _2225_/A _2225_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_26_29 VPWR VGND sg13cmos5l_fill_1
+Xclkbuf_leaf_18_clk _2478_/CLK clkbuf_leaf_2_clk/A VPWR VGND sg13cmos5l_buf_8
+X_2156_ _2156_/Y _2168_/A1 _2155_/Y _2154_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2087_ _2087_/Y _2087_/A _2108_/B VPWR VGND sg13cmos5l_nand2_1
+XFILLER_44_257 VPWR VGND sg13cmos5l_fill_1
+X_2453__286 _2453_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_4_375 VPWR VGND sg13cmos5l_fill_2
+X_2010_ _2011_/B _2023_/A _2006_/X _2009_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1725_ _1725_/X _2392_/Q _2280_/A _2263_/A _2247_/A _2401_/Q _2402_/Q VPWR VGND sg13cmos5l_mux4_1
+X_1587_ _1587_/Y _2412_/Q _1588_/C _1589_/A VPWR VGND sg13cmos5l_o21ai_1
+X_1656_ _1658_/C _2288_/A _2272_/A _1645_/X VPWR VGND sg13cmos5l_o21ai_1
+Xclkbuf_leaf_7_clk clkload7/A clkbuf_leaf_7_clk/A VPWR VGND sg13cmos5l_buf_8
+XFILLER_26_213 VPWR VGND sg13cmos5l_decap_4
+X_2208_ _2349_/D _1327_/Y _2209_/B _2207_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2139_ _2598_/D _2139_/A _2139_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_1_323 VPWR VGND sg13cmos5l_fill_1
+XFILLER_1_378 VPWR VGND sg13cmos5l_decap_8
+Xhold670 _2284_/A _2386_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold681 _2363_/D _2238_/X VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold692 _2389_/D _2291_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xheichips26_minimal_multicore_processor_141 uio_out[2] VPWR VGND sg13cmos5l_tielo
+XFILLER_32_216 VPWR VGND sg13cmos5l_decap_4
+X_1441_ _1441_/Y _2328_/A1 _1351_/Y _1440_/Y VPWR VGND sg13cmos5l_o21ai_1
+X_1510_ _1510_/Y _2430_/Q _1501_/B _1522_/B1 hold458/X VPWR VGND sg13cmos5l_a22oi_1
+X_2490_ _2490_/Q _2525_/CLK _2490_/D _2490_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_48_360 VPWR VGND sg13cmos5l_decap_8
+X_1372_ _1372_/Y _1372_/A VPWR VGND sg13cmos5l_inv_1
+XFILLER_23_238 VPWR VGND sg13cmos5l_fill_1
+X_1708_ _2471_/D _1708_/A VPWR VGND sg13cmos5l_inv_1
+X_1639_ _1639_/Y _1709_/B _1730_/A VPWR VGND sg13cmos5l_nor2_1
+Xfanout97 _2023_/A _2484_/Q VPWR VGND sg13cmos5l_buf_1
+Xfanout86 _2166_/A2 _2146_/A2 VPWR VGND sg13cmos5l_buf_1
+Xfanout75 _1650_/A _1342_/Y VPWR VGND sg13cmos5l_buf_1
+Xfanout64 _2093_/B _1414_/Y VPWR VGND sg13cmos5l_buf_1
+Xfanout53 _1841_/A2 _1398_/X VPWR VGND sg13cmos5l_buf_1
+Xfanout42 _2265_/B _2253_/Y VPWR VGND sg13cmos5l_buf_1
+Xfanout31 _2192_/B _2186_/X VPWR VGND sg13cmos5l_buf_1
+X_1990_ _1990_/X _2357_/Q _2349_/Q _2341_/Q _2333_/Q _2395_/Q _2396_/Q VPWR VGND sg13cmos5l_mux4_1
+X_2542_ _2542_/Q clkload8/A _2542_/D _2542_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1355_ _1355_/Y _2128_/B VPWR VGND sg13cmos5l_inv_1
+X_1424_ _1424_/X _1424_/A _2111_/B VPWR VGND sg13cmos5l_and2_1
+X_2473_ _2473_/Q _2478_/CLK _2473_/D _2473_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2438__332 _2438_/RESET_B VPWR VGND sg13cmos5l_tiehi
+Xclkload6 clkload6/Y clkload6/A VPWR VGND sg13cmos5l_inv_1
+XFILLER_46_138 VPWR VGND sg13cmos5l_fill_2
+XFILLER_10_230 VPWR VGND sg13cmos5l_fill_2
+XFILLER_6_245 VPWR VGND sg13cmos5l_fill_1
+X_1973_ _1978_/B _1977_/A _2024_/B VPWR VGND sg13cmos5l_or2_1
+X_2525_ _2525_/Q _2525_/CLK _2525_/D _2525_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1338_ _1338_/Y _1915_/A VPWR VGND sg13cmos5l_inv_1
+X_1407_ _2584_/D _1748_/B _1853_/A _1407_/C VPWR VGND sg13cmos5l_nand3_1
+X_2456_ _2456_/Q _2605_/CLK _2456_/D _2456_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2387_ _2387_/Q _2514_/CLK _2387_/D _2387_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_10_31 VPWR VGND sg13cmos5l_fill_1
+XFILLER_34_108 VPWR VGND sg13cmos5l_fill_2
+XFILLER_47_403 VPWR VGND sg13cmos5l_fill_1
+X_2534__404 _2534_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_42_196 VPWR VGND sg13cmos5l_fill_1
+X_2463__266 _2463_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_38_403 VPWR VGND sg13cmos5l_fill_1
+X_2310_ _2310_/Y _2330_/A1 _1694_/A _1422_/A VPWR VGND sg13cmos5l_o21ai_1
+X_2241_ _2241_/Y _2241_/A _2249_/B VPWR VGND sg13cmos5l_nor2_1
+X_2172_ _2172_/Y _2172_/A _2182_/B VPWR VGND sg13cmos5l_nor2_1
+X_1887_ _1887_/Y _1890_/A _1887_/B VPWR VGND sg13cmos5l_nand2_1
+X_1956_ _1958_/A _1954_/Y _1956_/B VPWR VGND sg13cmos5l_nand2b_1
+Xoutput19 uo_out[1] _2577_/Q VPWR VGND sg13cmos5l_buf_1
+X_2508_ _2508_/Q _2590_/CLK _2508_/D _2508_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_29_403 VPWR VGND sg13cmos5l_fill_1
+X_2439_ _2439_/Q clkload5/A _2439_/D _2439_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_24_185 VPWR VGND sg13cmos5l_fill_2
+X_2393__382 _2393_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1741_ _2484_/D _1325_/Y _2324_/A2 _1740_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1810_ _1814_/A _1802_/Y _1805_/B _1801_/Y VPWR VGND sg13cmos5l_o21ai_1
+X_1672_ _1674_/C _2292_/A _2276_/A _1645_/X VPWR VGND sg13cmos5l_o21ai_1
+XFILLER_16_0 VPWR VGND sg13cmos5l_fill_1
+X_2224_ _2357_/D _1327_/Y _2225_/B _2223_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2155_ _2155_/Y _2503_/Q _2166_/A2 _2166_/B1 _2511_/Q VPWR VGND sg13cmos5l_a22oi_1
+XFILLER_21_100 VPWR VGND sg13cmos5l_fill_1
+X_2086_ _2567_/D _1370_/Y _2095_/A2 _2084_/Y _2085_/Y VPWR VGND sg13cmos5l_a22oi_1
+X_1939_ _1939_/Y _1943_/A VPWR VGND sg13cmos5l_inv_1
+XFILLER_29_233 VPWR VGND sg13cmos5l_fill_1
+XFILLER_29_277 VPWR VGND sg13cmos5l_fill_2
+XFILLER_12_155 VPWR VGND sg13cmos5l_fill_2
+XFILLER_12_188 VPWR VGND sg13cmos5l_fill_1
+XFILLER_8_148 VPWR VGND sg13cmos5l_fill_2
+XFILLER_8_159 VPWR VGND sg13cmos5l_fill_2
+X_1724_ _2476_/D _1733_/A _1724_/B VPWR VGND sg13cmos5l_nor2_1
+X_1586_ _1589_/B _2412_/Q _1588_/C VPWR VGND sg13cmos5l_nor2_1
+X_1655_ _1658_/B _2288_/A _1703_/B VPWR VGND sg13cmos5l_or2_1
+XFILLER_26_225 VPWR VGND sg13cmos5l_fill_1
+XFILLER_26_236 VPWR VGND sg13cmos5l_fill_2
+XFILLER_26_269 VPWR VGND sg13cmos5l_fill_2
+X_2207_ _2207_/Y _2207_/A _2209_/B VPWR VGND sg13cmos5l_nor2_1
+X_2138_ _2139_/B _1405_/B _1406_/A _1394_/Y hold696/X VPWR VGND sg13cmos5l_a22oi_1
+X_2069_ _2069_/Y input3/X _2090_/B VPWR VGND sg13cmos5l_nand2_1
+XFILLER_1_302 VPWR VGND sg13cmos5l_decap_8
+Xhold660 _1614_/B _2459_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold671 hold671/X _2489_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_1_335 VPWR VGND sg13cmos5l_decap_8
+Xhold682 _2274_/A _2381_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold693 _1310_/A _2448_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xheichips26_minimal_multicore_processor_142 uio_out[3] VPWR VGND sg13cmos5l_tielo
+XFILLER_9_402 VPWR VGND sg13cmos5l_fill_2
+X_1371_ _1371_/Y _1371_/A VPWR VGND sg13cmos5l_inv_1
+X_1440_ _1440_/Y _2328_/A1 _2447_/Q _1584_/A VPWR VGND sg13cmos5l_a21oi_1
+X_2542__388 _2542_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_0_390 VPWR VGND sg13cmos5l_decap_8
+X_1638_ _2463_/D _1638_/A _2065_/A VPWR VGND sg13cmos5l_and2_1
+X_1707_ _1707_/Y hold740/X _1734_/B _2480_/D _1706_/Y VPWR VGND sg13cmos5l_a22oi_1
+X_1569_ _2452_/D _1584_/A _1569_/B VPWR VGND sg13cmos5l_nor2_1
+X_2415__377 _2415_/RESET_B VPWR VGND sg13cmos5l_tiehi
+Xfanout98 _2329_/A1 _2330_/A1 VPWR VGND sg13cmos5l_buf_1
+Xfanout87 _2146_/A2 _2589_/Q VPWR VGND sg13cmos5l_buf_1
+Xfanout76 _1979_/A _1319_/Y VPWR VGND sg13cmos5l_buf_1
+Xfanout65 _2090_/B _1414_/Y VPWR VGND sg13cmos5l_buf_1
+Xfanout54 _1854_/A1 _1397_/Y VPWR VGND sg13cmos5l_buf_1
+Xfanout43 _2233_/B _2219_/Y VPWR VGND sg13cmos5l_buf_1
+Xfanout32 _2184_/B _2182_/B VPWR VGND sg13cmos5l_buf_1
+XFILLER_49_103 VPWR VGND sg13cmos5l_fill_1
+Xhold490 _1581_/A _2419_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_45_386 VPWR VGND sg13cmos5l_decap_8
+X_2541_ _2541_/Q clkload8/A _2541_/D _2541_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2472_ _2472_/Q _2514_/CLK _2472_/D _2472_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1354_ _1354_/Y _1406_/A VPWR VGND sg13cmos5l_inv_1
+X_1423_ _1423_/Y _2116_/C _2065_/C _1389_/A VPWR VGND sg13cmos5l_o21ai_1
+Xclkload7 clkload7/Y clkload7/A VPWR VGND sg13cmos5l_inv_1
+XFILLER_24_52 VPWR VGND sg13cmos5l_fill_2
+XFILLER_6_279 VPWR VGND sg13cmos5l_fill_1
+X_2576__281 _2576_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1972_ _2024_/B _1976_/C _1974_/B VPWR VGND sg13cmos5l_nand2_1
+X_2524_ _2524_/Q _2525_/CLK _2524_/D _2524_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2455_ _2455_/Q clkload4/A _2455_/D _2455_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1337_ _1399_/A _1788_/A VPWR VGND sg13cmos5l_inv_1
+X_1406_ _1407_/C _1406_/A _1877_/A VPWR VGND sg13cmos5l_nand2_1
+X_2386_ _2386_/Q _2514_/CLK _2386_/D _2386_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_10_98 VPWR VGND sg13cmos5l_fill_1
+XFILLER_15_312 VPWR VGND sg13cmos5l_fill_1
+XFILLER_15_345 VPWR VGND sg13cmos5l_fill_2
+XFILLER_30_337 VPWR VGND sg13cmos5l_fill_1
+X_2240_ _2240_/Y _1310_/Y _2251_/B _2239_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2171_ _2331_/D hold635/X hold651/X _2182_/B VPWR VGND sg13cmos5l_mux2_1
+X_1886_ _2528_/D _1327_/Y _1876_/Y _1884_/Y _1885_/Y _1979_/B VPWR VGND sg13cmos5l_a221oi_1
+X_1955_ _1956_/B _1955_/A _2496_/Q _1955_/C VPWR VGND sg13cmos5l_nand3_1
+X_2507_ _2507_/Q _2590_/CLK _2507_/D _2507_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2438_ _2438_/Q clkload7/A _2438_/D _2438_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2369_ _2369_/Q clkload1/A _2369_/D _2369_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2486__223 _2486_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_47_267 VPWR VGND sg13cmos5l_fill_2
+XFILLER_30_145 VPWR VGND sg13cmos5l_fill_1
+X_1671_ _1674_/B _2292_/A _1703_/B VPWR VGND sg13cmos5l_or2_1
+X_1740_ _1740_/Y _2324_/A2 _2023_/A _1920_/B1 VPWR VGND sg13cmos5l_o21ai_1
+X_2223_ _2223_/Y _2223_/A _2225_/B VPWR VGND sg13cmos5l_nor2_1
+X_2154_ _2154_/Y _2424_/Q _2117_/A _2167_/B1 _2432_/Q _2168_/A1 VPWR VGND sg13cmos5l_a221oi_1
+X_2085_ _2085_/Y input8/X _2093_/B _2095_/A2 VPWR VGND sg13cmos5l_a21oi_1
+X_1869_ _1870_/B _1331_/A _1857_/Y _1858_/X _1361_/A VPWR VGND sg13cmos5l_a22oi_1
+X_1938_ _1943_/A _1938_/A _1950_/A VPWR VGND sg13cmos5l_nor2b_1
+X_2596__273 _2596_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2425__357 _2425_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_7_182 VPWR VGND sg13cmos5l_fill_1
+X_1654_ _1658_/A _2405_/Q _1654_/B VPWR VGND sg13cmos5l_nand2_1
+X_1723_ _1724_/B _1650_/A hold512/X _1709_/X hold630/X VPWR VGND sg13cmos5l_a22oi_1
+X_2582__317 _2582_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1585_ _1590_/A _1585_/A _1585_/B _1609_/C VPWR VGND sg13cmos5l_nand3_1
+X_2206_ _2348_/D _1328_/Y _2209_/B _2205_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2137_ _2597_/D _2137_/A _2137_/B VPWR VGND sg13cmos5l_nor2_1
+X_2068_ _2561_/D _1364_/Y _2080_/A2 _2066_/Y _2067_/Y VPWR VGND sg13cmos5l_a22oi_1
+Xhold650 hold650/X _2048_/X VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold661 _2459_/D _1616_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold672 _2489_/D _1750_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold683 _2381_/D _2275_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold694 _2288_/A _2388_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xheichips26_minimal_multicore_processor_143 uio_out[4] VPWR VGND sg13cmos5l_tielo
+Xheichips26_minimal_multicore_processor_132 uio_oe[1] VPWR VGND sg13cmos5l_tielo
+X_1370_ _1370_/Y _1370_/A VPWR VGND sg13cmos5l_inv_1
+XFILLER_48_395 VPWR VGND sg13cmos5l_decap_8
+X_1637_ _1637_/Y _1615_/A _1635_/Y _1636_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1706_ _1706_/Y _1706_/A _1706_/B _1706_/C _1706_/D VPWR VGND sg13cmos5l_nand4_1
+X_1499_ _1499_/Y hold580/X _1382_/Y _1498_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1568_ _1568_/Y _1313_/A _1574_/B _1567_/Y VPWR VGND sg13cmos5l_a21oi_1
+Xfanout55 _1522_/B1 _1383_/Y VPWR VGND sg13cmos5l_buf_1
+Xfanout44 _2225_/B _2219_/Y VPWR VGND sg13cmos5l_buf_1
+Xfanout33 _2182_/B _2170_/X VPWR VGND sg13cmos5l_buf_1
+Xfanout99 _2330_/A1 _2328_/A1 VPWR VGND sg13cmos5l_buf_1
+Xfanout88 _2168_/A1 _2127_/A VPWR VGND sg13cmos5l_buf_1
+Xfanout77 _1967_/A _1953_/A1 VPWR VGND sg13cmos5l_buf_1
+Xfanout66 _2080_/A2 _2065_/Y VPWR VGND sg13cmos5l_buf_1
+XFILLER_1_100 VPWR VGND sg13cmos5l_fill_1
+XFILLER_1_177 VPWR VGND sg13cmos5l_fill_1
+XFILLER_49_137 VPWR VGND sg13cmos5l_fill_1
+Xhold480 _1374_/D _2463_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold491 _2419_/D _1441_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_45_365 VPWR VGND sg13cmos5l_decap_8
+X_1422_ _2590_/D _1422_/A _1422_/B VPWR VGND sg13cmos5l_and2_1
+X_2540_ _2540_/Q clkload9/A _2540_/D _2540_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2471_ _2471_/Q _2605_/CLK _2471_/D _2471_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1353_ _1524_/A _1388_/A VPWR VGND sg13cmos5l_inv_1
+X_2588__323 _2588_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2473__247 _2473_/RESET_B VPWR VGND sg13cmos5l_tiehi
+Xclkload8 clkload8/X clkload8/A VPWR VGND sg13cmos5l_buf_8
+XFILLER_10_232 VPWR VGND sg13cmos5l_fill_1
+X_2346__203 _2346_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2502__192 _2502_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_18_387 VPWR VGND sg13cmos5l_fill_1
+X_1971_ _1974_/B _2023_/A _2483_/Q VPWR VGND sg13cmos5l_nor2b_1
+X_1405_ _1877_/A _1405_/A _1405_/B VPWR VGND sg13cmos5l_or2_1
+X_2523_ _2523_/Q _2525_/CLK _2523_/D _2523_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2454_ _2454_/Q clkload0/A _2454_/D _2454_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2385_ _2385_/Q clkload1/A _2385_/D _2385_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1336_ _1856_/A _2584_/Q VPWR VGND sg13cmos5l_inv_1
+Xinput1 input1/X rst_n VPWR VGND sg13cmos5l_buf_1
+XFILLER_24_313 VPWR VGND sg13cmos5l_fill_1
+XFILLER_3_206 VPWR VGND sg13cmos5l_fill_1
+XFILLER_10_88 VPWR VGND sg13cmos5l_fill_1
+XFILLER_42_132 VPWR VGND sg13cmos5l_fill_2
+X_2435__337 _2435_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2170_ _2170_/X _2487_/Q _2486_/Q _2485_/Q _2560_/D VPWR VGND sg13cmos5l_and4_1
+X_1954_ _1954_/Y _2496_/Q _1955_/C _1955_/A VPWR VGND sg13cmos5l_a21oi_1
+X_1885_ _1885_/Y _1366_/A _1877_/A _1901_/B VPWR VGND sg13cmos5l_a21oi_1
+X_2442__308 _2442_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2506_ _2506_/Q _2600_/CLK _2506_/D _2506_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2437_ _2437_/Q _2525_/CLK _2437_/D _2437_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2368_ _2368_/Q clkload1/A _2368_/D _2368_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1319_ _1319_/Y _2038_/A VPWR VGND sg13cmos5l_inv_1
+X_2336__224 _2336_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2299_ _2299_/Y _1312_/Y _2298_/B hold750/X VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_21_32 VPWR VGND sg13cmos5l_fill_1
+XFILLER_21_98 VPWR VGND sg13cmos5l_fill_2
+X_1670_ _1674_/A _1694_/A _1670_/B VPWR VGND sg13cmos5l_nand2_1
+XFILLER_30_4 VPWR VGND sg13cmos5l_fill_1
+X_2222_ _2222_/Y _1328_/Y _2225_/B _2221_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2153_ _2153_/X _2152_/Y hold598/X _2169_/S VPWR VGND sg13cmos5l_mux2_1
+X_2084_ _2084_/Y _2084_/A _2108_/B VPWR VGND sg13cmos5l_nand2_1
+X_1937_ _1950_/A _1937_/A _2494_/Q _1961_/B VPWR VGND sg13cmos5l_nand3_1
+X_1799_ _1800_/B _2503_/Q _1854_/A1 _1748_/B VPWR VGND sg13cmos5l_o21ai_1
+X_1868_ _2522_/D _1872_/A _1868_/B VPWR VGND sg13cmos5l_nor2_1
+Xhold810 _1378_/A _2581_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_4_345 VPWR VGND sg13cmos5l_fill_2
+X_2354__187 _2354_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_7_194 VPWR VGND sg13cmos5l_fill_1
+X_1584_ _2455_/D _1584_/A _1584_/B VPWR VGND sg13cmos5l_nor2_1
+X_1653_ _1654_/B _2388_/Q _2380_/Q _2372_/Q _2364_/Q _2399_/Q _2400_/Q VPWR VGND sg13cmos5l_mux4_1
+X_1722_ _1722_/X _2294_/A _2383_/Q _2261_/A _2245_/A _2401_/Q _2402_/Q VPWR VGND sg13cmos5l_mux4_1
+X_2205_ _2205_/Y _2205_/A _2209_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_19_290 VPWR VGND sg13cmos5l_fill_2
+X_2136_ _2137_/B _1387_/B _1388_/A _1376_/Y _1378_/A VPWR VGND sg13cmos5l_a22oi_1
+X_2067_ _2067_/Y _2090_/A _2096_/B _2098_/A2 VPWR VGND sg13cmos5l_a21oi_1
+Xhold640 hold640/X _1728_/X VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold651 hold651/X _2526_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold662 _1405_/B _2585_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold673 _1376_/A _2410_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold684 _2219_/A _2485_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold695 _2292_/A _2390_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_27_86 VPWR VGND sg13cmos5l_fill_2
+Xheichips26_minimal_multicore_processor_144 uio_out[5] VPWR VGND sg13cmos5l_tielo
+Xheichips26_minimal_multicore_processor_133 uio_oe[2] VPWR VGND sg13cmos5l_tielo
+XFILLER_4_153 VPWR VGND sg13cmos5l_fill_2
+XFILLER_48_374 VPWR VGND sg13cmos5l_decap_8
+X_1705_ _1706_/D _2300_/A _2284_/A _1705_/C VPWR VGND sg13cmos5l_nand3_1
+X_2512__172 _2512_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1567_ _1567_/Y _1563_/A _1487_/Y _1566_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1636_ _1636_/Y _1634_/A _1615_/A _2065_/A VPWR VGND sg13cmos5l_o21ai_1
+X_1498_ _1498_/Y _1377_/B _1496_/Y _1497_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2119_ _2119_/Y _2501_/Q _2146_/A2 _2131_/B _2509_/Q VPWR VGND sg13cmos5l_a22oi_1
+Xfanout89 _2145_/A _2127_/A VPWR VGND sg13cmos5l_buf_1
+Xfanout78 _1953_/A1 hold431/X VPWR VGND sg13cmos5l_buf_1
+Xfanout67 _2098_/A2 _2065_/Y VPWR VGND sg13cmos5l_buf_1
+Xfanout56 _1505_/B1 _1381_/Y VPWR VGND sg13cmos5l_buf_1
+Xfanout45 _2217_/B _2203_/Y VPWR VGND sg13cmos5l_buf_1
+Xfanout34 _2169_/S _2123_/Y VPWR VGND sg13cmos5l_buf_1
+Xhold470 _1344_/A _2446_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold481 hold481/X _1374_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold492 _1323_/A _2532_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2541__390 _2541_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1421_ _1422_/B _1421_/A hold434/X VPWR VGND sg13cmos5l_nor2b_1
+X_2470_ _2470_/Q _2604_/CLK _2470_/D _2470_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1352_ _1352_/Y _1352_/A VPWR VGND sg13cmos5l_inv_1
+Xclkload9 clkload9/Y clkload9/A VPWR VGND sg13cmos5l_inv_4
+X_1619_ _1622_/A _1617_/Y _1621_/B VPWR VGND sg13cmos5l_nand2b_1
+X_2599_ _2599_/Q _2605_/CLK _2599_/D _2599_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_10_299 VPWR VGND sg13cmos5l_fill_2
+X_2496__204 _2496_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1970_ _1978_/A _2023_/A _1970_/B VPWR VGND sg13cmos5l_nand2_1
+X_2522_ _2522_/Q _2525_/CLK _2522_/D _2522_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1335_ _1335_/Y _1335_/A VPWR VGND sg13cmos5l_inv_1
+X_1404_ _1890_/A _1405_/A _1405_/B VPWR VGND sg13cmos5l_nor2_1
+X_2453_ _2453_/Q _2605_/CLK _2453_/D _2453_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2384_ _2384_/Q _2604_/CLK _2384_/D _2384_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+Xinput2 input2/X ui_in[0] VPWR VGND sg13cmos5l_buf_1
+XFILLER_24_369 VPWR VGND sg13cmos5l_fill_2
+X_2449__294 _2449_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_30_317 VPWR VGND sg13cmos5l_fill_1
+X_1884_ _1884_/Y _1884_/A _1884_/B VPWR VGND sg13cmos5l_nand2_1
+X_1953_ _1953_/Y _1953_/A1 _1951_/X _1952_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2505_ _2505_/Q _2600_/CLK _2505_/D _2505_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2364__167 _2364_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1318_ _2131_/A _2127_/A VPWR VGND sg13cmos5l_inv_1
+X_2436_ _2436_/Q _2600_/CLK _2436_/D _2436_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2367_ _2367_/Q _2514_/CLK _2367_/D _2367_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2298_ _2298_/Y _2298_/A _2298_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_21_55 VPWR VGND sg13cmos5l_fill_2
+XFILLER_15_100 VPWR VGND sg13cmos5l_fill_1
+XFILLER_7_398 VPWR VGND sg13cmos5l_fill_1
+XFILLER_38_225 VPWR VGND sg13cmos5l_fill_2
+X_2221_ _2221_/Y _2221_/A _2225_/B VPWR VGND sg13cmos5l_nor2_1
+X_2152_ _2152_/Y _2168_/A1 _2150_/Y _2151_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2083_ _2566_/D _1369_/Y _2098_/A2 _2081_/Y _2082_/Y VPWR VGND sg13cmos5l_a22oi_1
+X_1867_ _1868_/B _1332_/A _1857_/Y _1858_/X _1360_/A VPWR VGND sg13cmos5l_a22oi_1
+X_1936_ _1938_/A _2494_/Q _1955_/C _1937_/A VPWR VGND sg13cmos5l_a21oi_1
+X_1798_ _1798_/Y hold663/X _1887_/B _1797_/Y VPWR VGND sg13cmos5l_a21oi_1
+Xhold811 hold811/X _2547_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold800 _2005_/A _2004_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2419_ _2419_/Q _2605_/CLK _2419_/D _2419_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1721_ _2475_/D _1730_/A _1721_/B VPWR VGND sg13cmos5l_nor2_1
+X_1583_ _1583_/X _1585_/B _1583_/B VPWR VGND sg13cmos5l_xor2_1
+X_1652_ _2464_/D _1652_/A VPWR VGND sg13cmos5l_inv_1
+XFILLER_14_0 VPWR VGND sg13cmos5l_fill_2
+X_2204_ _2347_/D _1977_/B hold651/X _2209_/B VPWR VGND sg13cmos5l_mux2_1
+X_2135_ _2135_/Y _2438_/Q hold434/X _2134_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2066_ _2066_/Y input2/X _2090_/B VPWR VGND sg13cmos5l_nand2_1
+X_1919_ _1919_/Y _1919_/A _1919_/B VPWR VGND sg13cmos5l_xnor2_1
+Xhold630 hold630/X _1722_/X VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_1_316 VPWR VGND sg13cmos5l_decap_8
+XFILLER_1_349 VPWR VGND sg13cmos5l_decap_4
+Xhold641 _2207_/A _2349_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold652 _2213_/A _2352_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold663 hold663/X _2595_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold674 hold674/X _2315_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold685 _2278_/A _2383_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold696 hold696/X _2584_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xheichips26_minimal_multicore_processor_134 uio_oe[3] VPWR VGND sg13cmos5l_tielo
+Xheichips26_minimal_multicore_processor_145 uio_out[6] VPWR VGND sg13cmos5l_tielo
+XFILLER_4_132 VPWR VGND sg13cmos5l_fill_2
+XFILLER_48_353 VPWR VGND sg13cmos5l_decap_8
+X_1704_ _1706_/C _2300_/A _2284_/A _1645_/X VPWR VGND sg13cmos5l_o21ai_1
+X_1497_ _1497_/Y _2461_/Q _1377_/B _1505_/B1 VPWR VGND sg13cmos5l_o21ai_1
+X_1566_ _1566_/Y _2566_/Q _1563_/A _1548_/X VPWR VGND sg13cmos5l_o21ai_1
+X_1635_ _1635_/Y _1635_/A _1635_/B VPWR VGND sg13cmos5l_xnor2_1
+XFILLER_39_386 VPWR VGND sg13cmos5l_fill_1
+X_2118_ _2148_/A _2117_/A _2131_/C VPWR VGND sg13cmos5l_nand2b_1
+X_2049_ _2050_/B _1319_/Y hold503/X hold613/X hold650/X VPWR VGND sg13cmos5l_a22oi_1
+XFILLER_22_253 VPWR VGND sg13cmos5l_fill_2
+Xfanout79 _1396_/A _1788_/A VPWR VGND sg13cmos5l_buf_1
+Xfanout68 _2110_/A2 _2095_/A2 VPWR VGND sg13cmos5l_buf_1
+Xfanout57 _2036_/B1 _2559_/D VPWR VGND sg13cmos5l_buf_1
+Xfanout46 _2209_/B _2203_/Y VPWR VGND sg13cmos5l_buf_1
+Xfanout35 _1901_/B _1876_/Y VPWR VGND sg13cmos5l_buf_1
+X_2565__303 _2565_/RESET_B VPWR VGND sg13cmos5l_tiehi
+Xhold460 _1574_/A _2454_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold471 _2418_/D _1439_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_38_64 VPWR VGND sg13cmos5l_fill_1
+XFILLER_49_117 VPWR VGND sg13cmos5l_fill_2
+Xhold482 _2583_/D _1375_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold493 _1900_/B _1899_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2459__274 _2459_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1351_ _1351_/Y _1581_/A VPWR VGND sg13cmos5l_inv_1
+X_1420_ _1421_/A _1420_/A _1420_/B VPWR VGND sg13cmos5l_nor2_1
+X_1618_ _1621_/B _1618_/A _2416_/Q _1633_/B VPWR VGND sg13cmos5l_nand3_1
+X_1549_ _1549_/Y _1549_/A _1549_/B VPWR VGND sg13cmos5l_nand2_1
+X_2598_ _2598_/Q clkload8/A _2598_/D _2598_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_49_96 VPWR VGND sg13cmos5l_fill_2
+XFILLER_33_348 VPWR VGND sg13cmos5l_fill_1
+X_2521_ _2521_/Q _2525_/CLK _2521_/D _2521_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1334_ _1334_/Y _1334_/A VPWR VGND sg13cmos5l_inv_1
+X_1403_ _1858_/B _2586_/Q _1406_/A VPWR VGND sg13cmos5l_and2_1
+X_2452_ _2452_/Q _2605_/CLK _2452_/D _2452_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2383_ _2383_/Q _2514_/CLK _2383_/D _2383_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_36_120 VPWR VGND sg13cmos5l_fill_2
+Xinput3 input3/X ui_in[1] VPWR VGND sg13cmos5l_buf_1
+X_2382__405 _2382_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_10_46 VPWR VGND sg13cmos5l_fill_2
+X_1883_ _2527_/D _1328_/Y _1901_/B _1881_/Y _1882_/Y _1979_/B VPWR VGND sg13cmos5l_a221oi_1
+X_1952_ _1952_/Y _1953_/A1 _1947_/A _1967_/B VPWR VGND sg13cmos5l_o21ai_1
+X_2509__178 _2509_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2504_ _2504_/Q clkload2/A _2504_/D _2504_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2435_ _2435_/Q _2600_/CLK _2435_/D _2435_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1317_ _1317_/Y _1317_/A VPWR VGND sg13cmos5l_inv_1
+X_2366_ _2366_/Q _2478_/CLK _2366_/D _2366_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2297_ _2392_/D _1313_/Y _2298_/B hold725/X VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_12_318 VPWR VGND sg13cmos5l_fill_1
+X_2573__287 _2573_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2538__396 _2538_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_15_156 VPWR VGND sg13cmos5l_fill_2
+XFILLER_15_167 VPWR VGND sg13cmos5l_fill_1
+XFILLER_15_189 VPWR VGND sg13cmos5l_fill_2
+XFILLER_7_300 VPWR VGND sg13cmos5l_fill_2
+X_2441__310 _2441_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2220_ _2355_/D _1977_/A hold651/X _2225_/B VPWR VGND sg13cmos5l_mux2_1
+X_2151_ _2151_/Y _2423_/Q _2117_/A _2167_/B1 _2431_/Q _2168_/A1 VPWR VGND sg13cmos5l_a221oi_1
+X_2082_ _2082_/Y input7/X _2090_/B _2098_/A2 VPWR VGND sg13cmos5l_a21oi_1
+X_1797_ _1797_/Y _1321_/Y _1788_/A _1854_/A1 VPWR VGND sg13cmos5l_o21ai_1
+X_1866_ _2521_/D _1872_/A _1866_/B VPWR VGND sg13cmos5l_nor2_1
+Xhold812 _2013_/A _2012_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold801 hold801/X _2470_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_1935_ _1935_/Y hold431/X _1933_/Y _1934_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2522__153 _2522_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2418_ _2418_/Q _2525_/CLK _2418_/D _2418_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2349_ _2349_/Q _2361_/CLK _2349_/D _2349_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_40_402 VPWR VGND sg13cmos5l_fill_2
+XFILLER_4_347 VPWR VGND sg13cmos5l_fill_1
+X_1651_ _1651_/Y _1445_/B _1734_/B _1649_/Y _2480_/D VPWR VGND sg13cmos5l_a22oi_1
+X_1720_ _1721_/B _1650_/A hold448/X _1709_/X hold667/X VPWR VGND sg13cmos5l_a22oi_1
+XFILLER_3_391 VPWR VGND sg13cmos5l_decap_8
+X_1582_ _1583_/B _2411_/Q _1582_/B _1609_/C VPWR VGND sg13cmos5l_nand3_1
+XFILLER_19_292 VPWR VGND sg13cmos5l_fill_1
+X_2203_ _2203_/Y _2203_/A _2219_/B _2219_/C VPWR VGND sg13cmos5l_nor3_1
+X_2134_ _2134_/Y _2127_/A _1422_/B _1748_/B VPWR VGND sg13cmos5l_o21ai_1
+X_2065_ _2065_/Y _2065_/A _2065_/B _2065_/C VPWR VGND sg13cmos5l_nand3_1
+X_1849_ _1849_/Y _2515_/Q _1828_/B _1849_/B1 hold526/X VPWR VGND sg13cmos5l_a22oi_1
+X_1918_ _1919_/B _1918_/A _1918_/B _1961_/B VPWR VGND sg13cmos5l_nand3_1
+Xhold620 _1733_/B _1732_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold631 _2215_/A _2353_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold642 hold642/X _2045_/X VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold653 hold653/X _2054_/X VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2483__229 _2483_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_1_328 VPWR VGND sg13cmos5l_decap_8
+Xhold664 _1800_/A _1798_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold675 _2410_/D _2316_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold686 _2383_/D _2279_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold697 _1392_/B _1391_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xheichips26_minimal_multicore_processor_146 uio_out[7] VPWR VGND sg13cmos5l_tielo
+Xheichips26_minimal_multicore_processor_135 uio_oe[4] VPWR VGND sg13cmos5l_tielo
+XFILLER_27_88 VPWR VGND sg13cmos5l_fill_1
+X_2390__389 _2390_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_40_221 VPWR VGND sg13cmos5l_fill_2
+XFILLER_0_383 VPWR VGND sg13cmos5l_decap_8
+X_1634_ _1635_/B _1634_/A _1634_/B VPWR VGND sg13cmos5l_xnor2_1
+X_1703_ _1706_/B _2300_/A _1703_/B VPWR VGND sg13cmos5l_or2_1
+Xclkbuf_leaf_11_clk _2531_/CLK clkbuf_leaf_9_clk/A VPWR VGND sg13cmos5l_buf_8
+X_1496_ _1496_/Y _1496_/A _1496_/B VPWR VGND sg13cmos5l_xnor2_1
+X_1565_ _2451_/D _1314_/Y _1549_/Y _1563_/Y _1564_/Y _1515_/A VPWR VGND sg13cmos5l_a221oi_1
+X_2117_ _2117_/Y _2117_/A _2131_/C VPWR VGND sg13cmos5l_nor2b_1
+X_2048_ _2048_/X _2358_/Q _2209_/A _2192_/A _2176_/A _2397_/Q _2398_/Q VPWR VGND sg13cmos5l_mux4_1
+Xfanout69 _2113_/A2 _2095_/A2 VPWR VGND sg13cmos5l_buf_1
+Xfanout58 _2480_/D _1650_/Y VPWR VGND sg13cmos5l_buf_1
+Xfanout47 _1544_/A2 _1529_/X VPWR VGND sg13cmos5l_buf_1
+Xfanout36 _1574_/B _1549_/Y VPWR VGND sg13cmos5l_buf_1
+Xhold461 _2454_/D _1577_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold472 _1828_/A _2507_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold483 hold483/X _2472_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold494 _1363_/A _2576_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold450 _1347_/A _2443_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_45_379 VPWR VGND sg13cmos5l_decap_8
+X_1350_ _1383_/A _1470_/A VPWR VGND sg13cmos5l_inv_1
+XFILLER_0_191 VPWR VGND sg13cmos5l_fill_1
+Xclkbuf_leaf_0_clk _2604_/CLK clkbuf_leaf_2_clk/A VPWR VGND sg13cmos5l_buf_8
+X_1617_ _1617_/Y _2416_/Q _1609_/C _1618_/A VPWR VGND sg13cmos5l_a21oi_1
+X_2597_ _2597_/Q _2605_/CLK _2597_/D _2597_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1479_ _1479_/Y _1383_/A _1563_/B _1505_/B1 VPWR VGND sg13cmos5l_o21ai_1
+X_1548_ _1548_/X _1549_/A _1549_/B VPWR VGND sg13cmos5l_and2_1
+XFILLER_40_44 VPWR VGND sg13cmos5l_fill_1
+X_2389__391 _2389_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2548__376 _2548_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1402_ _1853_/A _1394_/Y _1398_/B hold696/X VPWR VGND sg13cmos5l_o21ai_1
+X_2520_ _2520_/Q clkload7/A _2520_/D _2520_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2451_ _2451_/Q clkload4/A _2451_/D _2451_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1333_ _1333_/Y _1333_/A VPWR VGND sg13cmos5l_inv_1
+Xinput4 input4/X ui_in[2] VPWR VGND sg13cmos5l_buf_1
+X_2382_ _2382_/Q clkload1/A _2382_/D _2382_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+Xclkbuf_2_1__f_clk clkbuf_2_1__f_clk/X clkbuf_0_clk/X VPWR VGND sg13cmos5l_buf_8
+XFILLER_10_58 VPWR VGND sg13cmos5l_fill_2
+XFILLER_27_198 VPWR VGND sg13cmos5l_decap_4
+XFILLER_4_0 VPWR VGND sg13cmos5l_fill_2
+XFILLER_18_121 VPWR VGND sg13cmos5l_fill_1
+XFILLER_18_176 VPWR VGND sg13cmos5l_fill_1
+X_1882_ _1882_/Y _1365_/A _1877_/A _1901_/B VPWR VGND sg13cmos5l_a21oi_1
+X_1951_ _1951_/X _1951_/A _1951_/B VPWR VGND sg13cmos5l_xor2_1
+X_2503_ _2503_/Q _2590_/CLK _2503_/D _2503_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2434_ _2434_/Q _2600_/CLK _2434_/D _2434_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2365_ _2365_/Q clkload1/A _2365_/D _2365_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1316_ _1647_/C _2403_/Q VPWR VGND sg13cmos5l_inv_1
+X_2296_ _2296_/Y _2296_/A _2298_/B VPWR VGND sg13cmos5l_nor2_1
+X_2343__209 _2343_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_7_59 VPWR VGND sg13cmos5l_fill_1
+X_2150_ _2150_/Y _2502_/Q _2166_/A2 _2167_/B1 _2510_/Q VPWR VGND sg13cmos5l_a22oi_1
+X_2081_ _2081_/Y _2081_/A _2096_/B VPWR VGND sg13cmos5l_nand2_1
+X_1934_ _1934_/Y _1953_/A1 _2537_/Q _1429_/A VPWR VGND sg13cmos5l_o21ai_1
+X_1796_ _1887_/B _1796_/A _1795_/Y VPWR VGND sg13cmos5l_nor2b_1
+X_1865_ _1866_/B _1333_/A _1857_/Y _1858_/X _1359_/A VPWR VGND sg13cmos5l_a22oi_1
+Xhold813 _1603_/A _2458_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold802 _1589_/A _2456_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2417_ _2417_/Q clkload6/A _2417_/D _2417_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2348_ _2348_/Q clkload2/A _2348_/D _2348_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2279_ _2279_/Y _1314_/Y _2284_/B _2278_/Y VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_4_304 VPWR VGND sg13cmos5l_fill_1
+XFILLER_31_403 VPWR VGND sg13cmos5l_fill_1
+X_1581_ _1588_/C _1581_/A _1581_/B _1581_/C VPWR VGND sg13cmos5l_nand3_1
+X_1650_ _1650_/Y _1650_/A _1730_/A VPWR VGND sg13cmos5l_nor2_1
+X_2469__255 _2469_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2202_ _2219_/C _2486_/Q _2487_/Q VPWR VGND sg13cmos5l_nand2b_1
+X_2530__412 _2530_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2133_ _2579_/D _1354_/Y _2132_/B _2132_/Y VPWR VGND sg13cmos5l_o21ai_1
+X_2064_ _2560_/D _2219_/B VPWR VGND sg13cmos5l_inv_1
+X_1917_ _1919_/A _1917_/A _1917_/B VPWR VGND sg13cmos5l_xnor2_1
+X_1779_ _1881_/B _1779_/A _1779_/B VPWR VGND sg13cmos5l_xor2_1
+X_1848_ _2514_/D _2062_/A _1848_/B VPWR VGND sg13cmos5l_nor2_1
+Xhold610 hold610/X _2605_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold621 hold621/X _2604_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold632 hold632/X _2057_/X VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold643 _1420_/B _2438_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold654 hold654/X _2599_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold665 _2503_/D _1800_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold676 hold676/X _2422_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold687 _1327_/A _2528_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold698 hold698/X _2423_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xheichips26_minimal_multicore_processor_136 uio_oe[5] VPWR VGND sg13cmos5l_tielo
+XFILLER_13_403 VPWR VGND sg13cmos5l_fill_1
+XFILLER_40_233 VPWR VGND sg13cmos5l_fill_2
+XFILLER_0_362 VPWR VGND sg13cmos5l_decap_8
+XFILLER_4_134 VPWR VGND sg13cmos5l_fill_1
+XFILLER_48_388 VPWR VGND sg13cmos5l_decap_8
+XFILLER_31_266 VPWR VGND sg13cmos5l_fill_1
+X_1564_ _1564_/Y _1368_/A _1550_/A _1549_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1633_ _1634_/B _2418_/Q _1633_/B VPWR VGND sg13cmos5l_nand2_1
+X_1702_ _1706_/A _2405_/Q _1702_/B VPWR VGND sg13cmos5l_nand2_1
+X_1495_ _1496_/B _2470_/Q _2417_/Q VPWR VGND sg13cmos5l_xnor2_1
+Xfanout37 _1501_/B _1522_/A2 VPWR VGND sg13cmos5l_buf_1
+Xfanout26 _2282_/B _2270_/Y VPWR VGND sg13cmos5l_buf_1
+X_2116_ _2131_/C _2116_/A _2128_/B _2116_/C VPWR VGND sg13cmos5l_nor3_1
+X_2047_ _2553_/D _2059_/A _2047_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_13_14 VPWR VGND sg13cmos5l_fill_2
+Xfanout59 _1609_/C _1580_/X VPWR VGND sg13cmos5l_buf_1
+Xfanout48 _2167_/B1 _2131_/B VPWR VGND sg13cmos5l_buf_1
+Xhold462 _1346_/A _2444_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold473 _2507_/D _1834_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold484 _1509_/B _1508_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold495 _1547_/B _1546_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold451 _2415_/D _1433_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold440 hold440/X _2478_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_45_325 VPWR VGND sg13cmos5l_decap_8
+XFILLER_45_358 VPWR VGND sg13cmos5l_decap_8
+XFILLER_0_181 VPWR VGND sg13cmos5l_fill_1
+X_1547_ _2446_/D _1547_/A _1547_/B VPWR VGND sg13cmos5l_nor2_1
+X_1616_ _1616_/Y _1614_/Y _1615_/Y _1584_/A VPWR VGND sg13cmos5l_a21oi_1
+X_2596_ _2596_/Q clkload9/A _2596_/D _2596_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1478_ _1563_/B _1478_/A _1478_/B VPWR VGND sg13cmos5l_xnor2_1
+X_2519__159 _2519_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_18_347 VPWR VGND sg13cmos5l_fill_2
+X_2396__374 _2396_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_41_394 VPWR VGND sg13cmos5l_decap_8
+X_1401_ _2585_/D _2139_/A _1401_/B VPWR VGND sg13cmos5l_nor2_1
+X_2450_ _2450_/Q clkload4/A _2450_/D _2450_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2381_ _2381_/Q clkload1/A _2381_/D _2381_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1332_ _1332_/Y _1332_/A VPWR VGND sg13cmos5l_inv_1
+Xinput5 input5/X ui_in[3] VPWR VGND sg13cmos5l_buf_1
+X_2555__348 _2555_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_24_328 VPWR VGND sg13cmos5l_fill_2
+X_2599__264 _2599_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2579_ _2579_/Q clkload7/A _2579_/D _2579_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_27_122 VPWR VGND sg13cmos5l_fill_1
+Xheichips26_minimal_multicore_processor uio_oe[0] VPWR VGND sg13cmos5l_tielo
+XFILLER_2_232 VPWR VGND sg13cmos5l_fill_2
+X_1950_ _1950_/Y _1950_/A _1950_/B VPWR VGND sg13cmos5l_nand2_1
+X_1881_ _1881_/Y _1884_/A _1881_/B VPWR VGND sg13cmos5l_nand2_1
+X_2502_ _2502_/Q _2595_/CLK _2502_/D _2502_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1315_ _1315_/Y _1315_/A VPWR VGND sg13cmos5l_inv_1
+X_2479__235 _2479_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2433_ _2433_/Q _2600_/CLK _2433_/D _2433_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2364_ _2364_/Q _2478_/CLK _2364_/D _2364_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2295_ _2391_/D _1314_/Y _2300_/B _2294_/Y VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_32_180 VPWR VGND sg13cmos5l_fill_1
+XFILLER_15_158 VPWR VGND sg13cmos5l_fill_1
+XFILLER_43_401 VPWR VGND sg13cmos5l_fill_2
+XFILLER_7_302 VPWR VGND sg13cmos5l_fill_1
+X_2508__180 _2508_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2080_ _2565_/D _1368_/Y _2080_/A2 _2078_/Y _2079_/Y VPWR VGND sg13cmos5l_a22oi_1
+X_1933_ _1933_/Y _1933_/A _1933_/B VPWR VGND sg13cmos5l_xnor2_1
+X_1795_ _1795_/Y _1794_/A _1794_/C _1794_/B VPWR VGND sg13cmos5l_o21ai_1
+X_1864_ _2520_/D _1872_/A _1864_/B VPWR VGND sg13cmos5l_nor2_1
+Xhold814 _2458_/D _1607_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold803 _2456_/D _1592_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2416_ _2416_/Q clkload6/A _2416_/D _2416_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2347_ _2347_/Q _2595_/CLK _2347_/D _2347_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2278_ _2278_/Y _2278_/A _2284_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_43_253 VPWR VGND sg13cmos5l_fill_1
+XFILLER_22_90 VPWR VGND sg13cmos5l_fill_2
+X_1580_ _1580_/X _2419_/Q _1581_/B _1581_/C VPWR VGND sg13cmos5l_and3_1
+X_2201_ _2346_/D _1322_/Y _2200_/B _2200_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2132_ _2132_/Y _2132_/A _2132_/B VPWR VGND sg13cmos5l_nand2_1
+X_2063_ _2219_/B _2063_/A _2063_/B VPWR VGND sg13cmos5l_nand2_1
+X_1847_ _1847_/Y _2514_/Q _1828_/B _1849_/B1 hold531/X VPWR VGND sg13cmos5l_a22oi_1
+X_1916_ _1916_/Y _2535_/Q _1917_/B VPWR VGND sg13cmos5l_nand2_1
+X_1778_ _1779_/B _1778_/A _1778_/B VPWR VGND sg13cmos5l_xor2_1
+Xhold600 hold600/X _2420_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold611 _2605_/D _2169_/X VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold622 _2604_/D _2165_/X VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold633 _2128_/B _2591_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold644 _1528_/B _1527_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold655 _2599_/D _2143_/X VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold666 _2276_/A _2382_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold677 _2422_/D _1456_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold688 _1648_/B _2379_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold699 _2423_/D _1464_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xheichips26_minimal_multicore_processor_137 uio_oe[6] VPWR VGND sg13cmos5l_tielo
+XFILLER_40_223 VPWR VGND sg13cmos5l_fill_1
+XFILLER_40_267 VPWR VGND sg13cmos5l_fill_1
+XFILLER_0_341 VPWR VGND sg13cmos5l_decap_8
+XFILLER_48_334 VPWR VGND sg13cmos5l_fill_2
+XFILLER_48_367 VPWR VGND sg13cmos5l_decap_8
+X_1701_ _1702_/B _2394_/Q _2386_/Q _2378_/Q _2370_/Q _2399_/Q _2400_/Q VPWR VGND sg13cmos5l_mux4_1
+X_1494_ _1494_/Y _2470_/Q _2417_/Q VPWR VGND sg13cmos5l_nor2_1
+X_1563_ _1563_/Y _1563_/A _1563_/B VPWR VGND sg13cmos5l_nand2_1
+X_1632_ _1635_/A _1625_/Y _1629_/B _1627_/B VPWR VGND sg13cmos5l_o21ai_1
+X_2482__231 _2482_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_12_0 VPWR VGND sg13cmos5l_fill_1
+X_2115_ _2115_/Y _2131_/A _2115_/B VPWR VGND sg13cmos5l_nand2_1
+Xfanout49 _2166_/B1 _2131_/B VPWR VGND sg13cmos5l_buf_1
+Xfanout38 _1522_/A2 _1382_/Y VPWR VGND sg13cmos5l_buf_1
+Xfanout27 _2284_/B _2270_/Y VPWR VGND sg13cmos5l_buf_1
+X_2046_ _2047_/B _1979_/A hold487/X hold613/X hold642/X VPWR VGND sg13cmos5l_a22oi_1
+Xhold463 _2416_/D _1435_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold474 hold474/X _2474_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold485 _1356_/A _2569_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold496 _1345_/A _2445_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold452 _1331_/A _2523_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold441 _1521_/B _1520_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold430 _2496_/D _1764_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_38_89 VPWR VGND sg13cmos5l_fill_1
+XFILLER_13_278 VPWR VGND sg13cmos5l_fill_1
+X_1477_ _1478_/B hold733/X _2414_/Q _1469_/A VPWR VGND sg13cmos5l_a21oi_1
+X_1546_ _1546_/Y _1363_/A _1529_/X _1531_/Y _1344_/A VPWR VGND sg13cmos5l_a22oi_1
+X_1615_ _1615_/Y _1615_/A _1620_/B _1615_/C VPWR VGND sg13cmos5l_nand3_1
+X_2595_ _2595_/Q _2595_/CLK _2595_/D _2595_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2421__365 _2421_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2029_ _2549_/D _2029_/A VPWR VGND sg13cmos5l_inv_1
+XFILLER_2_403 VPWR VGND sg13cmos5l_fill_1
+XFILLER_49_33 VPWR VGND sg13cmos5l_fill_2
+XFILLER_33_318 VPWR VGND sg13cmos5l_fill_1
+XFILLER_14_80 VPWR VGND sg13cmos5l_fill_2
+XFILLER_14_91 VPWR VGND sg13cmos5l_fill_1
+XFILLER_5_241 VPWR VGND sg13cmos5l_fill_1
+XFILLER_5_285 VPWR VGND sg13cmos5l_fill_2
+X_1331_ _1331_/Y _1331_/A VPWR VGND sg13cmos5l_inv_1
+X_1400_ _1401_/B _1405_/B _1354_/Y _1849_/B1 VPWR VGND sg13cmos5l_a21oi_1
+X_2380_ _2380_/Q _2478_/CLK _2380_/D _2380_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+Xinput6 input6/X ui_in[4] VPWR VGND sg13cmos5l_buf_1
+XFILLER_17_381 VPWR VGND sg13cmos5l_fill_1
+X_2562__309 _2562_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2527__418 _2527_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_19_14 VPWR VGND sg13cmos5l_fill_2
+X_1529_ _1529_/X _2583_/Q _2578_/Q _1549_/A VPWR VGND sg13cmos5l_and3_1
+X_2578_ _2578_/Q clkload7/A _2578_/D _2578_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_35_35 VPWR VGND sg13cmos5l_fill_1
+XFILLER_4_2 VPWR VGND sg13cmos5l_fill_1
+X_1880_ _1880_/Y _1875_/X _1878_/Y _1879_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2501_ _2501_/Q clkload8/A _2501_/D _2501_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1314_ _1314_/Y _1314_/A VPWR VGND sg13cmos5l_inv_1
+X_2432_ _2432_/Q _2600_/CLK _2432_/D _2432_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2363_ _2363_/Q _2514_/CLK _2363_/D _2363_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2294_ _2294_/Y _2294_/A _2300_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_46_12 VPWR VGND sg13cmos5l_fill_1
+XFILLER_30_107 VPWR VGND sg13cmos5l_fill_2
+XFILLER_46_251 VPWR VGND sg13cmos5l_fill_2
+X_1863_ _1864_/B _1334_/A _1857_/Y _1858_/X _1358_/A VPWR VGND sg13cmos5l_a22oi_1
+X_1932_ _1933_/B _1929_/Y _1932_/B VPWR VGND sg13cmos5l_nand2b_1
+X_1794_ _1796_/A _1794_/A _1794_/B _1794_/C VPWR VGND sg13cmos5l_nor3_1
+Xhold815 _1771_/B _2490_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold804 _1597_/A _2457_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2415_ _2415_/Q clkload6/A _2415_/D _2415_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2342__211 _2342_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2346_ _2346_/Q clkload3/A _2346_/D _2346_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2277_ _2382_/D _1315_/Y _2282_/B _2276_/Y VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_12_107 VPWR VGND sg13cmos5l_fill_1
+XFILLER_20_162 VPWR VGND sg13cmos5l_fill_1
+XFILLER_20_195 VPWR VGND sg13cmos5l_fill_2
+XFILLER_28_251 VPWR VGND sg13cmos5l_fill_2
+XFILLER_28_262 VPWR VGND sg13cmos5l_fill_1
+XFILLER_28_295 VPWR VGND sg13cmos5l_fill_2
+XFILLER_43_221 VPWR VGND sg13cmos5l_fill_2
+X_2200_ _2200_/Y _2200_/A _2200_/B VPWR VGND sg13cmos5l_nor2_1
+X_2131_ _2132_/B _2131_/A _2131_/B _2131_/C _2131_/D VPWR VGND sg13cmos5l_nor4_1
+X_2062_ _2558_/D _2062_/A _2062_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_34_265 VPWR VGND sg13cmos5l_fill_2
+X_1777_ _1777_/X _2544_/Q _1778_/B VPWR VGND sg13cmos5l_and2_1
+X_1846_ _2513_/D _2062_/A _1846_/B VPWR VGND sg13cmos5l_nor2_1
+X_1915_ _1917_/B _1915_/A _1915_/B _1915_/C _1915_/D VPWR VGND sg13cmos5l_nand4_1
+Xhold601 _1443_/B _1442_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold612 _2038_/A _2488_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xclkbuf_leaf_14_clk _2361_/CLK clkbuf_2_1__f_clk/X VPWR VGND sg13cmos5l_buf_8
+XFILLER_1_309 VPWR VGND sg13cmos5l_decap_8
+Xhold623 _1387_/B _2582_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold634 _2587_/D _1428_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold645 _2272_/A _2380_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold656 hold656/X _2371_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold667 hold667/X _1719_/X VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold678 hold678/X _2424_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold689 hold689/X _1710_/X VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xheichips26_minimal_multicore_processor_138 uio_oe[7] VPWR VGND sg13cmos5l_tielo
+X_2329_ _2406_/D _2329_/A1 _1313_/Y _2306_/Y VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_43_57 VPWR VGND sg13cmos5l_fill_1
+XFILLER_43_79 VPWR VGND sg13cmos5l_fill_2
+X_2431__345 _2431_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_0_320 VPWR VGND sg13cmos5l_decap_8
+XFILLER_0_397 VPWR VGND sg13cmos5l_decap_8
+XFILLER_48_346 VPWR VGND sg13cmos5l_decap_8
+X_2399__362 _2399_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_16_243 VPWR VGND sg13cmos5l_fill_2
+XFILLER_16_298 VPWR VGND sg13cmos5l_fill_1
+X_1631_ _2461_/D _1615_/A _1629_/Y _1630_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1700_ _2470_/D _1700_/A VPWR VGND sg13cmos5l_inv_1
+X_1493_ _1496_/A _1484_/X _1487_/B _1485_/A VPWR VGND sg13cmos5l_a21oi_1
+X_1562_ _2450_/D _1315_/Y _1549_/Y _1560_/Y _1561_/Y _1515_/A VPWR VGND sg13cmos5l_a221oi_1
+Xclkbuf_leaf_3_clk clkload4/A clkbuf_leaf_7_clk/A VPWR VGND sg13cmos5l_buf_8
+X_2558__336 _2558_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2378__413 _2378_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2114_ _2115_/B _2422_/Q _2117_/A _2131_/B _2430_/Q VPWR VGND sg13cmos5l_a22oi_1
+X_2045_ _2045_/X _2357_/Q _2207_/A _2190_/A _2174_/A _2397_/Q _2398_/Q VPWR VGND sg13cmos5l_mux4_1
+XFILLER_13_16 VPWR VGND sg13cmos5l_fill_1
+Xfanout39 _2300_/B _2298_/B VPWR VGND sg13cmos5l_buf_1
+Xfanout28 _2251_/B _2249_/B VPWR VGND sg13cmos5l_buf_1
+X_1829_ _1831_/A _1820_/Y _1823_/B _1819_/Y VPWR VGND sg13cmos5l_o21ai_1
+Xhold453 _2495_/D _1762_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold442 _1308_/A _2440_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold431 hold431/X _2596_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold464 hold464/X _2556_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold475 _1513_/B _1512_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold486 _1358_/A _2571_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold497 _1545_/B _1544_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_0_150 VPWR VGND sg13cmos5l_fill_2
+XFILLER_44_393 VPWR VGND sg13cmos5l_decap_8
+X_1614_ _1614_/Y _1582_/B _1614_/B VPWR VGND sg13cmos5l_nand2b_1
+X_2594_ _2594_/Q _2605_/CLK _2594_/D _2594_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1476_ _1478_/A _1476_/A _2415_/Q VPWR VGND sg13cmos5l_xor2_1
+X_1545_ _2445_/D _1547_/A _1545_/B VPWR VGND sg13cmos5l_nor2_1
+X_2601__256 _2601_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_24_15 VPWR VGND sg13cmos5l_fill_1
+X_2028_ _2029_/A hold806/X _2063_/B _2036_/B1 _2027_/Y VPWR VGND sg13cmos5l_a22oi_1
+X_2569__295 _2569_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2350__195 _2350_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_18_349 VPWR VGND sg13cmos5l_fill_1
+X_1330_ _1330_/Y _1330_/A VPWR VGND sg13cmos5l_inv_1
+Xinput7 input7/X ui_in[5] VPWR VGND sg13cmos5l_buf_1
+X_2518__161 _2518_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2577_ _2577_/Q clkload4/A _2577_/D _2577_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1459_ _1460_/B _2413_/Q _1459_/B VPWR VGND sg13cmos5l_xor2_1
+X_1528_ _2438_/D _2137_/A _1528_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_14_352 VPWR VGND sg13cmos5l_fill_1
+XFILLER_14_385 VPWR VGND sg13cmos5l_fill_1
+XFILLER_25_80 VPWR VGND sg13cmos5l_fill_2
+XFILLER_44_4 VPWR VGND sg13cmos5l_fill_1
+X_2500_ _2500_/Q _2590_/CLK _2500_/D _2500_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2431_ _2431_/Q _2478_/CLK _2431_/D _2431_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_49_293 VPWR VGND sg13cmos5l_fill_1
+X_1313_ _1313_/Y _1313_/A VPWR VGND sg13cmos5l_inv_1
+X_2362_ _2362_/Q clkload3/A _2362_/D _2362_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2293_ _2390_/D _1315_/Y _2300_/B _2292_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2386__397 _2386_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_43_403 VPWR VGND sg13cmos5l_fill_1
+X_2370__154 _2370_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_14_160 VPWR VGND sg13cmos5l_fill_2
+X_1793_ _1794_/C _2545_/Q _2492_/Q _1779_/A _1779_/B _1777_/X VPWR VGND sg13cmos5l_a221oi_1
+X_1862_ _2519_/D _1872_/A _1862_/B VPWR VGND sg13cmos5l_nor2_1
+Xinput10 _2090_/A uio_in[0] VPWR VGND sg13cmos5l_buf_1
+X_1931_ _1932_/B _2537_/Q _2493_/Q _1955_/C VPWR VGND sg13cmos5l_nand3_1
+Xhold816 hold816/X _2405_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold805 _2457_/D _1600_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2414_ _2414_/Q clkload6/A _2414_/D _2414_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_25_403 VPWR VGND sg13cmos5l_fill_1
+X_2492__212 _2492_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2345_ _2345_/Q _2361_/CLK _2345_/D _2345_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2276_ _2276_/Y _2276_/A _2282_/B VPWR VGND sg13cmos5l_nor2_1
+X_2551__364 _2551_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_22_92 VPWR VGND sg13cmos5l_fill_1
+X_2130_ _2578_/D _1524_/A _2129_/A _2129_/Y VPWR VGND sg13cmos5l_o21ai_1
+X_2061_ _2061_/Y hold526/X _1979_/A hold613/X _2060_/X VPWR VGND sg13cmos5l_a22oi_1
+X_1914_ _2534_/D _1914_/A _1914_/B VPWR VGND sg13cmos5l_nor2_1
+X_2413__246 _2413_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1776_ _2500_/D _1776_/A _1776_/B VPWR VGND sg13cmos5l_nor2_1
+X_1845_ _1845_/Y _2513_/Q _1828_/B _1849_/B1 hold464/X VPWR VGND sg13cmos5l_a22oi_1
+Xhold602 _1362_/A _2575_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold613 hold613/X _2038_/X VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold624 _1385_/B _1384_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold635 hold635/X _2331_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold646 hold646/X _1713_/X VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold657 _2371_/D _2254_/X VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold668 _1315_/A _2450_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold679 _2424_/D _1473_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xheichips26_minimal_multicore_processor_139 uio_out[0] VPWR VGND sg13cmos5l_tielo
+X_2328_ _2404_/D _2328_/A1 _1315_/Y _2304_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2259_ _2259_/Y _2259_/A _2267_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_0_376 VPWR VGND sg13cmos5l_decap_8
+XFILLER_48_336 VPWR VGND sg13cmos5l_fill_1
+X_2579__275 _2579_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2360__175 _2360_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1630_ _1630_/Y _1615_/A _1626_/A _2065_/A VPWR VGND sg13cmos5l_o21ai_1
+X_1492_ _1492_/Y _2470_/Q _2417_/Q VPWR VGND sg13cmos5l_nand2_1
+X_1561_ _1561_/Y _1367_/A _1550_/A _1574_/B VPWR VGND sg13cmos5l_a21oi_1
+X_2113_ _2576_/D _1363_/Y _2113_/A2 _2111_/Y _2112_/Y VPWR VGND sg13cmos5l_a22oi_1
+X_2044_ _2552_/D _2050_/A _2044_/B VPWR VGND sg13cmos5l_nor2_1
+Xfanout29 _2249_/B _2237_/Y VPWR VGND sg13cmos5l_buf_1
+X_1759_ _1759_/Y _1763_/A1 _2494_/Q _1851_/A VPWR VGND sg13cmos5l_o21ai_1
+X_1828_ _1828_/Y _1828_/A _1828_/B VPWR VGND sg13cmos5l_nand2_1
+Xhold465 _1846_/B _1845_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold476 _1901_/A _2533_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold487 hold487/X _2553_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold454 _1333_/A _2521_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold443 _2412_/D _2320_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold432 _2537_/D _1935_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold498 _1626_/B _2417_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_44_372 VPWR VGND sg13cmos5l_decap_8
+X_1544_ _1544_/Y _2575_/Q _1544_/A2 _1531_/Y _1345_/A VPWR VGND sg13cmos5l_a22oi_1
+X_1613_ _1615_/C _1612_/A _1612_/C _1612_/B VPWR VGND sg13cmos5l_o21ai_1
+X_2593_ _2593_/Q clkload0/A _2593_/D _2593_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1475_ _1475_/Y _2468_/Q _2415_/Q VPWR VGND sg13cmos5l_nor2_1
+X_2339__217 _2339_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2027_ _2027_/Y _2027_/A _2027_/B _2027_/C _2027_/D VPWR VGND sg13cmos5l_nand4_1
+XFILLER_40_15 VPWR VGND sg13cmos5l_fill_1
+XFILLER_40_37 VPWR VGND sg13cmos5l_fill_1
+Xinput8 input8/X ui_in[6] VPWR VGND sg13cmos5l_buf_1
+XFILLER_10_29 VPWR VGND sg13cmos5l_fill_2
+X_1527_ _1527_/Y _1381_/Y _1549_/B _1526_/Y _1420_/B VPWR VGND sg13cmos5l_a22oi_1
+X_2576_ _2576_/Q clkload6/A _2576_/D _2576_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1389_ _1389_/Y _1389_/A _1526_/A _1389_/C VPWR VGND sg13cmos5l_nand3_1
+X_1458_ _1467_/A _2413_/Q _2466_/Q VPWR VGND sg13cmos5l_nor2_1
+XFILLER_18_103 VPWR VGND sg13cmos5l_fill_1
+X_2526__420 _2526_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2561__311 _2561_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2430_ _2430_/Q _2600_/CLK _2430_/D _2430_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2361_ _2361_/Q _2361_/CLK _2361_/D _2361_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_49_283 VPWR VGND sg13cmos5l_fill_1
+X_1312_ _1312_/Y _1312_/A VPWR VGND sg13cmos5l_inv_1
+X_2292_ _2292_/Y _2292_/A _2300_/B VPWR VGND sg13cmos5l_nor2_1
+X_2455__282 _2455_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2559_ _2559_/Q _2595_/CLK _2559_/D _2559_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2591__326 _2591_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_36_80 VPWR VGND sg13cmos5l_fill_2
+XFILLER_36_91 VPWR VGND sg13cmos5l_fill_1
+X_1930_ _1933_/A _2536_/Q _1924_/B _1925_/B _1925_/A VPWR VGND sg13cmos5l_a22oi_1
+X_1792_ _1794_/B _2546_/Q _2493_/Q VPWR VGND sg13cmos5l_xnor2_1
+X_1861_ _1862_/B hold570/X _1857_/Y _1858_/X _1357_/A VPWR VGND sg13cmos5l_a22oi_1
+Xinput11 _2093_/A uio_in[1] VPWR VGND sg13cmos5l_buf_1
+Xhold817 _1786_/B _2492_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold806 hold806/X _2549_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2413_ _2413_/Q clkload5/A _2413_/D _2413_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2344_ _2344_/Q clkload3/A _2344_/D _2344_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_37_253 VPWR VGND sg13cmos5l_fill_2
+X_2275_ _2275_/Y _1317_/Y _2282_/B _2274_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2401__354 _2401_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_34_212 VPWR VGND sg13cmos5l_fill_1
+X_2060_ _2060_/X _2362_/Q _2354_/Q _2200_/A _2184_/A _2397_/Q _2398_/Q VPWR VGND sg13cmos5l_mux4_1
+X_1913_ _1913_/X _1918_/A _1913_/B VPWR VGND sg13cmos5l_xor2_1
+XFILLER_8_73 VPWR VGND sg13cmos5l_fill_1
+X_1775_ _1775_/Y hold559/X _1841_/A2 _1774_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1844_ _2512_/D _2062_/A _1844_/B VPWR VGND sg13cmos5l_nor2_1
+Xhold603 hold603/X _2602_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold614 _2062_/B _2061_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold625 _2205_/A _2348_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold636 hold636/X _2039_/X VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold647 _2211_/A _2351_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold658 _1326_/A _2529_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold669 hold669/X _2339_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2604__244 _2604_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2327_ _2403_/D _2329_/A1 _1317_/Y _2302_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2258_ _2258_/Y _1317_/Y _2265_/B hold566/X VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_43_15 VPWR VGND sg13cmos5l_fill_1
+X_2189_ _2189_/Y _1328_/Y _2192_/B _2188_/Y VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_0_355 VPWR VGND sg13cmos5l_decap_8
+X_2505__186 _2505_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_31_226 VPWR VGND sg13cmos5l_decap_4
+X_2332__234 _2332_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1560_ _1560_/Y _1563_/A _1560_/B VPWR VGND sg13cmos5l_nand2_1
+XFILLER_39_304 VPWR VGND sg13cmos5l_fill_1
+X_1491_ _2426_/D _1584_/A _1491_/B VPWR VGND sg13cmos5l_nor2_1
+X_2112_ _2112_/Y _2087_/A _2090_/B _2113_/A2 VPWR VGND sg13cmos5l_a21oi_1
+X_2043_ _2044_/B _1979_/A hold507/X hold613/X hold626/X VPWR VGND sg13cmos5l_a22oi_1
+X_1827_ _2506_/D _2059_/A _1827_/B VPWR VGND sg13cmos5l_nor2_1
+X_1689_ _1690_/D _2296_/A _2280_/A _1705_/C VPWR VGND sg13cmos5l_nand3_1
+X_1758_ _1758_/Y _1333_/Y _1766_/A2 _1757_/Y VPWR VGND sg13cmos5l_a21oi_1
+Xhold466 _1501_/A _2428_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold477 _2533_/D _1904_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold488 _1840_/B _1839_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold499 hold499/X _2477_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold455 _2493_/D _1758_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold444 _1309_/A _2439_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold433 _1429_/B _2590_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold422 _2596_/D _2560_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_13_215 VPWR VGND sg13cmos5l_fill_1
+XFILLER_5_403 VPWR VGND sg13cmos5l_fill_1
+XFILLER_0_196 VPWR VGND sg13cmos5l_fill_1
+XFILLER_8_263 VPWR VGND sg13cmos5l_fill_2
+X_1474_ _1474_/Y _2468_/Q _2415_/Q VPWR VGND sg13cmos5l_nand2_1
+X_1543_ _2444_/D _1547_/A _1543_/B VPWR VGND sg13cmos5l_nor2_1
+X_1612_ _1620_/B _1612_/A _1612_/B _1612_/C VPWR VGND sg13cmos5l_or3_1
+X_2592_ _2592_/Q clkload7/A _2592_/D _2592_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_10_0 VPWR VGND sg13cmos5l_fill_2
+X_2536__400 _2536_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2489__218 _2489_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2026_ _2027_/D _2231_/A _2215_/A _2031_/C VPWR VGND sg13cmos5l_nand3_1
+XFILLER_26_340 VPWR VGND sg13cmos5l_fill_2
+Xinput9 input9/X ui_in[7] VPWR VGND sg13cmos5l_buf_1
+XFILLER_32_398 VPWR VGND sg13cmos5l_decap_4
+X_1457_ _1460_/A _1452_/A _1452_/B _1450_/X VPWR VGND sg13cmos5l_a21oi_1
+X_1526_ _1526_/Y _1526_/A _1549_/B VPWR VGND sg13cmos5l_nand2_1
+X_2575_ _2575_/Q clkload6/A _2575_/D _2575_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1388_ _1388_/Y _1388_/A _1550_/A VPWR VGND sg13cmos5l_nand2_1
+X_2009_ _2009_/Y _2359_/Q _2024_/B _2008_/Y VPWR VGND sg13cmos5l_o21ai_1
+X_2554__352 _2554_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_25_82 VPWR VGND sg13cmos5l_fill_1
+X_1311_ _1311_/Y _1574_/A VPWR VGND sg13cmos5l_inv_1
+X_2360_ _2360_/Q clkload3/A _2360_/D _2360_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2291_ _2291_/Y _1317_/Y _2298_/B hold691/X VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_17_170 VPWR VGND sg13cmos5l_fill_2
+X_1509_ _2429_/D _1776_/A _1509_/B VPWR VGND sg13cmos5l_nor2_1
+X_2558_ _2558_/Q clkload3/A _2558_/D _2558_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2489_ _2489_/Q _2531_/CLK _2489_/D _2489_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_7_317 VPWR VGND sg13cmos5l_fill_1
+XFILLER_46_210 VPWR VGND sg13cmos5l_fill_1
+X_1860_ _2518_/D _1872_/A _1860_/B VPWR VGND sg13cmos5l_nor2_1
+X_2515__166 _2515_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1791_ _1791_/Y _1788_/Y _1789_/Y _1790_/Y VPWR VGND sg13cmos5l_a21oi_1
+Xinput12 _2072_/A uio_in[2] VPWR VGND sg13cmos5l_buf_1
+Xhold818 _2286_/A _2406_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold807 _1786_/A _2545_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2412_ _2412_/Q _2525_/CLK _2412_/D _2412_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2343_ _2343_/Q _2361_/CLK _2343_/D _2343_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2274_ _2274_/Y _2274_/A _2282_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_16_18 VPWR VGND sg13cmos5l_fill_2
+Xclkbuf_leaf_17_clk _2600_/CLK clkbuf_2_1__f_clk/X VPWR VGND sg13cmos5l_buf_8
+X_1989_ _2544_/D _1989_/A VPWR VGND sg13cmos5l_inv_1
+XFILLER_19_221 VPWR VGND sg13cmos5l_fill_2
+X_2417__373 _2417_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1843_ _1843_/Y _2512_/Q _1828_/B _1849_/B1 hold514/X VPWR VGND sg13cmos5l_a22oi_1
+X_1912_ _1955_/C _2498_/Q _1915_/C _1915_/D VPWR VGND sg13cmos5l_and3_1
+XFILLER_6_191 VPWR VGND sg13cmos5l_fill_1
+X_1774_ _1774_/Y _1788_/A _1772_/Y _1773_/Y VPWR VGND sg13cmos5l_a21oi_1
+Xhold604 _2602_/D _2157_/X VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold615 hold615/X _2603_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold626 hold626/X _2042_/X VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold637 _2280_/A _2384_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold648 hold648/X _2051_/X VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold659 _1915_/A _2498_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xclkbuf_leaf_6_clk _2525_/CLK clkbuf_leaf_7_clk/A VPWR VGND sg13cmos5l_buf_8
+X_2326_ _2398_/D _1323_/Y _2326_/A2 _1744_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2257_ _2257_/Y _2257_/A _2265_/B VPWR VGND sg13cmos5l_nor2_1
+X_2188_ _2188_/Y _2188_/A _2192_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_0_334 VPWR VGND sg13cmos5l_decap_8
+XFILLER_33_60 VPWR VGND sg13cmos5l_fill_1
+X_1490_ _1490_/Y hold539/X _1522_/A2 _1489_/Y VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_3_183 VPWR VGND sg13cmos5l_fill_2
+X_2111_ _2111_/Y input9/X _2111_/B VPWR VGND sg13cmos5l_nand2_1
+X_2042_ _2042_/X _2356_/Q _2205_/A _2188_/A _2172_/A _2397_/Q _2398_/Q VPWR VGND sg13cmos5l_mux4_1
+XFILLER_47_382 VPWR VGND sg13cmos5l_decap_8
+XFILLER_30_293 VPWR VGND sg13cmos5l_fill_2
+X_1826_ _1826_/Y hold524/X _1828_/B _1825_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1688_ _1690_/C _2296_/A _2280_/A _1645_/X VPWR VGND sg13cmos5l_o21ai_1
+X_1757_ _1757_/Y _1766_/A2 _2493_/Q _1389_/A VPWR VGND sg13cmos5l_o21ai_1
+Xhold467 _2428_/D _1507_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold478 _1361_/A _2574_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold489 _1359_/A _2572_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold456 _1348_/A _2442_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold445 _2411_/D _2318_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold434 hold434/X _2587_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold423 _2595_/D _2559_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2309_ _2402_/D _2329_/A1 _1312_/Y _2308_/Y VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_48_157 VPWR VGND sg13cmos5l_fill_1
+X_1611_ _1612_/C _1598_/A _1595_/Y _1603_/B _2458_/Q _1596_/X VPWR VGND sg13cmos5l_a221oi_1
+XFILLER_5_97 VPWR VGND sg13cmos5l_fill_1
+X_1473_ _1473_/Y _1470_/Y _1471_/Y _1472_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1542_ _1543_/B _1361_/A _1544_/A2 _1531_/Y _1346_/A VPWR VGND sg13cmos5l_a22oi_1
+X_2591_ _2591_/Q clkload7/A _2591_/D _2591_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_35_330 VPWR VGND sg13cmos5l_fill_1
+XFILLER_39_157 VPWR VGND sg13cmos5l_fill_1
+X_2025_ _2027_/C _2231_/A _2215_/A _1974_/X VPWR VGND sg13cmos5l_o21ai_1
+X_1809_ _2504_/D _2050_/A _1809_/B VPWR VGND sg13cmos5l_nor2_1
+X_2465__263 _2465_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_18_319 VPWR VGND sg13cmos5l_fill_1
+X_2375__419 _2375_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2574_ _2574_/Q clkload6/A _2574_/D _2574_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_19_29 VPWR VGND sg13cmos5l_fill_1
+X_1387_ _1550_/A _2583_/Q _1387_/B VPWR VGND sg13cmos5l_or2_1
+X_1456_ _1456_/Y _1453_/Y _1454_/Y _1455_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1525_ _1549_/B _1530_/A _1550_/A _1388_/Y VPWR VGND sg13cmos5l_o21ai_1
+X_2008_ _2008_/Y _2359_/Q _2351_/Q _1974_/X VPWR VGND sg13cmos5l_o21ai_1
+XFILLER_41_93 VPWR VGND sg13cmos5l_fill_2
+X_1310_ _1310_/Y _1310_/A VPWR VGND sg13cmos5l_inv_1
+X_2290_ _2290_/Y _2290_/A _2298_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_37_403 VPWR VGND sg13cmos5l_fill_1
+XFILLER_20_303 VPWR VGND sg13cmos5l_fill_2
+X_2557_ _2557_/Q clkload2/A _2557_/D _2557_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2427__353 _2427_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1439_ _1439_/Y _2320_/A1 _1344_/Y _1438_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1508_ _1508_/Y _2429_/Q _1382_/Y _1522_/B1 hold483/X VPWR VGND sg13cmos5l_a22oi_1
+X_2488_ _2488_/Q _2590_/CLK _2488_/D _2488_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_11_74 VPWR VGND sg13cmos5l_fill_2
+X_1790_ _1790_/Y hold777/X _1854_/A1 _1920_/B1 VPWR VGND sg13cmos5l_o21ai_1
+Xinput13 _2075_/A uio_in[3] VPWR VGND sg13cmos5l_buf_1
+Xhold808 _1997_/A _1996_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2411_ _2411_/Q _2525_/CLK _2411_/D _2411_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2342_ _2342_/Q clkload2/A _2342_/D _2342_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2273_ _2380_/D _1310_/Y _2284_/B _2272_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1988_ _1988_/Y _1778_/A _2063_/B _2036_/B1 _1987_/Y VPWR VGND sg13cmos5l_a22oi_1
+X_2544__385 _2544_/RESET_B VPWR VGND sg13cmos5l_tiehi
+Xclkbuf_2_2__f_clk clkbuf_leaf_7_clk/A clkbuf_0_clk/X VPWR VGND sg13cmos5l_buf_8
+XFILLER_11_166 VPWR VGND sg13cmos5l_fill_2
+XFILLER_11_177 VPWR VGND sg13cmos5l_fill_1
+XFILLER_7_137 VPWR VGND sg13cmos5l_fill_2
+XFILLER_3_398 VPWR VGND sg13cmos5l_decap_4
+XFILLER_34_236 VPWR VGND sg13cmos5l_fill_2
+XFILLER_8_31 VPWR VGND sg13cmos5l_fill_1
+X_1773_ _1773_/Y _2534_/Q _1396_/A _1854_/A1 VPWR VGND sg13cmos5l_o21ai_1
+X_1842_ _2511_/D _2050_/A _1842_/B VPWR VGND sg13cmos5l_nor2_1
+X_1911_ _1915_/D _2550_/Q _2549_/Q _2548_/Q _2547_/Q VPWR VGND sg13cmos5l_nor4_1
+Xhold605 _2172_/A _2332_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold616 _2603_/D _2161_/X VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold627 _1709_/A _2408_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold638 hold638/X _1725_/X VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold649 _2209_/A _2350_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2325_ _2397_/D _1324_/Y _2326_/A2 _1742_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2256_ _2256_/Y _1310_/Y _2267_/B _2255_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2187_ _2339_/D hold669/X hold651/X _2192_/B VPWR VGND sg13cmos5l_mux2_1
+XFILLER_43_39 VPWR VGND sg13cmos5l_fill_1
+X_2581__316 _2581_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_0_313 VPWR VGND sg13cmos5l_decap_8
+X_2475__243 _2475_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_47_361 VPWR VGND sg13cmos5l_decap_8
+X_2110_ _2575_/D _1362_/Y _2110_/A2 _2108_/Y _2109_/Y VPWR VGND sg13cmos5l_a22oi_1
+X_2041_ _2551_/D _2050_/A _2041_/B VPWR VGND sg13cmos5l_nor2_1
+X_1756_ _1756_/Y _1334_/Y _1763_/A1 _1755_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1825_ _1825_/Y _1396_/A _1823_/Y _1824_/Y VPWR VGND sg13cmos5l_a21oi_1
+Xhold435 _2580_/D _2135_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold424 _2593_/D _2480_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_1687_ _1690_/B _2296_/A _1703_/B VPWR VGND sg13cmos5l_or2_1
+Xhold468 _1332_/A _2522_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold479 _1734_/A _2597_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold457 _2414_/D _1431_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold446 _1334_/A _2520_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2308_ _2308_/Y _2329_/A1 hold743/X _2314_/B VPWR VGND sg13cmos5l_o21ai_1
+XFILLER_13_206 VPWR VGND sg13cmos5l_fill_1
+X_2239_ _2239_/Y _2239_/A _2251_/B VPWR VGND sg13cmos5l_nor2_1
+X_2557__340 _2557_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_44_386 VPWR VGND sg13cmos5l_decap_8
+XFILLER_8_221 VPWR VGND sg13cmos5l_fill_1
+XFILLER_8_265 VPWR VGND sg13cmos5l_fill_1
+X_1610_ _1612_/B _1608_/Y _1621_/A VPWR VGND sg13cmos5l_nand2b_1
+X_2590_ _2590_/Q _2590_/CLK _2590_/D _2590_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1472_ _1472_/Y hold678/X _1505_/B1 _1422_/A VPWR VGND sg13cmos5l_o21ai_1
+X_1541_ _2443_/D _1547_/A _1541_/B VPWR VGND sg13cmos5l_nor2_1
+X_2024_ _2027_/B _2231_/A _2024_/B VPWR VGND sg13cmos5l_or2_1
+X_1739_ _2483_/D _1326_/Y _1767_/A2 _1738_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1808_ _1808_/Y hold568/X _1828_/B _1807_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2437__333 _2437_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_41_312 VPWR VGND sg13cmos5l_fill_1
+X_2587__322 _2587_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_5_202 VPWR VGND sg13cmos5l_fill_2
+X_2444__304 _2444_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2366__162 _2366_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_49_401 VPWR VGND sg13cmos5l_fill_2
+X_2600__260 _2600_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2338__220 _2338_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_32_356 VPWR VGND sg13cmos5l_fill_2
+X_1524_ _1524_/Y _1524_/A _1524_/B VPWR VGND sg13cmos5l_nor2_1
+X_2573_ _2573_/Q clkload6/A _2573_/D _2573_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2525__147 _2525_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1386_ _1386_/Y _1386_/A _1387_/B VPWR VGND sg13cmos5l_nor2_1
+X_1455_ _1455_/Y hold676/X _1505_/B1 _1422_/A VPWR VGND sg13cmos5l_o21ai_1
+X_2007_ _2011_/A _2227_/A _2211_/A _2031_/C VPWR VGND sg13cmos5l_nand3_1
+XFILLER_14_345 VPWR VGND sg13cmos5l_fill_2
+X_1507_ _1507_/Y _1501_/Y _1506_/X _1776_/A VPWR VGND sg13cmos5l_a21oi_1
+X_2556_ _2556_/Q clkload3/A _2556_/D _2556_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2487_ _2487_/Q _2531_/CLK _2487_/D _2487_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1369_ _1369_/Y _1369_/A VPWR VGND sg13cmos5l_inv_1
+X_1438_ _1438_/Y _2320_/A1 _2418_/Q _1352_/A VPWR VGND sg13cmos5l_o21ai_1
+X_2356__183 _2356_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_36_50 VPWR VGND sg13cmos5l_fill_2
+XFILLER_14_175 VPWR VGND sg13cmos5l_fill_1
+Xinput14 _2078_/A uio_in[4] VPWR VGND sg13cmos5l_buf_1
+XFILLER_35_4 VPWR VGND sg13cmos5l_fill_2
+Xhold809 _1444_/A _2411_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2410_ _2410_/Q clkload4/A _2410_/D _2410_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2341_ _2341_/Q _2361_/CLK _2341_/D _2341_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2272_ _2272_/Y _2272_/A _2284_/B VPWR VGND sg13cmos5l_nor2_1
+X_1987_ _1987_/Y _1987_/A _1987_/B _1987_/C _1987_/D VPWR VGND sg13cmos5l_nand4_1
+X_2539_ _2539_/Q clkload9/A _2539_/D _2539_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_19_256 VPWR VGND sg13cmos5l_fill_2
+XFILLER_47_71 VPWR VGND sg13cmos5l_fill_1
+X_2595__262 _2595_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1910_ _1915_/C _2546_/Q _2545_/Q _2544_/Q _2543_/Q VPWR VGND sg13cmos5l_nor4_1
+X_2452__288 _2452_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1772_ _1772_/Y _2543_/Q _1918_/B VPWR VGND sg13cmos5l_xnor2_1
+X_1841_ _1841_/Y _2511_/Q _1841_/A2 _1849_/B1 hold503/X VPWR VGND sg13cmos5l_a22oi_1
+Xhold606 _2332_/D _2173_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold617 _2063_/A _2598_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold628 _1718_/B _1717_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold639 _2282_/A _2385_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2324_ _2396_/D _1326_/Y _2324_/A2 _1738_/Y VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_25_248 VPWR VGND sg13cmos5l_fill_2
+X_2255_ _2255_/Y _2255_/A _2267_/B VPWR VGND sg13cmos5l_nor2_1
+X_2186_ _2186_/X _2487_/Q _2486_/Q _2203_/A _2560_/D VPWR VGND sg13cmos5l_and4_1
+XFILLER_0_369 VPWR VGND sg13cmos5l_decap_8
+XFILLER_39_329 VPWR VGND sg13cmos5l_fill_1
+XFILLER_47_340 VPWR VGND sg13cmos5l_decap_8
+X_2040_ _2041_/B _1979_/A hold521/X hold613/X hold636/X VPWR VGND sg13cmos5l_a22oi_1
+X_1686_ _1690_/A _1694_/A _1686_/B VPWR VGND sg13cmos5l_nand2_1
+X_1755_ _1755_/Y _1763_/A1 _2492_/Q _1389_/A VPWR VGND sg13cmos5l_o21ai_1
+X_1824_ _1824_/Y _2540_/Q _1396_/A _1854_/A1 VPWR VGND sg13cmos5l_o21ai_1
+Xhold469 _2494_/D _1760_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold458 hold458/X _2473_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold447 _2492_/D _1756_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold436 _1307_/A _2441_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold425 _2594_/D _2481_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2498__200 _2498_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2307_ _2401_/D _2329_/A1 _1313_/Y _2306_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2238_ _2238_/X hold680/X _2447_/Q _2251_/B VPWR VGND sg13cmos5l_mux2_1
+XFILLER_38_373 VPWR VGND sg13cmos5l_fill_1
+X_2169_ _2169_/X _2168_/Y hold610/X _2169_/S VPWR VGND sg13cmos5l_mux2_1
+XFILLER_29_373 VPWR VGND sg13cmos5l_fill_2
+XFILLER_44_321 VPWR VGND sg13cmos5l_decap_4
+XFILLER_12_251 VPWR VGND sg13cmos5l_fill_1
+XFILLER_44_365 VPWR VGND sg13cmos5l_decap_8
+X_1540_ _1541_/B _1360_/A _1544_/A2 _1531_/Y _1347_/A VPWR VGND sg13cmos5l_a22oi_1
+X_1471_ _1471_/Y _2458_/Q _1383_/A _1522_/A2 VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_47_170 VPWR VGND sg13cmos5l_fill_2
+X_2023_ _2027_/A _2023_/A _2023_/B VPWR VGND sg13cmos5l_nand2_1
+X_1807_ _1807_/Y _1320_/Y _1399_/A _1806_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1669_ _1670_/B _2390_/Q _2382_/Q _2374_/Q _2366_/Q _2399_/Q _2400_/Q VPWR VGND sg13cmos5l_mux4_1
+X_1738_ _1738_/Y _1767_/A2 hold770/X _1920_/B1 VPWR VGND sg13cmos5l_o21ai_1
+XFILLER_41_335 VPWR VGND sg13cmos5l_fill_1
+XFILLER_44_195 VPWR VGND sg13cmos5l_fill_1
+X_1454_ _1454_/Y _2456_/Q _1383_/A _1522_/A2 VPWR VGND sg13cmos5l_a21oi_1
+X_1523_ _2436_/D _1776_/A _1523_/B VPWR VGND sg13cmos5l_nor2_1
+X_2572_ _2572_/Q clkload6/A _2572_/D _2572_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1385_ _2582_/D _2137_/A _1385_/B VPWR VGND sg13cmos5l_nor2_1
+X_2006_ _2006_/X _2359_/Q _2351_/Q _2343_/Q _2335_/Q _2395_/Q _2396_/Q VPWR VGND sg13cmos5l_mux4_1
+XFILLER_25_30 VPWR VGND sg13cmos5l_fill_1
+X_2374__421 _2374_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_2_23 VPWR VGND sg13cmos5l_fill_1
+X_2533__406 _2533_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1437_ _2417_/D _2320_/A1 _1345_/Y _1436_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1506_ _1506_/X _1377_/B _1504_/Y _1505_/Y VPWR VGND sg13cmos5l_a21o_1
+X_2555_ _2555_/Q clkload3/A _2555_/D _2555_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2486_ _2486_/Q clkload2/A _2486_/D _2486_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2462__268 _2462_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1368_ _1368_/Y _1368_/A VPWR VGND sg13cmos5l_inv_1
+XFILLER_10_371 VPWR VGND sg13cmos5l_fill_1
+Xinput15 _2081_/A uio_in[5] VPWR VGND sg13cmos5l_buf_1
+X_2340_ _2340_/Q clkload2/A _2340_/D _2340_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2271_ _2379_/D _1648_/B hold742/X _2284_/B VPWR VGND sg13cmos5l_mux2_1
+X_2392__384 _2392_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1986_ _1987_/D _2221_/A _2205_/A _2031_/C VPWR VGND sg13cmos5l_nand3_1
+Xclkbuf_leaf_9_clk clkload9/A clkbuf_leaf_9_clk/A VPWR VGND sg13cmos5l_buf_8
+X_2538_ _2538_/Q clkload9/A _2538_/D _2538_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2469_ _2469_/Q _2605_/CLK _2469_/D _2469_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_43_227 VPWR VGND sg13cmos5l_fill_1
+X_2406__258 _2406_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1840_ _2510_/D _2062_/A _1840_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_6_183 VPWR VGND sg13cmos5l_fill_1
+X_1771_ _1779_/A _2543_/Q _1771_/B VPWR VGND sg13cmos5l_and2_1
+Xhold607 _2188_/A _2340_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold618 _1778_/B _2491_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold629 _2294_/A _2391_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2323_ _2395_/D _1327_/Y _2324_/A2 _1736_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2254_ _2254_/X hold656/X _2447_/Q _2267_/B VPWR VGND sg13cmos5l_mux2_1
+X_2185_ _2338_/D _1322_/Y _2184_/B _2184_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1969_ _1970_/B _2355_/Q _2347_/Q _2339_/Q _2331_/Q _2395_/Q _2396_/Q VPWR VGND sg13cmos5l_mux4_1
+XFILLER_0_348 VPWR VGND sg13cmos5l_decap_8
+XFILLER_47_396 VPWR VGND sg13cmos5l_decap_8
+XFILLER_30_274 VPWR VGND sg13cmos5l_fill_2
+X_1823_ _1823_/Y _1823_/A _1823_/B VPWR VGND sg13cmos5l_xnor2_1
+X_1685_ _1686_/B _2392_/Q _2384_/Q _2376_/Q _2368_/Q _2399_/Q _2400_/Q VPWR VGND sg13cmos5l_mux4_1
+X_1754_ _2491_/D _1768_/A2 _1915_/B _1753_/Y VPWR VGND sg13cmos5l_o21ai_1
+Xhold459 _1511_/B _1510_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold448 hold448/X _2475_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold437 _2413_/D _2322_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold426 _1638_/A _2594_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_38_330 VPWR VGND sg13cmos5l_fill_1
+X_2306_ _2306_/Y _2329_/A1 hold795/X _2314_/B VPWR VGND sg13cmos5l_o21ai_1
+X_2237_ _2237_/Y _2253_/C _2270_/A VPWR VGND sg13cmos5l_nor2_1
+X_2168_ _2168_/Y _2168_/A1 _2166_/Y _2167_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2099_ _2099_/Y input5/X _2108_/B VPWR VGND sg13cmos5l_nand2_1
+XFILLER_0_134 VPWR VGND sg13cmos5l_fill_2
+X_2384__401 _2384_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1470_ _1470_/Y _1470_/A _1560_/B VPWR VGND sg13cmos5l_nand2_1
+XFILLER_47_160 VPWR VGND sg13cmos5l_fill_1
+X_2022_ _2023_/B _2361_/Q _2353_/Q _2345_/Q _2337_/Q _2395_/Q _2396_/Q VPWR VGND sg13cmos5l_mux4_1
+X_1806_ _1806_/Y _1399_/A _1890_/B _1397_/Y VPWR VGND sg13cmos5l_o21ai_1
+X_1599_ _1599_/Y _1582_/B _1597_/A _2314_/B VPWR VGND sg13cmos5l_o21ai_1
+X_1668_ _2466_/D _1668_/A VPWR VGND sg13cmos5l_inv_1
+X_1737_ _2482_/D _1327_/Y _1767_/A2 _1736_/Y VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_14_32 VPWR VGND sg13cmos5l_fill_1
+XFILLER_5_204 VPWR VGND sg13cmos5l_fill_1
+XFILLER_49_403 VPWR VGND sg13cmos5l_fill_1
+Xhold790 hold790/X _2543_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_17_355 VPWR VGND sg13cmos5l_fill_2
+XFILLER_4_281 VPWR VGND sg13cmos5l_fill_1
+X_1453_ _1453_/Y _1470_/A _1554_/B VPWR VGND sg13cmos5l_nand2_1
+X_1522_ _1522_/Y _2436_/Q _1522_/A2 _1522_/B1 hold519/X VPWR VGND sg13cmos5l_a22oi_1
+X_2571_ _2571_/Q clkload5/A _2571_/D _2571_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1384_ _1384_/Y _1387_/B _1524_/A _1383_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2575__283 _2575_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2005_ _2546_/D _2005_/A VPWR VGND sg13cmos5l_inv_1
+X_2554_ _2554_/Q clkload2/A _2554_/D _2554_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_49_0 VPWR VGND sg13cmos5l_fill_2
+X_1367_ _1367_/Y _1367_/A VPWR VGND sg13cmos5l_inv_1
+X_1436_ _1436_/Y _2320_/A1 _1626_/B _1352_/A VPWR VGND sg13cmos5l_o21ai_1
+X_1505_ _1505_/Y _2462_/Q _1377_/B _1505_/B1 VPWR VGND sg13cmos5l_o21ai_1
+X_2485_ _2485_/Q _2531_/CLK _2485_/D _2485_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_11_317 VPWR VGND sg13cmos5l_fill_1
+XFILLER_46_258 VPWR VGND sg13cmos5l_fill_2
+XFILLER_6_365 VPWR VGND sg13cmos5l_fill_2
+XFILLER_6_376 VPWR VGND sg13cmos5l_fill_1
+Xinput16 _2084_/A uio_in[6] VPWR VGND sg13cmos5l_buf_1
+X_2485__225 _2485_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2270_ _2270_/Y _2270_/A _2286_/C VPWR VGND sg13cmos5l_nor2_1
+X_1985_ _1987_/C _2221_/A _2205_/A _1974_/X VPWR VGND sg13cmos5l_o21ai_1
+X_2537_ _2537_/Q clkload9/A _2537_/D _2537_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_28_236 VPWR VGND sg13cmos5l_decap_8
+X_1419_ _2591_/D _2139_/A _1419_/B VPWR VGND sg13cmos5l_nor2_1
+X_2468_ _2468_/Q clkload0/A _2468_/D _2468_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2399_ _2399_/Q _2604_/CLK _2399_/D _2399_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_42_261 VPWR VGND sg13cmos5l_fill_2
+X_1770_ _2499_/D _1776_/A _1770_/B VPWR VGND sg13cmos5l_nor2_1
+Xhold608 _2340_/D _2189_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold619 _1709_/B _2409_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2424__359 _2424_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2322_ _2322_/Y _1307_/Y _2322_/A2 _2321_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2253_ _2253_/Y _2253_/A _2286_/B _2253_/C VPWR VGND sg13cmos5l_nor3_1
+X_2184_ _2184_/Y _2184_/A _2184_/B VPWR VGND sg13cmos5l_nor2_1
+X_1899_ _1899_/Y _1323_/A _1901_/B _1898_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1968_ _1968_/Y _2038_/A _1979_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_0_327 VPWR VGND sg13cmos5l_decap_8
+X_2451__290 _2451_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_47_375 VPWR VGND sg13cmos5l_decap_8
+X_1753_ _1753_/Y hold570/X _1763_/A1 _1872_/A VPWR VGND sg13cmos5l_a21oi_1
+X_1822_ _1823_/B _1814_/A _1812_/X _1813_/A VPWR VGND sg13cmos5l_a21oi_1
+X_1684_ _2468_/D _1684_/A VPWR VGND sg13cmos5l_inv_1
+Xhold449 _1515_/B _1514_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold438 _1335_/A _2518_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold427 _1329_/A _2525_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2305_ _2400_/D _2330_/A1 _1315_/Y _2304_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2236_ _2270_/A _2286_/A _2481_/D VPWR VGND sg13cmos5l_nand2_1
+X_2167_ _2167_/Y hold580/X _2117_/A _2167_/B1 _2435_/Q _2168_/A1 VPWR VGND sg13cmos5l_a221oi_1
+XFILLER_21_220 VPWR VGND sg13cmos5l_fill_1
+X_2098_ _2571_/D _1358_/Y _2098_/A2 _2096_/Y _2097_/Y VPWR VGND sg13cmos5l_a22oi_1
+XFILLER_0_179 VPWR VGND sg13cmos5l_fill_2
+XFILLER_48_128 VPWR VGND sg13cmos5l_fill_2
+XFILLER_29_375 VPWR VGND sg13cmos5l_fill_1
+X_2414__314 _2414_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2021_ _2548_/D _2021_/A VPWR VGND sg13cmos5l_inv_1
+X_1736_ _1736_/Y _1767_/A2 hold765/X _1920_/B1 VPWR VGND sg13cmos5l_o21ai_1
+X_1805_ _1890_/B _1805_/A _1805_/B VPWR VGND sg13cmos5l_xnor2_1
+X_1598_ _1598_/Y _1598_/A _1598_/B VPWR VGND sg13cmos5l_xnor2_1
+X_1667_ _1668_/A _1459_/B _1734_/B _2480_/D _1666_/Y VPWR VGND sg13cmos5l_a22oi_1
+XFILLER_26_367 VPWR VGND sg13cmos5l_fill_1
+X_2472__249 _2472_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2219_ _2219_/Y _2219_/A _2219_/B _2219_/C VPWR VGND sg13cmos5l_nor3_1
+Xhold791 _1317_/A _2449_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold780 _1424_/A _2592_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_39_85 VPWR VGND sg13cmos5l_fill_1
+X_2594__329 _2594_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2570_ _2570_/Q clkload5/A _2570_/D _2570_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2345__205 _2345_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1383_ _1383_/Y _1383_/A _1549_/A VPWR VGND sg13cmos5l_nor2_1
+X_1452_ _1554_/B _1452_/A _1452_/B VPWR VGND sg13cmos5l_xor2_1
+X_1521_ _2435_/D _1730_/A _1521_/B VPWR VGND sg13cmos5l_nor2_1
+X_2501__194 _2501_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2004_ _2004_/Y hold799/X _2063_/B _2036_/B1 _2003_/Y VPWR VGND sg13cmos5l_a22oi_1
+X_1719_ _1719_/X _2390_/Q _2276_/A _2259_/A _2243_/A _2401_/Q _2402_/Q VPWR VGND sg13cmos5l_mux4_1
+XFILLER_13_381 VPWR VGND sg13cmos5l_fill_2
+XFILLER_9_374 VPWR VGND sg13cmos5l_fill_2
+X_1504_ _1504_/Y _1504_/A _1504_/B VPWR VGND sg13cmos5l_xnor2_1
+X_2553_ _2553_/Q clkload2/A _2553_/D _2553_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1366_ _1366_/Y _1366_/A VPWR VGND sg13cmos5l_inv_1
+X_1435_ _1435_/Y _2322_/A2 _1346_/Y _1434_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2484_ _2484_/Q _2595_/CLK _2484_/D _2484_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_23_134 VPWR VGND sg13cmos5l_fill_1
+X_2434__339 _2434_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2335__226 _2335_/RESET_B VPWR VGND sg13cmos5l_tiehi
+Xinput17 _2087_/A uio_in[7] VPWR VGND sg13cmos5l_buf_1
+X_2461__270 _2461_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1984_ _1987_/B _2221_/A _2024_/B VPWR VGND sg13cmos5l_or2_1
+X_2605_ _2605_/Q _2605_/CLK _2605_/D _2605_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2536_ _2536_/Q clkload9/A _2536_/D _2536_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2467_ _2467_/Q clkload0/A _2467_/D _2467_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1349_ _1530_/A _2581_/Q VPWR VGND sg13cmos5l_inv_1
+X_1418_ _1419_/B _2128_/B _1412_/X _1417_/X _2065_/C VPWR VGND sg13cmos5l_a22oi_1
+X_2398_ _2398_/Q clkload2/A _2398_/D _2398_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+Xhold609 _2065_/B _2592_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2321_ _2321_/Y _2413_/Q _2322_/A2 _2065_/A VPWR VGND sg13cmos5l_o21ai_1
+XFILLER_2_380 VPWR VGND sg13cmos5l_fill_1
+XFILLER_33_4 VPWR VGND sg13cmos5l_fill_2
+X_2252_ _2370_/D _1311_/Y _2249_/B _2251_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2183_ _2337_/D _1323_/Y _2182_/B _2182_/Y VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_33_251 VPWR VGND sg13cmos5l_fill_2
+X_2353__189 _2353_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1898_ _1898_/Y _1884_/A _1823_/Y _1897_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1967_ _2542_/D _1967_/A _1967_/B VPWR VGND sg13cmos5l_and2_1
+XFILLER_0_306 VPWR VGND sg13cmos5l_decap_8
+X_2519_ _2519_/Q _2525_/CLK _2519_/D _2519_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2405__271 _2405_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_3_111 VPWR VGND sg13cmos5l_fill_1
+XFILLER_3_199 VPWR VGND sg13cmos5l_fill_2
+XFILLER_47_332 VPWR VGND sg13cmos5l_fill_1
+XFILLER_47_354 VPWR VGND sg13cmos5l_decap_8
+X_1683_ _1683_/Y _1476_/A _1639_/Y _2480_/D _1682_/Y VPWR VGND sg13cmos5l_a22oi_1
+X_1752_ _1752_/Y _1335_/Y _1763_/A1 _1751_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1821_ _1823_/A _2549_/Q _2496_/Q VPWR VGND sg13cmos5l_xnor2_1
+Xclkbuf_leaf_10_clk _2595_/CLK clkbuf_leaf_9_clk/A VPWR VGND sg13cmos5l_buf_8
+XFILLER_24_0 VPWR VGND sg13cmos5l_fill_1
+Xhold439 _2490_/D _1752_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold428 _2497_/D _1766_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2304_ _2304_/Y _2330_/A1 hold758/X _2314_/B VPWR VGND sg13cmos5l_o21ai_1
+X_2235_ _2253_/C _2408_/Q _2407_/Q VPWR VGND sg13cmos5l_nand2_1
+X_2166_ _2166_/Y hold524/X _2166_/A2 _2166_/B1 _2514_/Q VPWR VGND sg13cmos5l_a22oi_1
+X_2097_ _2097_/Y _2072_/A _2093_/B _2098_/A2 VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_21_232 VPWR VGND sg13cmos5l_fill_1
+X_2511__174 _2511_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_0_114 VPWR VGND sg13cmos5l_fill_2
+XFILLER_0_136 VPWR VGND sg13cmos5l_fill_1
+XFILLER_28_43 VPWR VGND sg13cmos5l_fill_2
+XFILLER_44_379 VPWR VGND sg13cmos5l_decap_8
+X_2540__392 _2540_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2020_ _2020_/Y hold768/X _2063_/B _2036_/B1 _2019_/Y VPWR VGND sg13cmos5l_a22oi_1
+X_1666_ _1666_/Y _1666_/A _1666_/B _1666_/C _1666_/D VPWR VGND sg13cmos5l_nand4_1
+X_1735_ _2481_/D _2286_/B VPWR VGND sg13cmos5l_inv_1
+X_1804_ _1805_/B _2546_/Q _2493_/Q _1796_/A VPWR VGND sg13cmos5l_a21oi_1
+X_1597_ _1598_/B _1597_/A _1597_/B VPWR VGND sg13cmos5l_xnor2_1
+XFILLER_26_324 VPWR VGND sg13cmos5l_fill_2
+X_2218_ _2354_/D _1322_/Y _2217_/B _2217_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2149_ _2149_/Y _1372_/Y _2123_/Y _2145_/X _2148_/X VPWR VGND sg13cmos5l_a22oi_1
+XFILLER_30_88 VPWR VGND sg13cmos5l_fill_2
+Xhold792 _1388_/A _2578_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold781 hold781/X _2387_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold770 hold770/X _2483_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2373__148 _2373_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_17_357 VPWR VGND sg13cmos5l_fill_1
+XFILLER_17_379 VPWR VGND sg13cmos5l_fill_2
+X_1520_ _1520_/Y _2435_/Q _1501_/B _1522_/B1 hold440/X VPWR VGND sg13cmos5l_a22oi_1
+X_1382_ _1382_/Y _2581_/Q _1526_/A VPWR VGND sg13cmos5l_nand2_1
+X_1451_ _1452_/B _2412_/Q _1451_/B VPWR VGND sg13cmos5l_xor2_1
+X_2495__206 _2495_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_35_187 VPWR VGND sg13cmos5l_fill_2
+X_2003_ _2003_/Y _2003_/A _2003_/B VPWR VGND sg13cmos5l_nand2_1
+X_1649_ _1649_/Y _1649_/A _1649_/B _1649_/C _1649_/D VPWR VGND sg13cmos5l_nand4_1
+X_1718_ _2474_/D _1730_/A _1718_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_14_338 VPWR VGND sg13cmos5l_fill_1
+XFILLER_41_146 VPWR VGND sg13cmos5l_fill_2
+X_2448__296 _2448_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_9_386 VPWR VGND sg13cmos5l_fill_2
+X_1503_ _1504_/B _2471_/Q _2418_/Q VPWR VGND sg13cmos5l_xor2_1
+X_2552_ _2552_/Q _2590_/CLK _2552_/D _2552_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2483_ _2483_/Q _2531_/CLK _2483_/D _2483_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1365_ _1365_/Y _1365_/A VPWR VGND sg13cmos5l_inv_1
+X_1434_ _1434_/Y _2322_/A2 _2416_/Q _1352_/A VPWR VGND sg13cmos5l_o21ai_1
+X_2363__169 _2363_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_39_290 VPWR VGND sg13cmos5l_decap_4
+XFILLER_33_400 VPWR VGND sg13cmos5l_decap_4
+X_2604_ _2604_/Q _2604_/CLK _2604_/D _2604_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1983_ _1987_/A _2484_/Q _1983_/B VPWR VGND sg13cmos5l_nand2_1
+X_1417_ _1417_/X _2065_/B _1414_/Y _2116_/C VPWR VGND sg13cmos5l_a21o_1
+X_2535_ _2535_/Q clkload9/A _2535_/D _2535_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2466_ _2466_/Q clkload0/A _2466_/D _2466_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1348_ _1348_/Y _1348_/A VPWR VGND sg13cmos5l_inv_1
+X_2397_ _2397_/Q _2531_/CLK _2397_/D _2397_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_3_359 VPWR VGND sg13cmos5l_fill_1
+XFILLER_10_182 VPWR VGND sg13cmos5l_fill_2
+XFILLER_6_131 VPWR VGND sg13cmos5l_fill_1
+XFILLER_2_392 VPWR VGND sg13cmos5l_decap_8
+X_2320_ _2320_/Y _2320_/A1 _1308_/Y _2319_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2251_ _2251_/Y _2251_/A _2251_/B VPWR VGND sg13cmos5l_nor2_1
+X_2182_ _2182_/Y _2182_/A _2182_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_21_403 VPWR VGND sg13cmos5l_fill_1
+X_1966_ _1966_/Y _1967_/A _1964_/X _1965_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1897_ _1897_/Y _2567_/Q _1884_/A _1875_/X VPWR VGND sg13cmos5l_o21ai_1
+X_2518_ _2518_/Q clkload7/A _2518_/D _2518_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2449_ _2449_/Q clkload4/A _2449_/D _2449_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_3_101 VPWR VGND sg13cmos5l_fill_1
+X_2423__361 _2423_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1820_ _1820_/Y _2549_/Q _2496_/Q VPWR VGND sg13cmos5l_nor2_1
+X_1682_ _1682_/Y _1682_/A _1682_/B _1682_/C _1682_/D VPWR VGND sg13cmos5l_nand4_1
+X_1751_ _1751_/Y _1763_/A1 _2490_/Q _1389_/A VPWR VGND sg13cmos5l_o21ai_1
+Xhold429 _1330_/A _2524_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2303_ _2303_/Y _2329_/A1 _1317_/Y _2302_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2234_ _2362_/D _1322_/Y _2233_/B _2233_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2165_ _2165_/X _2164_/Y hold621/X _2169_/S VPWR VGND sg13cmos5l_mux2_1
+X_2096_ _2096_/Y input4/X _2096_/B VPWR VGND sg13cmos5l_nand2_1
+X_1949_ _1951_/B _1950_/A _1949_/B VPWR VGND sg13cmos5l_nand2_1
+XFILLER_44_325 VPWR VGND sg13cmos5l_fill_2
+XFILLER_44_358 VPWR VGND sg13cmos5l_decap_8
+X_2564__305 _2564_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2529__414 _2529_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_35_303 VPWR VGND sg13cmos5l_fill_1
+X_2458__276 _2458_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_43_380 VPWR VGND sg13cmos5l_decap_8
+X_1803_ _1805_/A _2547_/Q _2494_/Q VPWR VGND sg13cmos5l_xor2_1
+X_1596_ _1596_/X _2413_/Q _1597_/A _1609_/C VPWR VGND sg13cmos5l_and3_1
+X_1665_ _1666_/D _2290_/A _2274_/A _1705_/C VPWR VGND sg13cmos5l_nand3_1
+X_1734_ _2286_/B _1734_/A _1734_/B VPWR VGND sg13cmos5l_nand2_1
+X_2217_ _2217_/Y _2217_/A _2217_/B VPWR VGND sg13cmos5l_nor2_1
+X_2148_ _2148_/X _2148_/A _2148_/B _2148_/C VPWR VGND sg13cmos5l_and3_1
+X_2079_ _2079_/Y input6/X _2090_/B _2080_/A2 VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_14_46 VPWR VGND sg13cmos5l_fill_2
+XFILLER_14_57 VPWR VGND sg13cmos5l_fill_2
+Xhold793 _1389_/C _1388_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold782 _1924_/A _2536_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold771 _1476_/A _2468_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold760 _1634_/A _2462_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_25_391 VPWR VGND sg13cmos5l_fill_2
+XFILLER_32_328 VPWR VGND sg13cmos5l_fill_1
+XFILLER_44_177 VPWR VGND sg13cmos5l_fill_2
+XFILLER_44_188 VPWR VGND sg13cmos5l_fill_2
+X_1450_ _1450_/X _2412_/Q _2465_/Q VPWR VGND sg13cmos5l_and2_1
+X_1381_ _1381_/Y _1530_/A _1381_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_35_155 VPWR VGND sg13cmos5l_fill_1
+X_2471__251 _2471_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2002_ _2003_/B _2484_/Q _1998_/X _2001_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1579_ _1581_/C _2471_/Q _2470_/Q _2469_/Q _2468_/Q VPWR VGND sg13cmos5l_nor4_1
+X_1648_ _1649_/D _2387_/Q _1648_/B _1705_/C VPWR VGND sg13cmos5l_nand3_1
+X_1717_ _1717_/Y _1650_/A hold474/X _1709_/X _1716_/X VPWR VGND sg13cmos5l_a22oi_1
+XFILLER_26_111 VPWR VGND sg13cmos5l_fill_1
+X_2381__407 _2381_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_1_232 VPWR VGND sg13cmos5l_fill_2
+XFILLER_2_38 VPWR VGND sg13cmos5l_fill_1
+XFILLER_2_49 VPWR VGND sg13cmos5l_fill_2
+Xhold590 _1855_/B _1854_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_13_383 VPWR VGND sg13cmos5l_fill_1
+XFILLER_9_376 VPWR VGND sg13cmos5l_fill_1
+X_1433_ _1433_/Y _2322_/A2 _1347_/Y _1432_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1502_ _1504_/A _1492_/Y _1496_/A _1494_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2551_ _2551_/Q _2590_/CLK _2551_/D _2551_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2482_ _2482_/Q _2531_/CLK _2482_/D _2482_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1364_ _1364_/Y _1364_/A VPWR VGND sg13cmos5l_inv_1
+X_2584__319 _2584_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_14_125 VPWR VGND sg13cmos5l_fill_1
+X_2537__398 _2537_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2572__289 _2572_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2433__341 _2433_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1982_ _1983_/B _2356_/Q _2348_/Q _2340_/Q _2332_/Q _2395_/Q _2396_/Q VPWR VGND sg13cmos5l_mux4_1
+X_2603_ _2603_/Q _2604_/CLK _2603_/D _2603_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2534_ _2534_/Q clkload9/A _2534_/D _2534_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1347_ _1347_/Y _1347_/A VPWR VGND sg13cmos5l_inv_1
+X_1416_ _1416_/Y _2116_/A _2116_/C VPWR VGND sg13cmos5l_nor2_1
+X_2465_ _2465_/Q clkload0/A _2465_/D _2465_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2440__312 _2440_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2396_ _2396_/Q _2531_/CLK _2396_/D _2396_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_36_283 VPWR VGND sg13cmos5l_fill_1
+X_2521__155 _2521_/RESET_B VPWR VGND sg13cmos5l_tiehi
+Xfanout130 _1920_/B1 _1429_/A VPWR VGND sg13cmos5l_buf_1
+XFILLER_27_261 VPWR VGND sg13cmos5l_fill_2
+X_2250_ _2369_/D _1312_/Y _2249_/B _2249_/Y VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_18_261 VPWR VGND sg13cmos5l_fill_1
+X_2181_ _2336_/D _1324_/Y _2184_/B _2180_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1965_ _1965_/Y _1962_/A _1967_/A _1967_/B VPWR VGND sg13cmos5l_o21ai_1
+X_1896_ _2531_/D _1979_/B _1896_/B VPWR VGND sg13cmos5l_nor2_1
+X_2517_ _2517_/Q clkload8/A _2517_/D _2517_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2448_ _2448_/Q clkload4/A _2448_/D _2448_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2379_ _2379_/Q _2514_/CLK _2379_/D _2379_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_17_68 VPWR VGND sg13cmos5l_fill_2
+XFILLER_3_168 VPWR VGND sg13cmos5l_fill_1
+XFILLER_47_389 VPWR VGND sg13cmos5l_decap_8
+X_1750_ _1750_/Y _1328_/Y _1767_/A2 _1749_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2352__191 _2352_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1681_ _1682_/D _2294_/A _2278_/A _1705_/C VPWR VGND sg13cmos5l_nand3_1
+X_2302_ _2302_/Y _2329_/A1 hold787/X _2314_/B VPWR VGND sg13cmos5l_o21ai_1
+X_2233_ _2233_/Y _2233_/A _2233_/B VPWR VGND sg13cmos5l_nor2_1
+X_2164_ _2164_/Y _2145_/A _2163_/Y _2162_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2095_ _2570_/D _1357_/Y _2095_/A2 _2093_/Y _2094_/Y VPWR VGND sg13cmos5l_a22oi_1
+XFILLER_9_80 VPWR VGND sg13cmos5l_fill_1
+X_1879_ _1879_/Y hold651/X _1875_/X _1748_/B VPWR VGND sg13cmos5l_o21ai_1
+X_1948_ _1951_/A _1948_/A _1950_/B VPWR VGND sg13cmos5l_nand2_1
+XFILLER_44_88 VPWR VGND sg13cmos5l_fill_1
+XFILLER_43_370 VPWR VGND sg13cmos5l_fill_1
+Xclkbuf_2_3__f_clk clkbuf_leaf_9_clk/A clkbuf_0_clk/X VPWR VGND sg13cmos5l_buf_8
+X_1733_ _2479_/D _1733_/A _1733_/B VPWR VGND sg13cmos5l_nor2_1
+X_1802_ _1802_/Y _2547_/Q _2494_/Q VPWR VGND sg13cmos5l_nor2_1
+X_1595_ _1595_/Y _2457_/Q _1597_/B VPWR VGND sg13cmos5l_nand2b_1
+X_1664_ _1666_/C _2290_/A _2274_/A _1645_/X VPWR VGND sg13cmos5l_o21ai_1
+XFILLER_38_186 VPWR VGND sg13cmos5l_fill_2
+X_2216_ _2353_/D _1323_/Y _2217_/B _2215_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2147_ _2148_/C _2146_/Y _2580_/Q VPWR VGND sg13cmos5l_nand2b_1
+X_2078_ _2078_/Y _2078_/A _2108_/B VPWR VGND sg13cmos5l_nand2_1
+XFILLER_1_403 VPWR VGND sg13cmos5l_fill_1
+XFILLER_39_44 VPWR VGND sg13cmos5l_fill_1
+Xhold794 _2581_/D _1389_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold783 _2536_/D _1927_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold772 _1684_/A _1683_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold761 _2462_/D _1637_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold750 hold750/X _2298_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_29_175 VPWR VGND sg13cmos5l_fill_2
+XFILLER_40_395 VPWR VGND sg13cmos5l_decap_8
+X_2388__393 _2388_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_4_241 VPWR VGND sg13cmos5l_fill_1
+X_1380_ _1526_/A _2581_/Q _1381_/B VPWR VGND sg13cmos5l_nand2_1
+X_2001_ _2001_/Y _2225_/A _2024_/B _2000_/Y VPWR VGND sg13cmos5l_o21ai_1
+XFILLER_23_307 VPWR VGND sg13cmos5l_fill_1
+X_1716_ _1716_/X _2389_/Q _2381_/Q _2257_/A _2241_/A _2401_/Q _2402_/Q VPWR VGND sg13cmos5l_mux4_1
+X_1578_ _1581_/B _2467_/Q _2466_/Q _2465_/Q _2464_/Q VPWR VGND sg13cmos5l_nor4_1
+X_1647_ _1705_/C _1694_/A _2404_/Q _1647_/C VPWR VGND sg13cmos5l_nor3_1
+X_2404__338 _2404_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2372__150 _2372_/RESET_B VPWR VGND sg13cmos5l_tiehi
+Xhold580 hold580/X _2427_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold591 _2194_/A _2343_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2550_ _2550_/Q clkload9/A _2550_/D _2550_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1363_ _1363_/Y _1363_/A VPWR VGND sg13cmos5l_inv_1
+X_1432_ _1432_/Y _2322_/A2 _2415_/Q _1352_/A VPWR VGND sg13cmos5l_o21ai_1
+X_1501_ _1501_/Y _1501_/A _1501_/B VPWR VGND sg13cmos5l_nand2_1
+X_2481_ _2481_/Q _2605_/CLK _2481_/D _2481_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_42_402 VPWR VGND sg13cmos5l_fill_2
+X_1981_ _2543_/D _1981_/A VPWR VGND sg13cmos5l_inv_1
+X_2602_ _2602_/Q _2604_/CLK _2602_/D _2602_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2533_ _2533_/Q _2590_/CLK _2533_/D _2533_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1346_ _1346_/Y _1346_/A VPWR VGND sg13cmos5l_inv_1
+X_1415_ _1415_/X _2131_/A _2420_/Q _1413_/X VPWR VGND sg13cmos5l_a21o_1
+X_2464_ _2464_/Q clkload0/A _2464_/D _2464_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2395_ _2395_/Q _2531_/CLK _2395_/D _2395_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2362__171 _2362_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_3_317 VPWR VGND sg13cmos5l_fill_2
+Xfanout131 _1429_/A input1/X VPWR VGND sg13cmos5l_buf_1
+Xfanout120 fanout120/X _1352_/Y VPWR VGND sg13cmos5l_buf_1
+XFILLER_42_276 VPWR VGND sg13cmos5l_fill_2
+X_2180_ _2180_/Y _2180_/A _2184_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_18_295 VPWR VGND sg13cmos5l_fill_1
+X_1895_ _1895_/Y _1324_/A _1901_/B _1894_/Y VPWR VGND sg13cmos5l_a21oi_1
+Xclkbuf_leaf_13_clk clkload2/A clkbuf_2_1__f_clk/X VPWR VGND sg13cmos5l_buf_8
+X_2468__257 _2468_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1964_ _1964_/X _1964_/A _1964_/B VPWR VGND sg13cmos5l_xor2_1
+X_2516_ _2516_/Q clkload8/A _2516_/D _2516_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2447_ _2447_/Q clkload7/A _2447_/D _2447_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1329_ _1329_/Y _1329_/A VPWR VGND sg13cmos5l_inv_1
+X_2378_ _2378_/Q _2514_/CLK _2378_/D _2378_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_24_254 VPWR VGND sg13cmos5l_fill_2
+XFILLER_3_158 VPWR VGND sg13cmos5l_fill_1
+XFILLER_47_368 VPWR VGND sg13cmos5l_decap_8
+X_1680_ _1682_/C _2294_/A _2278_/A _1645_/X VPWR VGND sg13cmos5l_o21ai_1
+X_2301_ _2301_/Y _1311_/Y _2298_/B _2300_/Y VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_31_4 VPWR VGND sg13cmos5l_fill_1
+Xclkbuf_leaf_2_clk clkload0/A clkbuf_leaf_2_clk/A VPWR VGND sg13cmos5l_buf_8
+X_2232_ _2361_/D _1323_/Y _2233_/B _2231_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2163_ _2163_/Y hold505/X _2166_/A2 _2166_/B1 _2513_/Q VPWR VGND sg13cmos5l_a22oi_1
+XFILLER_46_390 VPWR VGND sg13cmos5l_decap_8
+X_2094_ _2094_/Y input3/X _2096_/B _2095_/A2 VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_9_70 VPWR VGND sg13cmos5l_fill_1
+X_1878_ _1878_/Y _1364_/A _1877_/A _1877_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2481__232 _2481_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1947_ _1950_/B _1947_/A _2495_/Q _1961_/B VPWR VGND sg13cmos5l_nand3_1
+X_1663_ _1666_/B _2290_/A _1703_/B VPWR VGND sg13cmos5l_or2_1
+X_1732_ _1732_/Y hold519/X _1342_/Y _1709_/X _1731_/X VPWR VGND sg13cmos5l_a22oi_1
+X_1801_ _1801_/Y _2547_/Q _2494_/Q VPWR VGND sg13cmos5l_nand2_1
+X_1594_ _1597_/B _2413_/Q _1609_/C VPWR VGND sg13cmos5l_nand2_1
+X_2215_ _2215_/Y _2215_/A _2217_/B VPWR VGND sg13cmos5l_nor2_1
+X_2146_ _2146_/Y hold559/X _2146_/A2 _2131_/B _2508_/Q VPWR VGND sg13cmos5l_a22oi_1
+X_2077_ _2564_/D _1367_/Y _2080_/A2 _2075_/Y _2076_/Y VPWR VGND sg13cmos5l_a22oi_1
+XFILLER_41_308 VPWR VGND sg13cmos5l_decap_4
+Xhold740 hold740/X _2471_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold773 _1372_/A _2600_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold762 _2116_/A _2592_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold751 _2393_/D _2299_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_39_12 VPWR VGND sg13cmos5l_fill_2
+Xhold795 hold795/X _2406_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold784 _1585_/A _2411_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_25_393 VPWR VGND sg13cmos5l_fill_1
+XFILLER_40_330 VPWR VGND sg13cmos5l_fill_1
+XFILLER_40_363 VPWR VGND sg13cmos5l_fill_1
+XFILLER_35_135 VPWR VGND sg13cmos5l_fill_2
+X_2000_ _2000_/Y _2358_/Q _2209_/A _1974_/X VPWR VGND sg13cmos5l_o21ai_1
+X_1646_ _1649_/C _2387_/Q _1648_/B _1645_/X VPWR VGND sg13cmos5l_o21ai_1
+X_1715_ _2473_/D _1733_/A _1715_/B VPWR VGND sg13cmos5l_nor2_1
+X_2547__379 _2547_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1577_ _1577_/Y _1574_/Y _1576_/X _1584_/A VPWR VGND sg13cmos5l_a21oi_1
+X_2129_ _2129_/Y _2129_/A _2132_/A VPWR VGND sg13cmos5l_nand2_1
+XFILLER_1_234 VPWR VGND sg13cmos5l_fill_1
+Xhold570 hold570/X _2519_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold581 _1500_/B _1499_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold592 _2343_/D _2195_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_45_400 VPWR VGND sg13cmos5l_decap_4
+X_1500_ _2427_/D _1515_/A _1500_/B VPWR VGND sg13cmos5l_nor2_1
+X_2480_ _2480_/Q clkload0/A _2480_/D _2480_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2349__197 _2349_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1362_ _1362_/Y _1362_/A VPWR VGND sg13cmos5l_inv_1
+X_1431_ _1431_/Y _2322_/A2 _1348_/Y _1430_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1629_ _1629_/Y _1629_/A _1629_/B VPWR VGND sg13cmos5l_xnor2_1
+X_2478__237 _2478_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1980_ _1981_/A hold790/X _2063_/B _1978_/Y _2036_/B1 VPWR VGND sg13cmos5l_a22oi_1
+X_2601_ _2601_/Q _2604_/CLK _2601_/D _2601_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2532_ _2532_/Q _2590_/CLK _2532_/D _2532_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2507__182 _2507_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2463_ _2463_/Q clkload5/A _2463_/D _2463_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1345_ _1345_/Y _1345_/A VPWR VGND sg13cmos5l_inv_1
+X_1414_ _1414_/Y _2131_/A _2420_/Q _1413_/X VPWR VGND sg13cmos5l_a21oi_1
+X_2590__325 _2590_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2394_ _2394_/Q _2478_/CLK _2394_/D _2394_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_24_403 VPWR VGND sg13cmos5l_fill_1
+XFILLER_36_263 VPWR VGND sg13cmos5l_fill_2
+XFILLER_22_26 VPWR VGND sg13cmos5l_fill_1
+XFILLER_3_307 VPWR VGND sg13cmos5l_fill_2
+Xfanout121 _2314_/B _1422_/A VPWR VGND sg13cmos5l_buf_1
+Xfanout110 _2059_/A fanout113/X VPWR VGND sg13cmos5l_buf_1
+XFILLER_27_263 VPWR VGND sg13cmos5l_fill_1
+X_2571__291 _2571_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_2_340 VPWR VGND sg13cmos5l_decap_8
+XFILLER_6_189 VPWR VGND sg13cmos5l_fill_2
+X_1894_ _1894_/Y _1884_/A _1814_/Y _1893_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1963_ _1964_/B _1954_/Y _1958_/B _1956_/B VPWR VGND sg13cmos5l_o21ai_1
+X_2515_ _2515_/Q clkload3/A _2515_/D _2515_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2446_ _2446_/Q _2525_/CLK _2446_/D _2446_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1328_ _1328_/Y _1328_/A VPWR VGND sg13cmos5l_inv_1
+X_2377_ _2377_/Q clkload1/A _2377_/D _2377_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2369__156 _2369_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_47_325 VPWR VGND sg13cmos5l_fill_2
+XFILLER_47_347 VPWR VGND sg13cmos5l_decap_8
+X_2300_ _2300_/Y _2300_/A _2300_/B VPWR VGND sg13cmos5l_nor2_1
+X_2231_ _2231_/Y _2231_/A _2233_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_0_40 VPWR VGND sg13cmos5l_fill_2
+X_2162_ _2162_/Y hold539/X _2117_/A _2167_/B1 _2434_/Q _2145_/A VPWR VGND sg13cmos5l_a221oi_1
+X_2093_ _2093_/Y _2093_/A _2093_/B VPWR VGND sg13cmos5l_nand2_1
+XFILLER_0_95 VPWR VGND sg13cmos5l_fill_2
+XFILLER_21_269 VPWR VGND sg13cmos5l_fill_1
+X_1877_ _1877_/Y _1877_/A _1877_/B VPWR VGND sg13cmos5l_nor2_1
+X_1946_ _1948_/A _2495_/Q _1955_/C _1947_/A VPWR VGND sg13cmos5l_a21o_1
+X_2429_ _2429_/Q _2590_/CLK _2429_/D _2429_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_12_203 VPWR VGND sg13cmos5l_fill_2
+XFILLER_44_306 VPWR VGND sg13cmos5l_fill_1
+XFILLER_4_402 VPWR VGND sg13cmos5l_fill_2
+XFILLER_43_394 VPWR VGND sg13cmos5l_decap_8
+X_1800_ _1800_/Y _1800_/A _1800_/B VPWR VGND sg13cmos5l_nor2_1
+X_1662_ _1666_/A _1694_/A _1662_/B VPWR VGND sg13cmos5l_nand2_1
+X_1731_ _1731_/X _2394_/Q _2386_/Q _2267_/A _2251_/A _2401_/Q _2402_/Q VPWR VGND sg13cmos5l_mux4_1
+X_1593_ _1598_/A _1590_/A _1588_/Y _1587_/Y VPWR VGND sg13cmos5l_o21ai_1
+X_2214_ _2352_/D _1324_/Y _2217_/B _2213_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2359__177 _2359_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2145_ _2145_/X _2145_/A _2145_/B VPWR VGND sg13cmos5l_or2_1
+X_2076_ _2076_/Y input5/X _2090_/B _2080_/A2 VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_14_16 VPWR VGND sg13cmos5l_fill_2
+X_1929_ _1929_/Y _2493_/Q _1955_/C _2537_/Q VPWR VGND sg13cmos5l_a21oi_1
+Xhold730 _1937_/A _2538_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold741 _1708_/A _1707_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold796 _1917_/A _2535_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold785 hold785/X _1550_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold774 _2600_/D _2149_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold763 _1962_/A _2541_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold752 _1947_/A _2539_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_17_317 VPWR VGND sg13cmos5l_fill_2
+X_2420__367 _2420_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_4_298 VPWR VGND sg13cmos5l_fill_2
+X_1576_ _1576_/X _1386_/Y _1504_/Y _1575_/Y VPWR VGND sg13cmos5l_a21o_1
+X_1645_ _1645_/X _2403_/Q _1645_/B VPWR VGND sg13cmos5l_and2_1
+X_1714_ _1715_/B _1650_/A hold458/X _1709_/X hold646/X VPWR VGND sg13cmos5l_a22oi_1
+X_2128_ _2132_/A _2116_/C _2128_/B VPWR VGND sg13cmos5l_nand2b_1
+X_2059_ _2557_/D _2059_/A _2059_/B VPWR VGND sg13cmos5l_nor2_1
+Xhold560 _1776_/B _1775_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold571 _2125_/A _2577_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold582 _2241_/A _2365_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold593 _2182_/A _2337_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2598__267 _2598_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_25_191 VPWR VGND sg13cmos5l_fill_1
+XFILLER_9_313 VPWR VGND sg13cmos5l_fill_1
+X_1430_ _1430_/Y _2322_/A2 _2414_/Q _1352_/A VPWR VGND sg13cmos5l_o21ai_1
+X_1361_ _1361_/Y _1361_/A VPWR VGND sg13cmos5l_inv_1
+X_2499__198 _2499_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_23_128 VPWR VGND sg13cmos5l_fill_1
+X_1559_ _2449_/D _1317_/Y _1574_/B _1557_/Y _1558_/Y _2137_/A VPWR VGND sg13cmos5l_a221oi_1
+X_1628_ _1629_/B _1620_/B _1621_/X _1617_/Y VPWR VGND sg13cmos5l_a21o_1
+XFILLER_39_294 VPWR VGND sg13cmos5l_fill_2
+XFILLER_18_401 VPWR VGND sg13cmos5l_fill_2
+X_2600_ _2600_/Q _2600_/CLK _2600_/D _2600_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1413_ _1413_/X _2127_/A _2499_/Q VPWR VGND sg13cmos5l_and2_1
+X_2531_ _2531_/Q _2531_/CLK _2531_/D _2531_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2462_ _2462_/Q clkload4/A _2462_/D _2462_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2393_ _2393_/Q clkload1/A _2393_/D _2393_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1344_ _1344_/Y _1344_/A VPWR VGND sg13cmos5l_inv_1
+XFILLER_47_46 VPWR VGND sg13cmos5l_fill_1
+Xfanout122 _1422_/A input1/X VPWR VGND sg13cmos5l_buf_1
+Xfanout111 _1776_/A _2050_/A VPWR VGND sg13cmos5l_buf_1
+Xfanout100 _2328_/A1 hold759/X VPWR VGND sg13cmos5l_buf_1
+X_2341__213 _2341_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_10_120 VPWR VGND sg13cmos5l_fill_2
+XFILLER_8_29 VPWR VGND sg13cmos5l_fill_2
+XFILLER_2_385 VPWR VGND sg13cmos5l_decap_8
+XFILLER_33_245 VPWR VGND sg13cmos5l_fill_2
+X_1962_ _1964_/A _1962_/A _1962_/B VPWR VGND sg13cmos5l_xor2_1
+X_1893_ _1893_/Y _2566_/Q _1884_/A _1875_/X VPWR VGND sg13cmos5l_o21ai_1
+XFILLER_45_0 VPWR VGND sg13cmos5l_fill_1
+X_2514_ _2514_/Q _2514_/CLK _2514_/D _2514_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2445_ _2445_/Q clkload6/A _2445_/D _2445_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2376_ _2376_/Q clkload1/A _2376_/D _2376_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_24_201 VPWR VGND sg13cmos5l_fill_2
+X_1327_ _1327_/Y _1327_/A VPWR VGND sg13cmos5l_inv_1
+X_2430__347 _2430_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2230_ _2360_/D _1324_/Y _2233_/B _2229_/Y VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_17_4 VPWR VGND sg13cmos5l_fill_2
+X_2161_ _2161_/X _2160_/Y hold615/X _2169_/S VPWR VGND sg13cmos5l_mux2_1
+X_2092_ _2569_/D _1356_/Y _2098_/A2 _2090_/Y _2091_/Y VPWR VGND sg13cmos5l_a22oi_1
+X_1945_ _1945_/Y _1967_/A _1943_/Y _1944_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1876_ _1876_/Y _1876_/A _1876_/B VPWR VGND sg13cmos5l_nand2_1
+X_2428_ _2428_/Q _2600_/CLK _2428_/D _2428_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2377__415 _2377_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2359_ _2359_/Q _2361_/CLK _2359_/D _2359_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_18_92 VPWR VGND sg13cmos5l_fill_2
+XFILLER_43_340 VPWR VGND sg13cmos5l_fill_2
+X_1592_ _1592_/Y _1582_/B _1590_/Y _1591_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1661_ _1662_/B _2389_/Q _2381_/Q _2373_/Q _2365_/Q _2399_/Q _2400_/Q VPWR VGND sg13cmos5l_mux4_1
+X_1730_ _2478_/D _1730_/A _1730_/B VPWR VGND sg13cmos5l_nor2_1
+X_2213_ _2213_/Y _2213_/A _2217_/B VPWR VGND sg13cmos5l_nor2_1
+X_2144_ _2145_/B hold501/X _2146_/A2 _2167_/B1 _2429_/Q VPWR VGND sg13cmos5l_a22oi_1
+X_2075_ _2075_/Y _2075_/A _2108_/B VPWR VGND sg13cmos5l_nand2_1
+X_1859_ _1860_/B _1335_/A _1857_/Y _1858_/X _1356_/A VPWR VGND sg13cmos5l_a22oi_1
+X_1928_ _1928_/Y _2493_/Q _1955_/C VPWR VGND sg13cmos5l_nand2_1
+Xhold720 _2394_/D _2301_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold731 _2538_/D _1945_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold742 hold742/X _2447_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold797 hold797/X _2486_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold786 _2447_/D _1553_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold775 _1459_/B _2466_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold764 _2541_/D _1966_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold753 _2539_/D _1953_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_40_321 VPWR VGND sg13cmos5l_fill_2
+XFILLER_4_211 VPWR VGND sg13cmos5l_fill_1
+XFILLER_4_233 VPWR VGND sg13cmos5l_fill_2
+X_2568__297 _2568_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2395__378 _2395_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_31_398 VPWR VGND sg13cmos5l_fill_1
+X_1713_ _1713_/X _2388_/Q _2272_/A _2255_/A _2239_/A _2401_/Q _2402_/Q VPWR VGND sg13cmos5l_mux4_1
+X_1575_ _1575_/Y _2568_/Q _1386_/Y _1548_/X VPWR VGND sg13cmos5l_o21ai_1
+X_1644_ _1649_/B _2387_/Q _1703_/B VPWR VGND sg13cmos5l_or2_1
+X_2517__163 _2517_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2127_ _2129_/A _2127_/A _2131_/B _2131_/C _2131_/D VPWR VGND sg13cmos5l_nor4_1
+X_2058_ _2059_/B _1979_/A hold531/X hold613/X hold632/X VPWR VGND sg13cmos5l_a22oi_1
+Xhold550 _2247_/A _2368_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold561 _2259_/A _2374_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold572 _2577_/D _2126_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold583 _2365_/D _2242_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold594 hold594/X _2516_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_9_358 VPWR VGND sg13cmos5l_fill_2
+X_1360_ _1360_/Y _1360_/A VPWR VGND sg13cmos5l_inv_1
+X_2546__381 _2546_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2410__334 _2410_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1489_ _1489_/Y _1470_/A _1487_/Y _1488_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1558_ _1558_/Y _1366_/A _1550_/A _1574_/B VPWR VGND sg13cmos5l_a21oi_1
+X_1627_ _1629_/A _1625_/Y _1627_/B VPWR VGND sg13cmos5l_nand2b_1
+X_2385__399 _2385_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2530_ _2530_/Q _2595_/CLK _2530_/D _2530_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_3_63 VPWR VGND sg13cmos5l_fill_2
+X_1343_ _1343_/Y _2459_/Q VPWR VGND sg13cmos5l_inv_1
+X_1412_ _1412_/X _1420_/B _1420_/A _2127_/A VPWR VGND sg13cmos5l_mux2_1
+X_2461_ _2461_/Q clkload4/A _2461_/D _2461_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2392_ _2392_/Q _2604_/CLK _2392_/D _2392_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_36_298 VPWR VGND sg13cmos5l_fill_1
+Xclkbuf_leaf_16_clk _2514_/CLK clkbuf_2_1__f_clk/X VPWR VGND sg13cmos5l_buf_8
+Xfanout123 _2065_/A fanout127/X VPWR VGND sg13cmos5l_buf_1
+Xfanout112 _2050_/A fanout113/X VPWR VGND sg13cmos5l_buf_1
+Xfanout101 _2322_/A2 _2316_/A1 VPWR VGND sg13cmos5l_buf_1
+X_2491__214 _2491_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_2_331 VPWR VGND sg13cmos5l_fill_1
+XFILLER_6_169 VPWR VGND sg13cmos5l_fill_1
+X_1892_ _2530_/D _1325_/Y _1876_/Y _1890_/Y _1891_/Y _1979_/B VPWR VGND sg13cmos5l_a221oi_1
+X_1961_ _1962_/B _2497_/Q _1961_/B VPWR VGND sg13cmos5l_nand2_1
+X_2513_ _2513_/Q _2514_/CLK _2513_/D _2513_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_38_0 VPWR VGND sg13cmos5l_fill_1
+X_1326_ _1326_/Y _1326_/A VPWR VGND sg13cmos5l_inv_1
+Xclkbuf_leaf_5_clk clkload6/A clkbuf_leaf_7_clk/A VPWR VGND sg13cmos5l_buf_8
+X_2444_ _2444_/Q clkload6/A _2444_/D _2444_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2375_ _2375_/Q _2514_/CLK _2375_/D _2375_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_33_16 VPWR VGND sg13cmos5l_fill_2
+XFILLER_24_279 VPWR VGND sg13cmos5l_fill_2
+XFILLER_47_327 VPWR VGND sg13cmos5l_fill_1
+X_2580__315 _2580_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2578__277 _2578_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2160_ _2160_/Y _2145_/A _2158_/Y _2159_/Y VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_0_42 VPWR VGND sg13cmos5l_fill_1
+XFILLER_48_90 VPWR VGND sg13cmos5l_fill_2
+X_2091_ _2091_/Y input2/X _2096_/B _2098_/A2 VPWR VGND sg13cmos5l_a21oi_1
+X_1875_ _1875_/X _1876_/A _1876_/B VPWR VGND sg13cmos5l_and2_1
+X_2446__300 _2446_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1944_ _1944_/Y _1967_/A _1937_/A _1967_/B VPWR VGND sg13cmos5l_o21ai_1
+X_2427_ _2427_/Q clkload0/A _2427_/D _2427_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1309_ _1309_/Y _1309_/A VPWR VGND sg13cmos5l_inv_1
+X_2358_ _2358_/Q _2361_/CLK _2358_/D _2358_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2289_ _2388_/D _1310_/Y _2300_/B _2288_/Y VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_12_249 VPWR VGND sg13cmos5l_fill_2
+XFILLER_43_352 VPWR VGND sg13cmos5l_decap_4
+XFILLER_34_70 VPWR VGND sg13cmos5l_fill_2
+XFILLER_7_231 VPWR VGND sg13cmos5l_fill_1
+X_1591_ _1591_/Y _1582_/B _1589_/A _2314_/B VPWR VGND sg13cmos5l_o21ai_1
+X_1660_ _2465_/D _1660_/A VPWR VGND sg13cmos5l_inv_1
+X_2212_ _2351_/D _1325_/Y _2217_/B _2211_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2143_ _2143_/X _2142_/Y hold654/X _2169_/S VPWR VGND sg13cmos5l_mux2_1
+XFILLER_14_18 VPWR VGND sg13cmos5l_fill_1
+X_2074_ _2563_/D _1366_/Y _2080_/A2 _2072_/Y _2073_/Y VPWR VGND sg13cmos5l_a22oi_1
+X_1858_ _1858_/X _1876_/A _1858_/B VPWR VGND sg13cmos5l_and2_1
+Xhold710 _1368_/A _2565_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold721 _2229_/A _2360_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_1927_ _1927_/Y _1953_/A1 _1925_/Y _1926_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1789_ _1789_/Y _2536_/Q _1399_/A _1841_/A2 VPWR VGND sg13cmos5l_a21oi_1
+Xhold732 _1369_/A _2566_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold743 hold743/X _2407_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold798 _2253_/A _2406_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold787 hold787/X _2403_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold776 _1977_/B _2347_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold765 hold765/X _2482_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold754 hold754/X _2487_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2488__219 _2488_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2586__321 _2586_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XANTENNA_1 _2296_/Y VPWR VGND sg13cmos5l_antennanp
+X_1643_ _1703_/B _1647_/C _1645_/B VPWR VGND sg13cmos5l_nand2_1
+X_1712_ _2472_/D _1733_/A _1712_/B VPWR VGND sg13cmos5l_nor2_1
+X_1574_ _1574_/Y _1574_/A _1574_/B VPWR VGND sg13cmos5l_nand2_1
+XFILLER_20_0 VPWR VGND sg13cmos5l_fill_2
+X_2126_ _2126_/Y _2169_/S _2124_/Y _2125_/Y VPWR VGND sg13cmos5l_o21ai_1
+X_2057_ _2057_/X _2361_/Q _2215_/A _2198_/A _2182_/A _2397_/Q _2398_/Q VPWR VGND sg13cmos5l_mux4_1
+XFILLER_34_160 VPWR VGND sg13cmos5l_fill_2
+Xhold540 _1491_/B _1490_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold551 _2267_/A _2378_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold562 _2374_/D _2260_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold573 _2255_/A _2372_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold584 _2180_/A _2336_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold595 _2251_/A _2370_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_17_149 VPWR VGND sg13cmos5l_fill_1
+XFILLER_31_71 VPWR VGND sg13cmos5l_fill_2
+XFILLER_48_296 VPWR VGND sg13cmos5l_fill_2
+X_1626_ _1627_/B _1626_/A _1626_/B _1633_/B VPWR VGND sg13cmos5l_nand3_1
+X_2560__313 _2560_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2408__242 _2408_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1488_ _1488_/Y _2460_/Q _1470_/A _1505_/B1 VPWR VGND sg13cmos5l_o21ai_1
+X_1557_ _1557_/Y _1563_/A _1557_/B VPWR VGND sg13cmos5l_nand2_1
+X_2454__284 _2454_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2109_ _2109_/Y _2084_/A _2093_/B _2110_/A2 VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_10_369 VPWR VGND sg13cmos5l_fill_2
+XFILLER_18_403 VPWR VGND sg13cmos5l_fill_1
+XFILLER_45_244 VPWR VGND sg13cmos5l_fill_2
+XFILLER_9_123 VPWR VGND sg13cmos5l_fill_2
+X_2460_ _2460_/Q clkload4/A _2460_/D _2460_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1342_ _1342_/Y _1709_/B VPWR VGND sg13cmos5l_inv_1
+X_1411_ _2592_/D _2137_/A _1411_/B VPWR VGND sg13cmos5l_nor2_1
+X_2391_ _2391_/Q _2478_/CLK _2391_/D _2391_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1609_ _1621_/A _1614_/B _2415_/Q _1609_/C VPWR VGND sg13cmos5l_nand3_1
+Xfanout113 fanout113/X fanout120/X VPWR VGND sg13cmos5l_buf_1
+Xfanout102 _2320_/A1 _2316_/A1 VPWR VGND sg13cmos5l_buf_1
+X_2589_ _2589_/Q _2590_/CLK _2589_/D _2589_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_27_211 VPWR VGND sg13cmos5l_fill_1
+Xfanout124 _1352_/A fanout127/X VPWR VGND sg13cmos5l_buf_1
+XFILLER_10_122 VPWR VGND sg13cmos5l_fill_1
+XFILLER_2_310 VPWR VGND sg13cmos5l_decap_4
+X_1891_ _1891_/Y _1368_/A _1877_/A _1901_/B VPWR VGND sg13cmos5l_a21oi_1
+X_1960_ _1960_/Y _1967_/A _1958_/Y _1959_/Y VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_5_192 VPWR VGND sg13cmos5l_fill_1
+X_2512_ _2512_/Q _2514_/CLK _2512_/D _2512_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2443_ _2443_/Q clkload6/A _2443_/D _2443_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_49_380 VPWR VGND sg13cmos5l_decap_8
+X_1325_ _1325_/Y _1325_/A VPWR VGND sg13cmos5l_inv_1
+X_2374_ _2374_/Q _2478_/CLK _2374_/D _2374_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2412__238 _2412_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_17_6 VPWR VGND sg13cmos5l_fill_1
+X_2504__188 _2504_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2439__330 _2439_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2398__366 _2398_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2090_ _2090_/Y _2090_/A _2090_/B VPWR VGND sg13cmos5l_nand2_1
+XFILLER_46_383 VPWR VGND sg13cmos5l_decap_8
+X_2331__236 _2331_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_9_63 VPWR VGND sg13cmos5l_fill_2
+X_1874_ _2525_/D _2137_/A _1874_/B VPWR VGND sg13cmos5l_nor2_1
+X_1943_ _1943_/Y _1943_/A _1943_/B VPWR VGND sg13cmos5l_xnor2_1
+X_2426_ _2426_/Q _2600_/CLK _2426_/D _2426_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1308_ _1308_/Y _1308_/A VPWR VGND sg13cmos5l_inv_1
+X_2357_ _2357_/Q _2361_/CLK _2357_/D _2357_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2288_ _2288_/Y _2288_/A _2300_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_18_61 VPWR VGND sg13cmos5l_fill_1
+XFILLER_28_383 VPWR VGND sg13cmos5l_fill_1
+XFILLER_43_342 VPWR VGND sg13cmos5l_fill_1
+XFILLER_11_250 VPWR VGND sg13cmos5l_fill_2
+X_1590_ _1590_/Y _1590_/A _1590_/B VPWR VGND sg13cmos5l_xnor2_1
+X_2211_ _2211_/Y _2211_/A _2217_/B VPWR VGND sg13cmos5l_nor2_1
+X_2142_ _2142_/Y _2168_/A1 _2140_/Y _2141_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_2073_ _2073_/Y input4/X _2090_/B _2080_/A2 VPWR VGND sg13cmos5l_a21oi_1
+X_1788_ _1788_/Y _1788_/A _1884_/B VPWR VGND sg13cmos5l_nand2_1
+X_1857_ _1857_/Y _1858_/B _1856_/Y _1876_/A VPWR VGND sg13cmos5l_o21ai_1
+Xhold700 _1365_/A _2562_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold711 _1325_/A _2530_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold722 hold722/X _2501_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold733 hold733/X _2467_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold744 _1618_/A _2460_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold755 _1918_/B _2490_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_1926_ _1926_/Y _1953_/A1 _1924_/A _1429_/A VPWR VGND sg13cmos5l_o21ai_1
+Xhold799 hold799/X _2546_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold788 _2399_/D _2303_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold777 hold777/X _2502_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold766 _1778_/A _2544_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2535__402 _2535_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2409_ _2409_/Q clkload0/A _2409_/D _2409_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_40_312 VPWR VGND sg13cmos5l_fill_1
+XFILLER_40_323 VPWR VGND sg13cmos5l_fill_1
+XFILLER_4_235 VPWR VGND sg13cmos5l_fill_1
+XANTENNA_2 uio_in[7] VPWR VGND sg13cmos5l_antennanp
+X_1642_ _1645_/B _1694_/A _2404_/Q VPWR VGND sg13cmos5l_nor2b_1
+X_1711_ _1712_/B _1650_/A hold483/X _1709_/X hold689/X VPWR VGND sg13cmos5l_a22oi_1
+X_1573_ _2453_/D _1584_/A _1573_/B VPWR VGND sg13cmos5l_nor2_1
+X_2125_ _2125_/Y _2125_/A _2169_/S VPWR VGND sg13cmos5l_nand2_1
+X_2056_ _2556_/D _2062_/A _2056_/B VPWR VGND sg13cmos5l_nor2_1
+XFILLER_22_356 VPWR VGND sg13cmos5l_fill_2
+X_1909_ _1913_/B _1967_/A _2490_/Q _1961_/B VPWR VGND sg13cmos5l_nand3_1
+Xhold530 _1573_/B _1572_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold541 _1313_/A _2452_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold552 _2245_/A _2367_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold563 _2192_/A _2342_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold574 _2372_/D _2256_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold585 _1405_/A _2586_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold596 _1386_/A _2583_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2394__380 _2394_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_31_197 VPWR VGND sg13cmos5l_fill_2
+X_1556_ _2448_/D _1310_/Y _1574_/B _1554_/Y _1555_/Y _2137_/A VPWR VGND sg13cmos5l_a221oi_1
+X_1625_ _1625_/Y _2417_/Q _1633_/B _1626_/A VPWR VGND sg13cmos5l_a21oi_1
+X_1487_ _1487_/Y _1487_/A _1487_/B VPWR VGND sg13cmos5l_xnor2_1
+X_2108_ _2108_/Y input8/X _2108_/B VPWR VGND sg13cmos5l_nand2_1
+X_2039_ _2039_/X _2355_/Q _2347_/Q _2339_/Q hold635/X _2397_/Q _2398_/Q VPWR VGND
++ sg13cmos5l_mux4_1
+XFILLER_45_234 VPWR VGND sg13cmos5l_fill_2
+X_1410_ _1411_/B _2065_/B _1409_/Y _2117_/A VPWR VGND sg13cmos5l_a21oi_1
+X_1341_ _1976_/C _2482_/Q VPWR VGND sg13cmos5l_inv_1
+X_2390_ _2390_/Q clkload1/A _2390_/D _2390_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_36_212 VPWR VGND sg13cmos5l_fill_1
+X_2514__168 _2514_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1539_ _2442_/D _1547_/A _1539_/B VPWR VGND sg13cmos5l_nor2_1
+X_1608_ _1608_/Y _2415_/Q _1609_/C _1614_/B VPWR VGND sg13cmos5l_a21oi_1
+Xfanout125 _1389_/A fanout127/X VPWR VGND sg13cmos5l_buf_1
+Xfanout114 _1872_/A fanout120/X VPWR VGND sg13cmos5l_buf_1
+Xfanout103 _2316_/A1 _2437_/Q VPWR VGND sg13cmos5l_buf_1
+X_2588_ _2588_/Q clkload7/A _2588_/D _2588_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_42_237 VPWR VGND sg13cmos5l_fill_1
+XFILLER_6_105 VPWR VGND sg13cmos5l_fill_2
+XFILLER_2_399 VPWR VGND sg13cmos5l_decap_4
+XFILLER_33_226 VPWR VGND sg13cmos5l_fill_2
+X_2550__368 _2550_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1890_ _1890_/Y _1890_/A _1890_/B VPWR VGND sg13cmos5l_nand2_1
+X_2511_ _2511_/Q clkload2/A _2511_/D _2511_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2442_ _2442_/Q clkload6/A _2442_/D _2442_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2373_ _2373_/Q _2604_/CLK _2373_/D _2373_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1324_ _1324_/Y _1324_/A VPWR VGND sg13cmos5l_inv_1
+XFILLER_32_292 VPWR VGND sg13cmos5l_fill_1
+X_2416__375 _2416_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_46_340 VPWR VGND sg13cmos5l_fill_2
+XFILLER_0_66 VPWR VGND sg13cmos5l_fill_2
+XFILLER_21_218 VPWR VGND sg13cmos5l_fill_2
+X_1942_ _1949_/B _1943_/A _1943_/B VPWR VGND sg13cmos5l_nand2_1
+X_1873_ _1874_/B _1329_/A _1857_/Y _1858_/X _1363_/A VPWR VGND sg13cmos5l_a22oi_1
+X_2425_ _2425_/Q _2600_/CLK _2425_/D _2425_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2356_ _2356_/Q clkload2/A _2356_/D _2356_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1307_ _1307_/Y _1307_/A VPWR VGND sg13cmos5l_inv_1
+X_2287_ _2387_/D hold781/X hold742/X _2300_/B VPWR VGND sg13cmos5l_mux2_1
+XFILLER_43_387 VPWR VGND sg13cmos5l_decap_8
+X_2210_ _2350_/D _1326_/Y _2209_/B _2209_/Y VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_38_104 VPWR VGND sg13cmos5l_fill_1
+X_2141_ _2141_/Y _1501_/A _2166_/A2 _2167_/B1 _2436_/Q _2168_/A1 VPWR VGND sg13cmos5l_a221oi_1
+X_2072_ _2072_/Y _2072_/A _2096_/B VPWR VGND sg13cmos5l_nand2_1
+X_1925_ _1925_/Y _1925_/A _1925_/B VPWR VGND sg13cmos5l_xnor2_1
+X_1787_ _1884_/B _1787_/A _1787_/B VPWR VGND sg13cmos5l_xnor2_1
+X_1856_ _1856_/Y _1856_/A _2586_/Q VPWR VGND sg13cmos5l_nor2_1
+Xhold701 _2217_/A _2354_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold712 _1367_/A _2564_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold723 _2501_/D _1783_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold734 _1371_/A _2568_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold745 _2460_/D _1624_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold778 _2502_/D _1791_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold767 _1989_/A _1988_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold756 _1877_/B _1772_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold789 _1977_/A _2355_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2408_ _2408_/Q _2478_/CLK _2408_/D _2408_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2339_ _2339_/Q _2531_/CLK _2339_/D _2339_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2464__265 _2464_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_48_402 VPWR VGND sg13cmos5l_fill_2
+XFILLER_29_50 VPWR VGND sg13cmos5l_fill_2
+XANTENNA_3 uio_in[6] VPWR VGND sg13cmos5l_antennanp
+X_1572_ _1572_/Y _1312_/A _1574_/B _1571_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1641_ _1649_/A _1694_/A _1641_/B VPWR VGND sg13cmos5l_nand2_1
+X_1710_ _1710_/X _2387_/Q _1648_/B hold656/X hold680/X _2401_/Q _2402_/Q VPWR VGND
++ sg13cmos5l_mux4_1
+XFILLER_39_402 VPWR VGND sg13cmos5l_fill_2
+X_2124_ _2124_/Y _2111_/B _2117_/Y _2120_/Y _2115_/Y VPWR VGND sg13cmos5l_a22oi_1
+X_2055_ _2056_/B _1979_/A hold464/X hold613/X hold653/X VPWR VGND sg13cmos5l_a22oi_1
+X_1839_ _1839_/Y _2510_/Q _1841_/A2 _1849_/B1 hold487/X VPWR VGND sg13cmos5l_a22oi_1
+X_1908_ _1961_/B _1915_/A _1908_/B _1908_/C _1908_/D VPWR VGND sg13cmos5l_and4_1
+X_2487__221 _2487_/RESET_B VPWR VGND sg13cmos5l_tiehi
+Xhold520 _1523_/B _1522_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold531 hold531/X _2557_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold542 _1569_/B _1568_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold553 _2367_/D _2246_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold564 _2342_/D _2193_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold575 _1406_/A _2579_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold586 _2198_/A _2345_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold597 _2437_/D _1524_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_48_298 VPWR VGND sg13cmos5l_fill_1
+X_1555_ _1555_/Y _1365_/A _1550_/A _1574_/B VPWR VGND sg13cmos5l_a21oi_1
+X_1624_ _1624_/Y _1615_/A _1622_/X _1623_/Y VPWR VGND sg13cmos5l_a21oi_1
+XFILLER_39_254 VPWR VGND sg13cmos5l_fill_1
+X_1486_ _1487_/B _1475_/Y _1478_/B _1474_/Y VPWR VGND sg13cmos5l_o21ai_1
+Xclkbuf_leaf_19_clk clkload1/A clkbuf_leaf_2_clk/A VPWR VGND sg13cmos5l_buf_8
+X_2107_ _2574_/D _1361_/Y _2110_/A2 _2105_/Y _2106_/Y VPWR VGND sg13cmos5l_a22oi_1
+X_2038_ _2038_/X _2038_/A _2487_/Q VPWR VGND sg13cmos5l_and2_1
+X_2426__355 _2426_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_45_246 VPWR VGND sg13cmos5l_fill_1
+XFILLER_9_125 VPWR VGND sg13cmos5l_fill_1
+XFILLER_5_353 VPWR VGND sg13cmos5l_fill_1
+X_1340_ _2203_/A _2485_/Q VPWR VGND sg13cmos5l_inv_1
+XFILLER_36_202 VPWR VGND sg13cmos5l_fill_1
+Xclkbuf_leaf_8_clk clkload8/A clkbuf_leaf_9_clk/A VPWR VGND sg13cmos5l_buf_8
+X_1469_ _1560_/B _1469_/A _1468_/Y VPWR VGND sg13cmos5l_nor2b_1
+X_1538_ _1539_/B _1359_/A _1544_/A2 _1531_/Y _1348_/A VPWR VGND sg13cmos5l_a22oi_1
+X_1607_ _1607_/Y _1582_/B _1605_/Y _1606_/Y VPWR VGND sg13cmos5l_a21oi_1
+Xfanout126 _1851_/A fanout127/X VPWR VGND sg13cmos5l_buf_1
+Xfanout115 _1547_/A _2137_/A VPWR VGND sg13cmos5l_buf_1
+Xfanout104 _1694_/A hold816/X VPWR VGND sg13cmos5l_buf_1
+X_2587_ _2587_/Q clkload8/A _2587_/D _2587_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2543__387 _2543_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_2_367 VPWR VGND sg13cmos5l_fill_1
+X_2400__358 _2400_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_37_72 VPWR VGND sg13cmos5l_fill_2
+X_2510_ _2510_/Q clkload2/A _2510_/D _2510_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_1323_ _1323_/Y _1323_/A VPWR VGND sg13cmos5l_inv_1
+X_2441_ _2441_/Q clkload5/A _2441_/D _2441_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2372_ _2372_/Q _2478_/CLK _2372_/D _2372_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+XFILLER_24_216 VPWR VGND sg13cmos5l_fill_2
+X_2603__248 _2603_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_15_216 VPWR VGND sg13cmos5l_fill_2
+XFILLER_23_282 VPWR VGND sg13cmos5l_fill_2
+XFILLER_23_96 VPWR VGND sg13cmos5l_fill_2
+X_2474__245 _2474_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1872_ _2524_/D _1872_/A _1872_/B VPWR VGND sg13cmos5l_nor2_1
+X_1941_ _1941_/Y _1321_/Y _1928_/Y _1933_/A _1932_/B _1939_/Y VPWR VGND sg13cmos5l_a221oi_1
+X_2424_ _2424_/Q clkload0/A _2424_/D _2424_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2355_ _2355_/Q _2531_/CLK _2355_/D _2355_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2286_ _2286_/Y _2286_/A _2286_/B _2286_/C VPWR VGND sg13cmos5l_nor3_1
+X_2347__201 _2347_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2503__190 _2503_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2140_ _2140_/Y _1828_/A _2166_/A2 _2167_/B1 _2515_/Q VPWR VGND sg13cmos5l_a22oi_1
+X_2071_ _2562_/D _1365_/Y _2080_/A2 _2069_/Y _2070_/Y VPWR VGND sg13cmos5l_a22oi_1
+X_1855_ _2517_/D _2139_/A _1855_/B VPWR VGND sg13cmos5l_nor2_1
+X_1924_ _1925_/B _1924_/A _1924_/B VPWR VGND sg13cmos5l_xor2_1
+X_1786_ _1787_/B _1786_/A _1786_/B VPWR VGND sg13cmos5l_xor2_1
+Xhold702 _2225_/A _2358_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold713 _1918_/A _2534_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold724 _2296_/A _2392_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold735 _1445_/B _2464_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold746 _1626_/A _2461_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold779 hold779/X _2550_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold768 hold768/X _2548_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold757 _2526_/D _1880_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+XFILLER_25_300 VPWR VGND sg13cmos5l_fill_1
+X_2407_ _2407_/Q _2605_/CLK _2407_/D _2407_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2338_ _2338_/Q clkload3/A _2338_/D _2338_/RESET_B VPWR VGND sg13cmos5l_dfrbpq_1
+X_2269_ _2286_/C _2407_/Q _2408_/Q VPWR VGND sg13cmos5l_nand2b_1
+XFILLER_28_171 VPWR VGND sg13cmos5l_fill_2
+XFILLER_45_61 VPWR VGND sg13cmos5l_fill_2
+X_2436__335 _2436_/RESET_B VPWR VGND sg13cmos5l_tiehi
+XFILLER_6_77 VPWR VGND sg13cmos5l_fill_2
+XFILLER_6_88 VPWR VGND sg13cmos5l_fill_2
+X_1571_ _1571_/Y _1563_/A _1496_/Y _1570_/Y VPWR VGND sg13cmos5l_a21oi_1
+X_1640_ _1641_/B _2387_/Q _2379_/Q _2371_/Q _2363_/Q _2399_/Q _2400_/Q VPWR VGND sg13cmos5l_mux4_1
+X_2443__306 _2443_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2593__328 _2593_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2123_ _2123_/Y _1429_/B _2148_/A _2148_/B VPWR VGND sg13cmos5l_o21ai_1
+XFILLER_22_325 VPWR VGND sg13cmos5l_fill_1
+X_2337__222 _2337_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_2054_ _2054_/X _2360_/Q _2213_/A _2196_/A _2180_/A _2397_/Q _2398_/Q VPWR VGND sg13cmos5l_mux4_1
+X_1838_ _2509_/D _2050_/A _1838_/B VPWR VGND sg13cmos5l_nor2_1
+X_1907_ _1908_/D _2550_/Q _2549_/Q _2548_/Q _2545_/Q VPWR VGND sg13cmos5l_nor4_1
+Xhold510 hold510/X _2425_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2524__149 _2524_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1769_ _1770_/B hold509/X _1841_/A2 _1849_/B1 VPWR VGND sg13cmos5l_a21oi_1
+Xhold521 hold521/X _2551_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold532 _1848_/B _1847_/Y VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold543 _2178_/A _2335_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold554 _2249_/A _2369_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold565 _2257_/A _2373_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold576 _1851_/B _1858_/B VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold587 _2174_/A _2333_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+Xhold598 hold598/X _2601_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
+X_2553__356 _2553_/RESET_B VPWR VGND sg13cmos5l_tiehi
+X_1485_ _1487_/A _1485_/A _1484_/X VPWR VGND sg13cmos5l_nor2b_1
+X_1554_ _1554_/Y _1563_/A _1554_/B VPWR VGND sg13cmos5l_nand2_1
+X_1623_ _1623_/Y _1615_/A _1618_/A _2065_/A VPWR VGND sg13cmos5l_o21ai_1
+.ends
+
